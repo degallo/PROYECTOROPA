@@ -1,0 +1,710 @@
+<title>Escalera de precios de la moda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Maqueta: una columna de herramienta. Controles arriba (marcas, ancho de tramo),
+   resultados debajo en el orden de la historia: escalera, choques, escalones, hueco, tabla. */
+:root {
+  --bg: #ffffff;
+  --panel: #f6f7f8;
+  --line: #e4e6e9;
+  --ink: #333333;
+  --ink-2: #5f646b;
+  --ink-3: #8a8f96;
+  --inditex: #2a64a8;          /* marca (punto) y texto de Inditex */
+  --inditex-band: #a9c1e2;     /* franja P25–P75 de Inditex */
+  --otros: #7a7a7a;            /* marca (punto) del resto */
+  --otros-text: #6b6b6b;
+  --otros-band: #d3d3d3;
+  --pair: #4a4f57;             /* barras de solapamiento */
+  --gap: #eef0f3;              /* sombreado del hueco */
+  --focus: #2a64a8;
+  --warn: #8a5a00;
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17191d; --panel: #1f2228; --line: #2e3238; --ink: #e6e7e9; --ink-2: #b4b8bf; --ink-3: #8b9099;
+    --inditex: #5e93db; --inditex-band: #2d4b74; --otros: #666a72; --otros-text: #a3a8b0; --otros-band: #3a3e45;
+    --pair: #a3a8b0; --gap: #22262c; --focus: #7ba7e2; --warn: #e0b45a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17191d; --panel: #1f2228; --line: #2e3238; --ink: #e6e7e9; --ink-2: #b4b8bf; --ink-3: #8b9099;
+  --inditex: #5e93db; --inditex-band: #2d4b74; --otros: #666a72; --otros-text: #a3a8b0; --otros-band: #3a3e45;
+  --pair: #a3a8b0; --gap: #22262c; --focus: #7ba7e2; --warn: #e0b45a; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 48px; display: grid; gap: 36px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; line-height: 1.2; }
+h1 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.2rem; font-weight: 700; }
+h3 { font-size: 0.95rem; font-weight: 600; }
+p { margin: 0; }
+.sub { color: var(--ink-2); max-width: 70ch; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+header { display: grid; gap: 10px; }
+.resumen-linea { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+/* Controles */
+.controles { display: grid; gap: 14px; padding: 16px; background: var(--panel); border-radius: var(--r); }
+.fila-control { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.fila-control > .etq { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); min-width: 9.5em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--bg);
+  color: var(--ink); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 0.875rem; cursor: pointer; }
+.chip .pt { width: 10px; height: 10px; border-radius: 50%; background: var(--otros); flex: none; }
+.chip.inditex .pt { background: var(--inditex); }
+.chip[aria-pressed="false"] { color: var(--ink-3); background: transparent; border-style: dashed; }
+.chip[aria-pressed="false"] .pt { background: transparent; border: 1.5px solid var(--ink-3); }
+.chip .quitar { border: 0; background: none; color: var(--ink-3); font: inherit; cursor: pointer; padding: 0 0 0 2px; }
+.segmentado { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.segmentado button { border: 0; background: var(--bg); color: var(--ink-2); font: inherit; font-size: 0.85rem; padding: 6px 12px; cursor: pointer; }
+.segmentado button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+button:focus-visible, select:focus-visible, textarea:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.btn { border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: var(--r); padding: 7px 14px; font: inherit; font-size: 0.875rem; font-weight: 600; cursor: pointer; }
+.btn.sec { background: transparent; color: var(--ink); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+select { font: inherit; font-size: 0.875rem; padding: 5px 8px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); }
+.nota { font-size: 0.8rem; color: var(--ink-3); }
+
+/* Secciones */
+section { display: grid; gap: 14px; }
+.cab { display: grid; gap: 4px; }
+.cab .sub { font-size: 0.9rem; }
+.dos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px 32px; }
+.grafico { min-width: 0; display: grid; gap: 6px; }
+.grafico svg { display: block; width: 100%; height: auto; overflow: visible; }
+.vacio { padding: 18px; border: 1px dashed var(--line); border-radius: var(--r); color: var(--ink-3); font-size: 0.9rem; }
+svg text { font-family: var(--font); }
+.leyenda { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.8rem; color: var(--ink-2); }
+.leyenda span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 18px; height: 9px; border-radius: 2px; display: inline-block; }
+
+/* Escalones de Inditex */
+.cadena { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-variant-numeric: tabular-nums; }
+.cadena .m { display: grid; }
+.cadena .m b { color: var(--inditex); font-size: 1.05rem; }
+.cadena .m small { color: var(--ink-3); font-size: 0.75rem; }
+.cadena .x { font-size: 1.6rem; font-weight: 700; color: var(--ink); padding-inline: 4px; }
+
+/* Tablas */
+.tabla-wrap { overflow-x: auto; min-width: 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child, th.izq, td.izq { text-align: left; }
+th { font-weight: 600; color: var(--ink-2); font-size: 0.78rem; }
+td .barra { display: inline-block; height: 8px; border-radius: 2px; background: var(--otros); vertical-align: middle; margin-right: 6px; }
+td .barra.inditex { background: var(--inditex); }
+.marca-inditex { color: var(--inditex); font-weight: 600; }
+.marca-otros { color: var(--otros-text); font-weight: 600; }
+.pequena { color: var(--warn); font-size: 0.75rem; }
+
+/* Añadir marca */
+details.anadir { border: 1px solid var(--line); border-radius: var(--r); }
+details.anadir > summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+.anadir-cuerpo { padding: 0 16px 16px; display: grid; gap: 12px; }
+textarea { width: 100%; box-sizing: border-box; min-height: 120px; font: 0.8rem/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace; padding: 8px;
+  border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.85em; background: var(--panel); padding: 1px 4px; border-radius: 3px; }
+.mensaje { font-size: 0.875rem; padding: 10px 12px; border-radius: var(--r); background: var(--panel); }
+.mensaje.error { color: var(--warn); }
+.revision { max-height: 220px; overflow: auto; border: 1px solid var(--line); border-radius: var(--r); }
+
+footer { display: grid; gap: 8px; font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 16px; }
+footer ul { margin: 0; padding-left: 18px; display: grid; gap: 2px; }
+
+/* Tooltip */
+#tip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 0.78rem;
+  padding: 8px 10px; border-radius: var(--r); line-height: 1.45; max-width: 260px; font-variant-numeric: tabular-nums; }
+#tip b { font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) { .chip, .segmentado button { transition: background 120ms, color 120ms; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Posicionamiento de precio · catálogo online · España</span>
+    <h1>Escalera de precios de la moda</h1>
+    <p class="sub">Activa o quita cadenas y mira cómo cambian la escalera de precios, los choques entre marcas y el hueco
+      entre Zara y Massimo Dutti. Prendas básicas de mujer (camiseta de manga larga y vaquero), recogidas el 10/10/2026.</p>
+    <p class="resumen-linea" id="resumen-linea">—</p>
+  </header>
+
+  <div class="controles" role="region" aria-label="Controles">
+    <div class="fila-control">
+      <span class="etq">Cadenas</span>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="fila-control">
+      <span class="etq">Ancho de los tramos</span>
+      <div class="segmentado" id="anchos">
+        <button type="button" id="ancho-principal" data-v="principal" aria-pressed="true">5 € / 10 €</button>
+        <button type="button" id="ancho-robustez" data-v="robustez" aria-pressed="false">4 € / 8 € (prueba de robustez)</button>
+      </div>
+      <span class="nota">Camiseta / vaquero. Solo afecta al solapamiento.</span>
+    </div>
+  </div>
+
+  <section id="escalera">
+    <div class="cab">
+      <h2>¿Dónde se sitúa cada cadena?</h2>
+      <p class="sub">Barra: el 50 % central de los modelos (de P25 a P75). Punto: precio mediano. Ordenadas de la más barata a la más cara.</p>
+    </div>
+    <div class="leyenda" id="leyenda-escalera"></div>
+    <div class="dos">
+      <div class="grafico" id="g-esc-camiseta"></div>
+      <div class="grafico" id="g-esc-vaquero"></div>
+    </div>
+  </section>
+
+  <section id="choques">
+    <div class="cab">
+      <h2>¿Quién choca con quién?</h2>
+      <p class="sub" id="choques-sub">Solapamiento por tramos de precio: 0 % si dos cadenas no comparten ningún tramo, 100 % si reparten su catálogo igual.</p>
+    </div>
+    <div class="dos">
+      <div class="grafico" id="g-sol-camiseta"></div>
+      <div class="grafico" id="g-sol-vaquero"></div>
+    </div>
+  </section>
+
+  <section id="escalones">
+    <div class="cab">
+      <h2>¿Cuánto cuesta cada escalón de Inditex?</h2>
+      <p class="sub">Precio mediano de cada marca de Inditex activa dividido entre el de la anterior.</p>
+    </div>
+    <div class="dos">
+      <div class="grafico" id="r-camiseta"></div>
+      <div class="grafico" id="r-vaquero"></div>
+    </div>
+  </section>
+
+  <section id="hueco">
+    <div class="cab">
+      <h2>¿Quién ocupa el hueco entre dos cadenas?</h2>
+      <p class="sub">Modelos con precio entre el P75 de la primera cadena y el P25 de la segunda, con precios redondeados al euro
+        (39,95 € y 39,99 € cuentan igual). Es una zona a investigar, no un hueco de mercado demostrado.</p>
+    </div>
+    <div class="fila-control">
+      <label class="etq" for="hueco-a">Entre el P75 de</label>
+      <select id="hueco-a"></select>
+      <label class="etq" for="hueco-b" style="min-width:auto">y el P25 de</label>
+      <select id="hueco-b"></select>
+    </div>
+    <div class="dos">
+      <div class="grafico" id="h-camiseta"></div>
+      <div class="grafico" id="h-vaquero"></div>
+    </div>
+  </section>
+
+  <section id="tabla">
+    <div class="cab">
+      <h2>Todas las cifras</h2>
+      <p class="sub">Cuartiles calculados como en el SQL del proyecto (NTILE(4)). Muestra pequeña: menos de 15 modelos.</p>
+    </div>
+    <div class="tabla-wrap"><table id="tabla-precios"></table></div>
+  </section>
+
+  <section id="anadir">
+    <details class="anadir" id="anadir-det">
+      <summary>Añadir una cadena desde un CSV</summary>
+      <div class="anadir-cuerpo">
+        <p class="sub">El fichero necesita las columnas <code>marca</code>, <code>categoria</code> (<code>camiseta</code> o <code>vaquero</code>),
+          <code>nombre</code> y <code>precio_actual</code>. Si tiene <code>precio_original</code> (rebajas) o <code>clasificacion_web</code>, se usan como en el
+          resto del proyecto. Una fila por modelo, sin repetir variantes de color. Vale coma o punto y coma como separador.</p>
+        <p class="sub">Las prendas se clasifican con las mismas 191 reglas que las otras cadenas. Esas reglas se escribieron para los nombres de
+          estas cinco marcas: revisa la lista de básicas antes de sacar conclusiones.</p>
+        <div class="fila-control">
+          <label class="etq" for="csv-fichero">Fichero</label>
+          <input type="file" id="csv-fichero" accept=".csv,.txt,text/csv">
+        </div>
+        <label class="etq" for="csv-texto">O pega aquí el contenido</label>
+        <textarea id="csv-texto" placeholder="marca,categoria,nombre,precio_actual&#10;Mango,vaquero,Jeans rectos tiro alto,35.99"></textarea>
+        <div class="fila-control">
+          <label class="etq" for="csv-grupo">Grupo</label>
+          <select id="csv-grupo">
+            <option value="otros">Otro grupo (gris)</option>
+            <option value="inditex">Inditex (azul)</option>
+          </select>
+          <button type="button" class="btn sec" id="csv-comprobar">Comprobar</button>
+          <button type="button" class="btn" id="csv-anadir" disabled>Añadir al panel</button>
+        </div>
+        <div id="csv-resultado"></div>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <p><b>Qué es y qué no es.</b> Describe dónde se sitúan los precios de catálogo. No mide ventas ni cuota, y no demuestra por qué cada cadena
+      fija sus precios: sin la composición del tejido no se distingue una segmentación buscada de prendas de distinto material.</p>
+    <ul>
+      <li>Fuente: web española de cada cadena, sección mujer, 10/10/2026. Precio de catálogo (1 producto rebajado, normalizado a su precio original).</li>
+      <li>"Básica" se decide por palabras clave en el nombre del producto: puede haber errores puntuales.</li>
+      <li>Shein, excluida por inaccesibilidad de los datos (protección anti-bot). Mango, COS o & Other Stories no están en los datos de partida.</li>
+      <li>Las cifras con las cinco cadenas originales coinciden con las vistas SQL del proyecto (v_resumen_precios y v_solape_pares).</li>
+    </ul>
+    <p>Análisis de Javier Benítez Escobedo.</p>
+  </footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>/*__CALC__*/</script>
+<script>
+window.DATOS = /*__DATOS__*/;
+</script>
+<script>
+(function () {
+  'use strict';
+  var D = window.DATOS, C = window.Calc;
+  var CATS = [['camiseta', 'Camiseta de manga larga'], ['vaquero', 'Vaquero']];
+  var ANCHOS = { principal: { camiseta: 5, vaquero: 10 }, robustez: { camiseta: 4, vaquero: 8 } };
+  var REGLAS = C.prepararReglas(D.reglas);
+  var CLAVE = 'escalera-precios-moda-v1';
+  var SVGNS = 'http://www.w3.org/2000/svg';
+
+  // ---------------------------------------------------------------- formato
+  function euros(x) { return x == null ? '—' : x.toFixed(2).replace('.', ',') + ' €'; }
+  function eurosCorto(x) { return String(x).replace('.', ',') + ' €'; }
+  function pct(x) { return x == null ? '—' : x + ' %'; }
+  function veces(x) { return '×' + x.toFixed(1).replace('.', ','); }
+  function miles(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+
+  // ---------------------------------------------------------------- datos
+  // Catálogo base: cada fila ya viene con su precio de catálogo (rebaja normalizada).
+  var marcas = {};      // nombre -> {grupo, filas, base}
+  function registrar(nombre, grupo, filas, base) {
+    filas.forEach(function (f) { f.motivo = C.clasificar(f, REGLAS); });
+    marcas[nombre] = { grupo: grupo, filas: filas, base: !!base };
+  }
+  var porMarca = {};
+  D.catalogo.forEach(function (f) { (porMarca[f.marca] = porMarca[f.marca] || []).push(f); });
+  Object.keys(porMarca).forEach(function (m) { registrar(m, D.inditex.indexOf(m) >= 0 ? 'inditex' : 'otros', porMarca[m], true); });
+
+  var estado = { activas: Object.keys(marcas), ancho: 'principal', huecoA: 'Zara', huecoB: 'Massimo Dutti', extra: {} };
+
+  // Preferencias de este navegador (comodidad; la página funciona sin ellas).
+  function guardar() {
+    try { localStorage.setItem(CLAVE, JSON.stringify({ activas: estado.activas, ancho: estado.ancho, huecoA: estado.huecoA,
+      huecoB: estado.huecoB, extra: estado.extra })); } catch (e) { /* sin almacenamiento */ }
+  }
+  function cargar() {
+    var g = null;
+    try { g = JSON.parse(localStorage.getItem(CLAVE) || 'null'); } catch (e) { g = null; }
+    if (!g) return;
+    Object.keys(g.extra || {}).forEach(function (m) {
+      var r = leerCSV(g.extra[m].texto);
+      if (r.ok && r.porMarca[m]) { registrar(m, g.extra[m].grupo, r.porMarca[m], false); estado.extra[m] = g.extra[m]; }
+    });
+    if (Array.isArray(g.activas)) estado.activas = g.activas.filter(function (m) { return marcas[m]; });
+    if (g.ancho && ANCHOS[g.ancho]) estado.ancho = g.ancho;
+    if (g.huecoA) estado.huecoA = g.huecoA;
+    if (g.huecoB) estado.huecoB = g.huecoB;
+  }
+
+  function preciosBasicos(marca, cat) {
+    return marcas[marca].filas.filter(function (f) { return f.categoria === cat && f.motivo === '7_basica' && f.precio != null; })
+      .map(function (f) { return f.precio; });
+  }
+  function esInditex(m) { return marcas[m] && marcas[m].grupo === 'inditex'; }
+  function activasOrdenadas() { return Object.keys(marcas).filter(function (m) { return estado.activas.indexOf(m) >= 0; }); }
+  function resumenes(cat) {
+    var out = [];
+    activasOrdenadas().forEach(function (m) {
+      var r = C.resumen(preciosBasicos(m, cat));
+      if (r) { r.marca = m; out.push(r); }
+    });
+    out.sort(function (a, b) { return a.mediana - b.mediana || a.marca.localeCompare(b.marca); });
+    return out;
+  }
+
+  // ---------------------------------------------------------------- tooltip
+  var tip = document.getElementById('tip');
+  function mostrarTip(ev, html) {
+    tip.innerHTML = html; tip.hidden = false;
+    var r = tip.getBoundingClientRect(), x = ev.clientX + 14, y = ev.clientY + 14;
+    if (x + r.width > window.innerWidth - 8) x = ev.clientX - r.width - 14;
+    if (y + r.height > window.innerHeight - 8) y = ev.clientY - r.height - 14;
+    tip.style.left = Math.max(8, x) + 'px'; tip.style.top = Math.max(8, y) + 'px';
+  }
+  function ocultarTip() { tip.hidden = true; }
+  function conTip(el, html) {
+    el.addEventListener('mousemove', function (ev) { mostrarTip(ev, html); });
+    el.addEventListener('mouseleave', ocultarTip);
+    el.addEventListener('focus', function () { var b = el.getBoundingClientRect(); mostrarTip({ clientX: b.right, clientY: b.top }, html); });
+    el.addEventListener('blur', ocultarTip);
+  }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  // ---------------------------------------------------------------- SVG
+  function el(tag, attrs, padre) {
+    var e = document.createElementNS(SVGNS, tag);
+    Object.keys(attrs || {}).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+    if (padre) padre.appendChild(e);
+    return e;
+  }
+  function texto(padre, x, y, t, attrs) {
+    var e = el('text', Object.assign({ x: x, y: y }, attrs || {}), padre); e.textContent = t; return e;
+  }
+  // Paso del eje: el más fino que deje al menos 46 px entre marcas (evita rótulos amontonados en móvil).
+  function pasoEje(max, px) {
+    var pasos = [5, 10, 20, 25, 50, 100];
+    for (var i = 0; i < pasos.length; i++) if (px * pasos[i] / max >= 46) return pasos[i];
+    return 100;
+  }
+
+  // 1. La escalera ---------------------------------------------------------
+  function dibujarEscalera(cat, titulo) {
+    var cont = document.getElementById('g-esc-' + cat);
+    cont.innerHTML = '';
+    var h3 = document.createElement('h3'); h3.textContent = titulo; cont.appendChild(h3);
+    var rs = resumenes(cat);
+    if (!rs.length) { var v = document.createElement('p'); v.className = 'vacio'; v.textContent = 'Ninguna cadena activa tiene prendas básicas en esta categoría.'; cont.appendChild(v); return; }
+    var W = Math.max(300, cont.clientWidth || 520), estrecho = W < 480;
+    var izq = estrecho ? 92 : 104, der = estrecho ? 96 : 112, fila = 40, sup = 22, inf = 30;
+    var H = sup + rs.length * fila + inf;
+    var max = Math.max.apply(null, rs.map(function (r) { return r.p75; })) * 1.12;
+    var paso = pasoEje(max, W - izq - der); max = Math.ceil(max / paso) * paso;
+    var x = function (v) { return izq + (W - izq - der) * v / max; };
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Escalera de precios: ' + titulo });
+    var defs = el('defs', {}, svg);
+    ['inditex', 'otros'].forEach(function (g) {
+      var p = el('pattern', { id: 'trama-' + g + '-' + cat, width: 6, height: 6, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(45)' }, defs);
+      el('rect', { width: 6, height: 6, fill: 'var(--' + g + '-band)' }, p);
+      el('line', { x1: 0, y1: 0, x2: 0, y2: 6, stroke: 'var(--bg)', 'stroke-width': 2.5 }, p);
+    });
+    // Hueco elegido, sombreado
+    var a = rs.filter(function (r) { return r.marca === estado.huecoA; })[0], b = rs.filter(function (r) { return r.marca === estado.huecoB; })[0];
+    if (a && b && a.p75 < b.p25) {
+      el('rect', { x: x(a.p75), y: sup - 20, width: x(b.p25) - x(a.p75), height: rs.length * fila + 20, fill: 'var(--gap)' }, svg);
+      texto(svg, (x(a.p75) + x(b.p25)) / 2, sup - 9, 'hueco', { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)' });
+    }
+    for (var t = 0; t <= max; t += paso) {
+      el('line', { x1: x(t), x2: x(t), y1: sup - 4, y2: sup + rs.length * fila, stroke: 'var(--line)', 'stroke-width': 1 }, svg);
+      texto(svg, x(t), H - 8, eurosCorto(t), { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)' });
+    }
+    rs.forEach(function (r, i) {
+      var y = sup + (rs.length - 1 - i) * fila + fila / 2, g = esInditex(r.marca) ? 'inditex' : 'otros';
+      var grupo = el('g', { tabindex: 0, role: 'img', 'aria-label': r.marca + ': mediana ' + euros(r.mediana) + ', de ' + euros(r.p25) + ' a ' + euros(r.p75) }, svg);
+      el('rect', { x: 0, y: y - fila / 2, width: W, height: fila, fill: 'transparent' }, grupo);
+      texto(grupo, izq - 12, y + 4, r.marca, { 'text-anchor': 'end', 'font-size': 13, 'font-weight': 600, fill: g === 'inditex' ? 'var(--inditex)' : 'var(--otros-text)' });
+      el('rect', { x: x(r.p25), y: y - 9, width: Math.max(0, x(r.p75) - x(r.p25)), height: 18, rx: 3,
+        fill: r.muestraPequena ? 'url(#trama-' + g + '-' + cat + ')' : 'var(--' + g + '-band)' }, grupo);
+      el('circle', { cx: x(r.mediana), cy: y, r: 6, fill: g === 'inditex' ? 'var(--inditex)' : 'var(--otros)', stroke: 'var(--bg)', 'stroke-width': 2 }, grupo);
+      var xt = Math.max(x(r.p75), x(r.mediana)) + 12;
+      texto(grupo, xt, y + 1, euros(r.mediana), { 'font-size': 12.5, 'font-weight': 700, fill: g === 'inditex' ? 'var(--inditex)' : 'var(--otros-text)' });
+      texto(grupo, xt, y + 14, 'n = ' + r.n + (r.muestraPequena ? ' · muestra pequeña' : ''), { 'font-size': 10.5, fill: 'var(--ink-3)' });
+      conTip(grupo, '<b>' + esc(r.marca) + '</b> · ' + r.n + ' modelos' + (r.muestraPequena ? ' (muestra pequeña)' : '') +
+        '<br>Mínimo ' + euros(r.minimo) + ' · Máximo ' + euros(r.maximo) + '<br>P25 ' + euros(r.p25) + ' · Mediana ' + euros(r.mediana) +
+        ' · P75 ' + euros(r.p75) + '<br>Media ' + euros(r.media));
+    });
+    cont.appendChild(svg);
+  }
+
+  // 2. Solapamiento por parejas -------------------------------------------
+  function parejas() {
+    var act = activasOrdenadas().slice().sort(), out = [];
+    for (var i = 0; i < act.length; i++) for (var j = i + 1; j < act.length; j++) out.push([act[i], act[j]]);
+    return out;
+  }
+  function valoresSolape(a, b, cat, cual) {
+    return C.solape(preciosBasicos(a, cat), preciosBasicos(b, cat), ANCHOS[cual][cat]);
+  }
+  function dibujarSolape(cat, titulo) {
+    var cont = document.getElementById('g-sol-' + cat);
+    cont.innerHTML = '';
+    var otro = estado.ancho === 'principal' ? 'robustez' : 'principal';
+    var h3 = document.createElement('h3'); h3.textContent = titulo + ' · tramos de ' + ANCHOS[estado.ancho][cat] + ' €'; cont.appendChild(h3);
+    var ps = parejas().map(function (p) {
+      return { a: p[0], b: p[1], v: valoresSolape(p[0], p[1], cat, estado.ancho), alt: valoresSolape(p[0], p[1], cat, otro),
+        orden: (valoresSolape(p[0], p[1], 'camiseta', estado.ancho) || 0) + (valoresSolape(p[0], p[1], 'vaquero', estado.ancho) || 0) };
+    }).sort(function (x, y) { return y.orden - x.orden || (x.a + x.b).localeCompare(y.a + y.b); });
+    if (!ps.length) { var v = document.createElement('p'); v.className = 'vacio'; v.textContent = 'Activa al menos dos cadenas para comparar.'; cont.appendChild(v); return; }
+    var W = Math.max(300, cont.clientWidth || 520), izq = W < 480 ? 150 : 190, der = 56, fila = 26, sup = 4, inf = 26;
+    var H = sup + ps.length * fila + inf;
+    var x = function (v) { return izq + (W - izq - der) * v / 100; };
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Solapamiento por parejas: ' + titulo });
+    ((W - izq - der) < 300 ? [0, 50, 100] : [0, 25, 50, 75, 100]).forEach(function (t) {
+      el('line', { x1: x(t), x2: x(t), y1: sup, y2: sup + ps.length * fila, stroke: 'var(--line)', 'stroke-width': 1 }, svg);
+      texto(svg, x(t), H - 8, t + ' %', { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)' });
+    });
+    ps.forEach(function (p, i) {
+      var y = sup + i * fila + fila / 2;
+      var g = el('g', { tabindex: 0, role: 'img', 'aria-label': p.a + ' – ' + p.b + ': ' + (p.v == null ? 'sin datos' : p.v + ' %') }, svg);
+      el('rect', { x: 0, y: y - fila / 2, width: W, height: fila, fill: 'transparent' }, g);
+      texto(g, izq - 10, y + 4, p.a + ' – ' + p.b, { 'text-anchor': 'end', 'font-size': W < 480 ? 10.5 : 12, fill: 'var(--ink-2)' });
+      if (p.v == null) { texto(g, izq + 4, y + 4, 'sin datos en esta prenda', { 'font-size': 11, fill: 'var(--ink-3)' }); return; }
+      el('rect', { x: izq, y: y - 7, width: Math.max(0, x(p.v) - izq), height: 14, rx: 2, fill: 'var(--pair)' }, g);
+      if (p.alt != null) el('line', { x1: x(p.alt), x2: x(p.alt), y1: y - 11, y2: y + 11, stroke: 'var(--ink)', 'stroke-width': 1.5 }, g);
+      texto(g, Math.max(x(p.v), p.alt != null ? x(p.alt) : 0) + 6, y + 4, p.v + ' %', { 'font-size': 11.5, 'font-weight': 600, fill: 'var(--ink)' });
+      conTip(g, '<b>' + esc(p.a) + ' – ' + esc(p.b) + '</b><br>Tramos de ' + ANCHOS[estado.ancho][cat] + ' €: ' + p.v + ' %<br>Tramos de ' +
+        ANCHOS[otro][cat] + ' €: ' + pct(p.alt) + (p.alt != null && Math.abs(p.alt - p.v) >= 15 ? '<br>Cambia mucho con el ancho del tramo: tómalo con cautela.' : ''));
+    });
+    cont.appendChild(svg);
+  }
+
+  // 3. Escalones de Inditex ------------------------------------------------
+  function dibujarEscalones(cat, titulo) {
+    var cont = document.getElementById('r-' + cat);
+    cont.innerHTML = '';
+    var h3 = document.createElement('h3'); h3.textContent = titulo; cont.appendChild(h3);
+    var rs = resumenes(cat).filter(function (r) { return esInditex(r.marca); });
+    if (rs.length < 2) { var v = document.createElement('p'); v.className = 'vacio'; v.textContent = 'Activa al menos dos marcas de Inditex.'; cont.appendChild(v); return; }
+    var div = document.createElement('div'); div.className = 'cadena';
+    rs.forEach(function (r, i) {
+      if (i > 0) {
+        var x = document.createElement('span'); x.className = 'x'; x.textContent = veces(r.mediana / rs[i - 1].mediana);
+        x.title = euros(r.mediana) + ' / ' + euros(rs[i - 1].mediana); div.appendChild(x);
+      }
+      var m = document.createElement('span'); m.className = 'm';
+      var b = document.createElement('b'); b.textContent = euros(r.mediana);
+      var s = document.createElement('small'); s.textContent = r.marca + (r.muestraPequena ? ' · muestra pequeña' : '');
+      m.appendChild(b); m.appendChild(s); div.appendChild(m);
+    });
+    cont.appendChild(div);
+    var nota = document.createElement('p'); nota.className = 'nota';
+    nota.textContent = 'Cálculo: ' + rs.slice(1).map(function (r, i) { return euros(r.mediana) + ' / ' + euros(rs[i].mediana) + ' = ' + (r.mediana / rs[i].mediana).toFixed(2).replace('.', ','); }).join(' · ');
+    cont.appendChild(nota);
+  }
+
+  // 4. Hueco ---------------------------------------------------------------
+  function rellenarSelects() {
+    var act = activasOrdenadas();
+    ['hueco-a', 'hueco-b'].forEach(function (id, k) {
+      var s = document.getElementById(id), actual = k === 0 ? estado.huecoA : estado.huecoB;
+      s.innerHTML = '';
+      act.forEach(function (m) { var o = document.createElement('option'); o.value = m; o.textContent = m; if (m === actual) o.selected = true; s.appendChild(o); });
+      if (act.indexOf(actual) < 0 && act.length) { if (k === 0) estado.huecoA = s.value; else estado.huecoB = s.value; }
+    });
+  }
+  function dibujarHueco(cat, titulo) {
+    var cont = document.getElementById('h-' + cat);
+    cont.innerHTML = '';
+    var h3 = document.createElement('h3'); h3.textContent = titulo; cont.appendChild(h3);
+    var ra = C.resumen(estado.huecoA && marcas[estado.huecoA] ? preciosBasicos(estado.huecoA, cat) : []);
+    var rb = C.resumen(estado.huecoB && marcas[estado.huecoB] ? preciosBasicos(estado.huecoB, cat) : []);
+    var p = document.createElement('p');
+    if (!ra || !rb || estado.huecoA === estado.huecoB) { p.className = 'vacio'; p.textContent = 'Elige dos cadenas distintas con prendas básicas en esta categoría.'; cont.appendChild(p); return; }
+    if (C.redondearEuro(ra.p75) >= C.redondearEuro(rb.p25) - 1) {
+      p.className = 'vacio'; p.textContent = 'No hay hueco: el P75 de ' + estado.huecoA + ' (' + euros(ra.p75) + ') llega al P25 de ' + estado.huecoB + ' (' + euros(rb.p25) + ').';
+      cont.appendChild(p); return;
+    }
+    var filas = [], tot = 0, totN = 0;
+    activasOrdenadas().forEach(function (m) {
+      var pr = preciosBasicos(m, cat); if (!pr.length) return;
+      var h = C.enHueco(pr, ra.p75, rb.p25); h.marca = m; filas.push(h); tot += h.enHueco; totN += h.n;
+    });
+    filas.sort(function (a, b) { return b.pct - a.pct || a.marca.localeCompare(b.marca); });
+    p.className = 'nota';
+    p.textContent = 'De ' + euros(ra.p75) + ' a ' + euros(rb.p25) + ' · ' + Math.round(100 * tot / totN) + ' % de los modelos de las cadenas activas (' + tot + ' de ' + totN + ').';
+    cont.appendChild(p);
+    var tw = document.createElement('div'); tw.className = 'tabla-wrap';
+    var t = document.createElement('table');
+    t.innerHTML = '<thead><tr><th>Cadena</th><th class="izq">% de sus modelos en el hueco</th><th>Modelos</th></tr></thead>';
+    var tb = document.createElement('tbody');
+    filas.forEach(function (f) {
+      var tr = document.createElement('tr');
+      var td1 = document.createElement('td'); td1.textContent = f.marca; td1.className = esInditex(f.marca) ? 'marca-inditex' : 'marca-otros';
+      var td2 = document.createElement('td'); td2.className = 'izq';
+      var bar = document.createElement('span'); bar.className = 'barra' + (esInditex(f.marca) ? ' inditex' : ''); bar.style.width = (f.pct * 1.2) + 'px';
+      td2.appendChild(bar); td2.appendChild(document.createTextNode(f.pct + ' %'));
+      var td3 = document.createElement('td'); td3.textContent = f.enHueco + ' de ' + f.n;
+      tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3); tb.appendChild(tr);
+    });
+    t.appendChild(tb); tw.appendChild(t); cont.appendChild(tw);
+  }
+
+  // 5. Tabla ---------------------------------------------------------------
+  function dibujarTabla() {
+    var t = document.getElementById('tabla-precios');
+    t.innerHTML = '<thead><tr><th>Prenda</th><th class="izq">Cadena</th><th>n</th><th>Mínimo</th><th>P25</th><th>Mediana</th><th>P75</th><th>Máximo</th><th>Media</th><th class="izq">Nota</th></tr></thead>';
+    var tb = document.createElement('tbody');
+    CATS.forEach(function (c) {
+      resumenes(c[0]).forEach(function (r) {
+        var tr = document.createElement('tr');
+        [c[1], r.marca, r.n, euros(r.minimo), euros(r.p25), euros(r.mediana), euros(r.p75), euros(r.maximo), euros(r.media), r.muestraPequena ? 'muestra pequeña' : '']
+          .forEach(function (v, i) {
+            var td = document.createElement('td'); td.textContent = v;
+            if (i === 1) { td.className = 'izq ' + (esInditex(r.marca) ? 'marca-inditex' : 'marca-otros'); }
+            if (i === 9) td.className = 'izq pequena';
+            tr.appendChild(td);
+          });
+        tb.appendChild(tr);
+      });
+    });
+    t.appendChild(tb);
+  }
+
+  // ---------------------------------------------------------------- controles
+  function dibujarChips() {
+    var c = document.getElementById('chips'); c.innerHTML = '';
+    Object.keys(marcas).forEach(function (m) {
+      var b = document.createElement('button'); b.type = 'button';
+      b.className = 'chip' + (esInditex(m) ? ' inditex' : ''); b.id = 'chip-' + m.replace(/[^A-Za-z0-9]/g, '_');
+      b.setAttribute('aria-pressed', estado.activas.indexOf(m) >= 0 ? 'true' : 'false');
+      var pt = document.createElement('span'); pt.className = 'pt'; b.appendChild(pt);
+      b.appendChild(document.createTextNode(m + (esInditex(m) ? ' · Inditex' : '')));
+      b.addEventListener('click', function (ev) {
+        if (ev.target.classList.contains('quitar')) return;
+        var i = estado.activas.indexOf(m);
+        if (i >= 0) estado.activas.splice(i, 1); else estado.activas.push(m);
+        todo();
+      });
+      if (!marcas[m].base) {
+        var q = document.createElement('span'); q.className = 'quitar'; q.setAttribute('role', 'button'); q.tabIndex = 0;
+        q.setAttribute('aria-label', 'Eliminar ' + m + ' del panel'); q.textContent = '×';
+        var quitar = function (ev) {
+          ev.stopPropagation(); delete marcas[m]; delete estado.extra[m];
+          if (porMarca[m]) {   // si sustituía a una cadena original, vuelven sus datos originales
+            registrar(m, D.inditex.indexOf(m) >= 0 ? 'inditex' : 'otros', porMarca[m], true);
+          } else {
+            estado.activas = estado.activas.filter(function (x) { return x !== m; });
+          }
+          todo();
+        };
+        q.addEventListener('click', quitar);
+        q.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); quitar(ev); } });
+        b.appendChild(q);
+      }
+      c.appendChild(b);
+    });
+    var lg = document.getElementById('leyenda-escalera');
+    lg.innerHTML = '<span><i class="sw" style="background:var(--inditex-band)"></i>Inditex</span><span><i class="sw" style="background:var(--otros-band)"></i>Otros grupos</span>' +
+      '<span><i class="sw" style="background:repeating-linear-gradient(45deg,var(--otros-band) 0 3px,var(--bg) 3px 5px)"></i>Muestra pequeña (menos de 15 modelos)</span>' +
+      '<span><i class="sw" style="background:var(--gap);outline:1px solid var(--line)"></i>Hueco elegido abajo</span>';
+  }
+
+  function dibujarResumen() {
+    var act = activasOrdenadas(), n = 0;
+    act.forEach(function (m) { CATS.forEach(function (c) { n += preciosBasicos(m, c[0]).length; }); });
+    document.getElementById('resumen-linea').textContent = act.length + ' de ' + Object.keys(marcas).length + ' cadenas activas · ' + miles(n) + ' modelos básicos con precio';
+    document.getElementById('choques-sub').textContent = 'Solapamiento por tramos de precio: 0 % si dos cadenas no comparten ningún tramo, 100 % si reparten su catálogo igual. ' +
+      'La raya vertical es el mismo cálculo con tramos de ' + (estado.ancho === 'principal' ? '4 € / 8 €' : '5 € / 10 €') + ': si se aleja mucho de la barra, el resultado es frágil.';
+  }
+
+  function todo() {
+    rellenarSelects();
+    dibujarChips(); dibujarResumen();
+    CATS.forEach(function (c) { dibujarEscalera(c[0], c[1]); dibujarSolape(c[0], c[1]); dibujarEscalones(c[0], c[1]); dibujarHueco(c[0], c[1]); });
+    dibujarTabla();
+    ['principal', 'robustez'].forEach(function (v) { document.getElementById('ancho-' + v).setAttribute('aria-pressed', estado.ancho === v ? 'true' : 'false'); });
+    guardar();
+  }
+
+  document.getElementById('anchos').addEventListener('click', function (ev) {
+    var v = ev.target.getAttribute && ev.target.getAttribute('data-v'); if (!v) return; estado.ancho = v; todo();
+  });
+  document.getElementById('hueco-a').addEventListener('change', function (ev) { estado.huecoA = ev.target.value; todo(); });
+  document.getElementById('hueco-b').addEventListener('change', function (ev) { estado.huecoB = ev.target.value; todo(); });
+
+  // ---------------------------------------------------------------- CSV
+  function partirCSV(texto, sep) {
+    var filas = [], fila = [], campo = '', comillas = false;
+    for (var i = 0; i < texto.length; i++) {
+      var ch = texto[i];
+      if (comillas) {
+        if (ch === '"') { if (texto[i + 1] === '"') { campo += '"'; i++; } else comillas = false; }
+        else campo += ch;
+      } else if (ch === '"') comillas = true;
+      else if (ch === sep) { fila.push(campo); campo = ''; }
+      else if (ch === '\n' || ch === '\r') {
+        if (ch === '\r' && texto[i + 1] === '\n') i++;
+        fila.push(campo); campo = ''; if (fila.some(function (c) { return c.trim() !== ''; })) filas.push(fila); fila = [];
+      } else campo += ch;
+    }
+    fila.push(campo); if (fila.some(function (c) { return c.trim() !== ''; })) filas.push(fila);
+    return filas;
+  }
+  function numero(s) {
+    s = String(s == null ? '' : s).replace(/€/g, '').replace(/\s/g, '');
+    if (!s) return null;
+    if (s.indexOf(',') >= 0 && s.indexOf('.') < 0) s = s.replace(',', '.');
+    var x = Number(s); return isFinite(x) ? x : NaN;
+  }
+  function leerCSV(texto) {
+    texto = String(texto || '').replace(/^﻿/, '');
+    var primera = texto.split(/\r?\n/)[0] || '';
+    var sep = (primera.split(';').length > primera.split(',').length) ? ';' : ',';
+    var filas = partirCSV(texto, sep);
+    if (filas.length < 2) return { ok: false, error: 'El fichero necesita una fila de cabecera y al menos una fila de datos.' };
+    var cab = filas[0].map(function (c) { return c.trim().toLowerCase(); });
+    var col = function (nombre, alias) { var i = cab.indexOf(nombre); if (i < 0 && alias) i = cab.indexOf(alias); return i; };
+    var iM = col('marca'), iC = col('categoria', 'categoría'), iN = col('nombre'), iP = col('precio_actual', 'precio'), iO = col('precio_original'), iW = col('clasificacion_web');
+    var faltan = [['marca', iM], ['categoria', iC], ['nombre', iN], ['precio_actual', iP]].filter(function (x) { return x[1] < 0; }).map(function (x) { return x[0]; });
+    if (faltan.length) return { ok: false, error: 'Faltan columnas: ' + faltan.join(', ') + '. La cabecera que he leído es: ' + cab.join(', ') + '.' };
+    var porM = {}, avisos = [], malas = 0;
+    filas.slice(1).forEach(function (f, k) {
+      var cat = (f[iC] || '').trim().toLowerCase();
+      var m = (f[iM] || '').trim();
+      var p = numero(f[iP]), o = iO >= 0 ? numero(f[iO]) : null;
+      if (!m || (cat !== 'camiseta' && cat !== 'vaquero') || (p !== null && isNaN(p)) || (o !== null && isNaN(o))) { malas++; if (avisos.length < 3) avisos.push('fila ' + (k + 2)); return; }
+      var precio = (o !== null && !isNaN(o)) ? o : p;      // rebajas: se usa el precio original, como en sql/02
+      (porM[m] = porM[m] || []).push({ marca: m, categoria: cat, nombre: (f[iN] || '').trim(), precio: precio, clasificacion_web: iW >= 0 ? (f[iW] || '').trim() : '' });
+    });
+    if (!Object.keys(porM).length) return { ok: false, error: 'Ninguna fila es válida. Revisa que categoria sea camiseta o vaquero y que el precio sea un número.' };
+    return { ok: true, porMarca: porM, malas: malas, avisos: avisos };
+  }
+
+  var pendiente = null;
+  var res = document.getElementById('csv-resultado'), btnAnadir = document.getElementById('csv-anadir');
+  function mensaje(txt, error) { res.innerHTML = ''; var d = document.createElement('p'); d.className = 'mensaje' + (error ? ' error' : ''); d.textContent = txt; res.appendChild(d); }
+  document.getElementById('csv-fichero').addEventListener('change', function (ev) {
+    var f = ev.target.files && ev.target.files[0]; if (!f) return;
+    var lector = new FileReader();
+    lector.onload = function () { document.getElementById('csv-texto').value = lector.result; comprobar(); };
+    lector.onerror = function () { mensaje('No he podido leer el fichero. Prueba a pegar su contenido en el cuadro de texto.', true); };
+    lector.readAsText(f, 'utf-8');
+  });
+  function comprobar() {
+    pendiente = null; btnAnadir.disabled = true;
+    var texto = document.getElementById('csv-texto').value;
+    var r = leerCSV(texto);
+    if (!r.ok) { mensaje(r.error, true); return; }
+    var grupo = document.getElementById('csv-grupo').value, reglas = REGLAS;
+    res.innerHTML = '';
+    Object.keys(r.porMarca).forEach(function (m) {
+      var filas = r.porMarca[m]; filas.forEach(function (f) { f.motivo = C.clasificar(f, reglas); });
+      var bas = filas.filter(function (f) { return f.motivo === '7_basica'; });
+      var cuenta = function (cat) { return bas.filter(function (f) { return f.categoria === cat && f.precio != null; }).length; };
+      var p = document.createElement('p'); p.className = 'mensaje';
+      p.textContent = m + (marcas[m] && marcas[m].base ? ' ya está en el panel con los datos originales: se sustituirán por los del fichero.' : '') +
+        ' · ' + filas.length + ' modelos leídos, ' + bas.length + ' básicos (' + cuenta('camiseta') + ' camisetas y ' + cuenta('vaquero') + ' vaqueros con precio).' +
+        (cuenta('camiseta') && cuenta('camiseta') < 15 || cuenta('vaquero') && cuenta('vaquero') < 15 ? ' Alguna prenda tiene menos de 15 modelos: saldrá como muestra pequeña.' : '');
+      res.appendChild(p);
+      var h = document.createElement('h3'); h.textContent = 'Revisa las básicas de ' + m; res.appendChild(h);
+      var w = document.createElement('div'); w.className = 'revision';
+      var t = document.createElement('table'); t.innerHTML = '<thead><tr><th>Prenda</th><th class="izq">Nombre</th><th>Precio</th></tr></thead>';
+      var tb = document.createElement('tbody');
+      bas.slice().sort(function (a, b) { return a.categoria.localeCompare(b.categoria) || (a.precio || 0) - (b.precio || 0); }).forEach(function (f) {
+        var tr = document.createElement('tr');
+        [f.categoria, f.nombre, euros(f.precio)].forEach(function (v, i) { var td = document.createElement('td'); td.textContent = v; if (i === 1) td.className = 'izq'; tr.appendChild(td); });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); w.appendChild(t); res.appendChild(w);
+    });
+    if (r.malas) { var a = document.createElement('p'); a.className = 'mensaje error'; a.textContent = r.malas + ' filas no se han podido leer (por ejemplo, ' + r.avisos.join(', ') + ') y se han descartado.'; res.appendChild(a); }
+    pendiente = { r: r, grupo: grupo, texto: texto }; btnAnadir.disabled = false;
+  }
+  document.getElementById('csv-comprobar').addEventListener('click', comprobar);
+  btnAnadir.addEventListener('click', function () {
+    if (!pendiente) return;
+    Object.keys(pendiente.r.porMarca).forEach(function (m) {
+      registrar(m, pendiente.grupo, pendiente.r.porMarca[m], false);
+      estado.extra[m] = { grupo: pendiente.grupo, texto: pendiente.texto };
+      if (estado.activas.indexOf(m) < 0) estado.activas.push(m);
+    });
+    mensaje('Añadido. Puedes activarla o quitarla desde los botones de cadenas, o eliminarla con la ×.');
+    pendiente = null; btnAnadir.disabled = true; todo();
+  });
+
+  // ---------------------------------------------------------------- arranque
+  cargar();
+  todo();
+  var ultimoAncho = 0;
+  window.addEventListener('resize', function () {
+    var w = document.querySelector('.wrap').clientWidth; if (Math.abs(w - ultimoAncho) < 8) return; ultimoAncho = w;
+    CATS.forEach(function (c) { dibujarEscalera(c[0], c[1]); dibujarSolape(c[0], c[1]); });
+  });
+})();
+</script>

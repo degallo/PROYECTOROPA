@@ -67,6 +67,7 @@ python scripts/construir_bd.py              # crea data/moda.db desde el CSV y e
 python scripts/analisis_complementario.py   # tablas del paso 1
 python scripts/graficos.py                  # gráficos del paso 2
 python scripts/crear_deck.py                # deck del paso 3
+python scripts/crear_panel.py               # panel web interactivo (comprueba con Node que cuadra con el SQL)
 ```
 
 | Fichero | Qué hace |
@@ -82,6 +83,7 @@ python scripts/crear_deck.py                # deck del paso 3
 | `scripts/graficos.py` | Paso 2: gráficos PNG a 300 ppp → `output/graficos/` |
 | `scripts/crear_deck.py` | Paso 3: `output/posicionamiento_precio_moda.pptx` (python-pptx, Calibri; cifras leídas de la base y de `output/tablas/`) |
 | `output/posicionamiento_precio_moda.pdf` | El deck exportado a PDF (LibreOffice; en PowerPoint: Archivo → Exportar → PDF). Hay que regenerarlo cada vez que cambie el .pptx |
+| `scripts/crear_panel.py` + `scripts/panel/` | Panel web `output/panel/escalera_precios.html` (publicado como artifact privado). Mete el catálogo y las 191 reglas en la página; `calc.js` reproduce `sql/04`, `v_resumen_precios`, `v_solape_pares` y el hueco. Antes de escribir la página comprueba con Node que todo coincide con el SQL y, si no, se para. Permite activar o quitar cadenas, cambiar el ancho de los tramos y añadir una cadena desde un CSV (`marca, categoria, nombre, precio_actual` + opcionales `precio_original`, `clasificacion_web`) |
 
 **Regla de coherencia:** todo lo que calcules en Python tiene que coincidir con estas vistas. Si no coincide, es un error tuyo de configuración, no un hallazgo nuevo. Usa las vistas como fuente o verifica contra ellas.
 
