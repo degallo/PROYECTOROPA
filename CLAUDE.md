@@ -81,6 +81,7 @@ python scripts/crear_deck.py                # deck del paso 3
 | `scripts/analisis_complementario.py` | Paso 1: arquitectura de precios, hueco de la escalera, ratios y "H&M rodea a Zara" → `output/tablas/*.csv` |
 | `scripts/graficos.py` | Paso 2: gráficos PNG a 300 ppp → `output/graficos/` |
 | `scripts/crear_deck.py` | Paso 3: `output/posicionamiento_precio_moda.pptx` (python-pptx, Calibri; cifras leídas de la base y de `output/tablas/`) |
+| `output/posicionamiento_precio_moda.pdf` | El deck exportado a PDF (LibreOffice; en PowerPoint: Archivo → Exportar → PDF). Hay que regenerarlo cada vez que cambie el .pptx |
 
 **Regla de coherencia:** todo lo que calcules en Python tiene que coincidir con estas vistas. Si no coincide, es un error tuyo de configuración, no un hallazgo nuevo. Usa las vistas como fuente o verifica contra ellas.
 

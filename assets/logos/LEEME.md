@@ -5,7 +5,7 @@ Si falta alguno, usa el nombre de cada marca en texto (para que la portada sea c
 
 | Marca | Fichero esperado | Estado |
 |---|---|---|
-| Primark | `primark.png` | falta |
+| Primark | `primark.png` | ✅ (enviado por Javi) |
 | Lefties | `lefties.png` | falta |
 | H&M | `hm.png` | ✅ (Simple Icons, CC0) |
 | Zara | `zara.png` | ✅ (Simple Icons, CC0) |
