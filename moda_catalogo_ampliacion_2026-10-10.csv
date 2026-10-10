@@ -1,0 +1,487 @@
+marca,categoria,nombre,precio_actual,precio_original,referencia_modelo,clasificacion_web,n_colores,url,fecha_recogida
+Mango,camiseta,Camiseta lazada ajustable,25.99,,37047811,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-lazada-ajustable/37047811,2026-10-10
+Mango,camiseta,Camiseta algodón entallada,15.99,,37095843,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-algodon-entallada/37095843,2026-10-10
+Mango,camiseta,Camiseta cuello alto,15.99,,37097782,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-cuello-alto/37097782,2026-10-10
+Mango,camiseta,Camiseta 100% algodón manga ancha,19.99,,37027816,camisetas/manga-larga,2,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-100-algodon-manga-ancha/37027816,2026-10-10
+Mango,camiseta,Camiseta cuello barco manga larga,9.99,15.99,37094103,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-cuello-barco-manga-larga/37094103,2026-10-10
+Mango,camiseta,Camiseta rayas manga larga,12.99,17.99,37065837,camisetas/basicas,2,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-rayas-manga-larga/37065837,2026-10-10
+Mango,camiseta,Camiseta entallada manga larga,9.99,15.99,37095838,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-entallada-manga-larga/37095838,2026-10-10
+Mango,camiseta,Polo algodón rayas contraste,25.99,,37084070,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/polo-algodon-rayas-contraste/37084070,2026-10-10
+Mango,camiseta,Camiseta asimétrica bambi,25.99,,37016017,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-asimetrica-bambi/37016017,2026-10-10
+Mango,camiseta,Camiseta entallada cuello alto,19.99,,37035856,camisetas/manga-larga,2,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-entallada-cuello-alto/37035856,2026-10-10
+Mango,camiseta,Camiseta entallada cuello barco,15.99,,37016016,camisetas/basicas,2,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-entallada-cuello-barco/37016016,2026-10-10
+Mango,camiseta,Camiseta entallada ribete encaje,22.99,,37045855,camisetas/manga-larga,2,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-entallada-ribete-encaje/37045855,2026-10-10
+Mango,camiseta,Camiseta entallada cuello pico,15.99,,37016015,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-entallada-cuello-pico/37016015,2026-10-10
+Mango,camiseta,Camiseta entallada lisa,15.99,,37077806,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-entallada-lisa/37077806,2026-10-10
+Mango,camiseta,Camiseta canalé detalles festoneados,15.99,,37035852,camisetas/basicas,2,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-canale-detalles-festoneados/37035852,2026-10-10
+Mango,camiseta,Camiseta cuello barco detalle drapeado,19.99,,37037814,camisetas/manga-larga,2,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-cuello-barco-detalle-drapeado/37037814,2026-10-10
+Mango,camiseta,Camiseta algodón rayas,19.99,,37054074,camisetas/basicas,1,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-algodon-rayas/37054074,2026-10-10
+Mango,camiseta,Camiseta canalé cuello alto,19.99,,37077792,camisetas/basicas,2,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-canale-cuello-alto/37077792,2026-10-10
+Mango,camiseta,Camiseta canalé botones decorativos,29.99,,37047810,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-canale-botones-decorativos/37047810,2026-10-10
+Mango,camiseta,Camiseta canalé botones,29.99,,37057938,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-canale-botones/37057938,2026-10-10
+Mango,camiseta,Cárdigan 100% algodón botones,22.99,,37057944,camisetas/basicas,2,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/cardigan-100-algodon-botones/37057944,2026-10-10
+Mango,camiseta,Camiseta lyocell detalle costura,29.99,,37026013,camisetas/basicas,1,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-lyocell-detalle-costura/37026013,2026-10-10
+Mango,camiseta,Camiseta cuello pico canalé,19.99,,37054075,camisetas/basicas,1,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-cuello-pico-canale/37054075,2026-10-10
+Mango,camiseta,Camiseta cuello barco lisa,15.99,,37097800,camisetas/basicas,3,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-cuello-barco-lisa/37097800,2026-10-10
+Mango,camiseta,Camiseta animal print fruncidos,25.99,,37047939,camisetas/manga-larga,2,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-animal-print-fruncidos/37047939,2026-10-10
+Mango,camiseta,Camiseta fruncida manga larga,19.99,,37057809,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-fruncida-manga-larga/37057809,2026-10-10
+Mango,camiseta,Camiseta semitransparente botones,25.99,,37047812,camisetas/manga-larga,1,https://shop.mango.com/es/es/p/mujer/camisetas/manga-larga/camiseta-semitransparente-botones/37047812,2026-10-10
+Mango,camiseta,Camiseta rayas cuello barco,12.99,19.99,37074081,camisetas/basicas,1,https://shop.mango.com/es/es/p/mujer/camisetas/basicas/camiseta-rayas-cuello-barco/37074081,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto,29.99,,37004100,vaqueros/tallas-plus,3,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto/37004100,2026-10-10
+Mango,vaquero,Jeans balloon crop,39.99,,37017817,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-crop/37017817,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,29.99,,37004091,vaqueros/balloon,5,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37004091,2026-10-10
+Mango,vaquero,Jeans rectos tachuelas,59.99,,37098286,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tachuelas/37098286,2026-10-10
+Mango,vaquero,Jeans balloon crop,39.99,,37017816,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-crop/37017816,2026-10-10
+Mango,vaquero,Jeans rectos strass,59.99,,37097807,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-strass/37097807,2026-10-10
+Mango,vaquero,Jeans rectos efecto encerado,59.99,,37017940,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-efecto-encerado/37017940,2026-10-10
+Mango,vaquero,Pantalón pana balloon,39.99,,37047786,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/pantalon-pana-balloon/37047786,2026-10-10
+Mango,vaquero,Jeans balloon acabado brillante,49.99,,37038288,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-acabado-brillante/37038288,2026-10-10
+Mango,vaquero,Jeans wide leg brillantes,59.99,,37038287,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-brillantes/37038287,2026-10-10
+Mango,vaquero,Jeans rectos efecto desgastado,29.99,,37077777,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-efecto-desgastado/37077777,2026-10-10
+Mango,vaquero,Pantalón flare pana,39.99,,37047788,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/pantalon-flare-pana/37047788,2026-10-10
+Mango,vaquero,Jeans rectos bajo vuelto,49.99,,37097937,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-bajo-vuelto/37097937,2026-10-10
+Mango,vaquero,Pantalón balloon pana,39.99,,37037785,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/pantalon-balloon-pana/37037785,2026-10-10
+Mango,vaquero,Jeans flare estampado floral,49.99,,37059134,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-estampado-floral/37059134,2026-10-10
+Mango,vaquero,Pantalón wide leg terciopelo,39.99,,37039117,vaqueros/tallas-plus,2,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/pantalon-wide-leg-terciopelo/37039117,2026-10-10
+Mango,vaquero,Jeans rectos tiro bajo,49.99,,37097943,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-bajo/37097943,2026-10-10
+Mango,vaquero,Jeans Miami rectos tiro medio,19.99,29.99,37024080,vaqueros/straight,4,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-miami-rectos-tiro-medio/37024080,2026-10-10
+Mango,vaquero,Jeans slim tiro alto,19.99,29.99,37054780,vaqueros/skinny--slim,2,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-tiro-alto/37054780,2026-10-10
+Mango,vaquero,Jeans slim tiro alto,19.99,29.99,37074779,vaqueros/skinny--slim,2,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-tiro-alto/37074779,2026-10-10
+Mango,vaquero,Jeans rectos tiro alto,19.99,29.99,37035853,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-alto/37035853,2026-10-10
+Mango,vaquero,Jeans rectos tiro alto,19.99,29.99,37085851,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-alto/37085851,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37015862,vaqueros/flare,5,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37015862,2026-10-10
+Mango,vaquero,Jeans Catherin culotte tiro alto,29.99,,37024082,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-catherin-culotte-tiro-alto/37024082,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37015868,vaqueros/flare,5,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37015868,2026-10-10
+Mango,vaquero,Jeans Catherin culotte tiro alto,29.99,,37034077,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-catherin-culotte-tiro-alto/37034077,2026-10-10
+Mango,vaquero,Pantalón pana wide leg,39.99,,37057780,vaqueros/wide-leg,2,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/pantalon-pana-wide-leg/37057780,2026-10-10
+Mango,vaquero,Jeans wide leg cuadros,39.99,,37015879,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-cuadros/37015879,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto,29.99,,37004092,vaqueros/tallas-plus,3,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto/37004092,2026-10-10
+Mango,vaquero,Jeans Danila wide leg tiro alto,29.99,,37004099,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-danila-wide-leg-tiro-alto/37004099,2026-10-10
+Mango,vaquero,Jeans Newmom confort tiro alto,29.99,,37004103,vaqueros/mom,4,https://shop.mango.com/es/es/p/mujer/vaqueros/mom/jeans-newmom-confort-tiro-alto/37004103,2026-10-10
+Mango,vaquero,Jeans Miami rectos tiro medio,19.99,29.99,37044434,vaqueros/straight,4,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-miami-rectos-tiro-medio/37044434,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37004089,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37004089,2026-10-10
+Mango,vaquero,Jeans rectos leopardo,39.99,,37005900,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-leopardo/37005900,2026-10-10
+Mango,vaquero,Pantalón denim barrel,39.99,,37076748,pantalones/bombachos,1,https://shop.mango.com/es/es/p/mujer/pantalones/bombachos/pantalon-denim-barrel/37076748,2026-10-10
+Mango,vaquero,Jeans Miami rectos tiro medio,19.99,29.99,37024079,vaqueros/straight,4,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-miami-rectos-tiro-medio/37024079,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37004095,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37004095,2026-10-10
+Mango,vaquero,Jeans rectos tiro bajo,19.99,29.99,37035854,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-bajo/37035854,2026-10-10
+Mango,vaquero,Jeans Danila wide leg tiro alto,29.99,,37004097,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-danila-wide-leg-tiro-alto/37004097,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos parche,19.99,29.99,37071368,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-bolsillos-parche/37071368,2026-10-10
+Mango,vaquero,Jeans rectos tiro alto,19.99,29.99,37045852,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-alto/37045852,2026-10-10
+Mango,vaquero,Jeans Newmom confort tiro alto,29.99,,37004104,vaqueros/mom,4,https://shop.mango.com/es/es/p/mujer/vaqueros/mom/jeans-newmom-confort-tiro-alto/37004104,2026-10-10
+Mango,vaquero,Jeans balloon costuras,35.99,,37015882,vaqueros/balloon,4,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-costuras/37015882,2026-10-10
+Mango,vaquero,Jeans Newmom confort tiro alto,29.99,,37004102,vaqueros/mom,4,https://shop.mango.com/es/es/p/mujer/vaqueros/mom/jeans-newmom-confort-tiro-alto/37004102,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos parche,29.99,,37044076,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-bolsillos-parche/37044076,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,29.99,,37034114,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37034114,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,29.99,,37037796,vaqueros/balloon,5,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37037796,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37047791,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37047791,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto,35.99,,37086747,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-tiro-alto/37086747,2026-10-10
+Mango,vaquero,Jeans balloon costuras,35.99,,37015877,vaqueros/balloon,4,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-costuras/37015877,2026-10-10
+Mango,vaquero,Jeans Catherin culotte tiro alto,29.99,,37024081,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-catherin-culotte-tiro-alto/37024081,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,25.99,35.99,37034118,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37034118,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37015863,vaqueros/flare,5,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37015863,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37091373,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37091373,2026-10-10
+Mango,vaquero,Jeans wide leg botones laterales,29.99,,37005889,vaqueros/wide-leg,4,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-botones-laterales/37005889,2026-10-10
+Mango,vaquero,Jeans Miami rectos tiro medio,19.99,29.99,37064451,vaqueros/straight,4,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-miami-rectos-tiro-medio/37064451,2026-10-10
+Mango,vaquero,Jeans rectos tiro bajo,19.99,29.99,37015858,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-bajo/37015858,2026-10-10
+Mango,vaquero,Jeans rectos tiro bajo,19.99,29.99,37015883,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-bajo/37015883,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto costuras,29.99,,37075842,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto-costuras/37075842,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37027793,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37027793,2026-10-10
+Mango,vaquero,Jeans wide leg tiro bajo,19.99,29.99,37022894,vaqueros/wide-leg,2,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-tiro-bajo/37022894,2026-10-10
+Mango,vaquero,Jeans Danila wide leg tiro alto,29.99,,37051370,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-danila-wide-leg-tiro-alto/37051370,2026-10-10
+Mango,vaquero,Jeans balloon rayas,39.99,,37017142,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-rayas/37017142,2026-10-10
+Mango,vaquero,Jeans Matilda rectos tiro alto,29.99,,37024121,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-matilda-rectos-tiro-alto/37024121,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,29.99,,37005888,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37005888,2026-10-10
+Mango,vaquero,Jeans balloon costuras,35.99,,37015873,vaqueros/balloon,4,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-costuras/37015873,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37015876,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37015876,2026-10-10
+Mango,vaquero,Jeans wide leg botones laterales,29.99,,37083322,vaqueros/tallas-plus,4,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-botones-laterales/37083322,2026-10-10
+Mango,vaquero,Jeans flocados rectos,49.99,,37027794,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-flocados-rectos/37027794,2026-10-10
+Mango,vaquero,Jeans balloon crop,49.99,,37005895,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-crop/37005895,2026-10-10
+Mango,vaquero,Jeans balloon tachuelas,49.99,,37015881,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tachuelas/37015881,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37045843,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37045843,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,29.99,,37064790,vaqueros/balloon,5,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37064790,2026-10-10
+Mango,vaquero,Jeans Danila wide leg tiro alto,29.99,,37015870,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-danila-wide-leg-tiro-alto/37015870,2026-10-10
+Mango,vaquero,Jeans wide leg strass,59.99,,37005898,vaqueros/tallas-plus,1,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-strass/37005898,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37015864,vaqueros/flare,5,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37015864,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,29.99,,37014096,vaqueros/balloon,5,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37014096,2026-10-10
+Mango,vaquero,Jeans Newmom confort tiro alto,29.99,,37015880,vaqueros/mom,4,https://shop.mango.com/es/es/p/mujer/vaqueros/mom/jeans-newmom-confort-tiro-alto/37015880,2026-10-10
+Mango,vaquero,Pantalón pana recto,39.99,,37077779,vaqueros/straight,2,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/pantalon-pana-recto/37077779,2026-10-10
+Mango,vaquero,Pantalón flare pana,29.99,,37037789,vaqueros/tallas-plus,2,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/pantalon-flare-pana/37037789,2026-10-10
+Mango,vaquero,jeans wide leg efecto lavado,19.99,29.99,37052892,vaqueros/tallas-plus,1,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-efecto-lavado/37052892,2026-10-10
+Mango,vaquero,Jeans Danila wide leg tiro alto,29.99,,37004098,vaqueros/wide-leg,5,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-danila-wide-leg-tiro-alto/37004098,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto costuras,29.99,,37015869,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto-costuras/37015869,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos parche,29.99,,37004093,vaqueros/wide-leg,5,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-bolsillos-parche/37004093,2026-10-10
+Mango,vaquero,Jeans Catherin culotte tiro alto,29.99,,37081381,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-catherin-culotte-tiro-alto/37081381,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,39.99,,37045881,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37045881,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37076743,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37076743,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos parche,29.99,,37024084,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-bolsillos-parche/37024084,2026-10-10
+Mango,vaquero,Jeans wide leg botones laterales,29.99,,37074460,vaqueros/wide-leg,4,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-botones-laterales/37074460,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,25.99,,37004090,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37004090,2026-10-10
+Mango,vaquero,Pantalón flare pana,29.99,,37037790,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/pantalon-flare-pana/37037790,2026-10-10
+Mango,vaquero,Jeans rayas tiro medio,39.99,,37027141,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rayas-tiro-medio/37027141,2026-10-10
+Mango,vaquero,Jeans balloon bambi,39.99,,37005897,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-bambi/37005897,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,29.99,,37064781,vaqueros/balloon,5,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37064781,2026-10-10
+Mango,vaquero,Jeans wide leg strass,59.99,,37005899,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-strass/37005899,2026-10-10
+Mango,vaquero,Jeans flare tiro alto,29.99,,37024078,vaqueros/flare,5,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-alto/37024078,2026-10-10
+Mango,vaquero,Jeans slim tiro alto,29.99,,37017818,vaqueros/skinny--slim,1,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-tiro-alto/37017818,2026-10-10
+Mango,vaquero,Jeans flare tiro medio,29.99,,37015872,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-medio/37015872,2026-10-10
+Mango,vaquero,Pantalón pana wide leg,39.99,,37097803,vaqueros/tallas-plus,2,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/pantalon-pana-wide-leg/37097803,2026-10-10
+Mango,vaquero,Jeans flare tiro medio,29.99,,37015859,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-medio/37015859,2026-10-10
+Mango,vaquero,Jeans balloon tachuelas,49.99,,37015861,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tachuelas/37015861,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,29.99,,37024112,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37024112,2026-10-10
+Mango,vaquero,Pantalón flare pana,39.99,,37057787,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/pantalon-flare-pana/37057787,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,27.99,39.99,37062558,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37062558,2026-10-10
+Mango,vaquero,Jeans Matilda rectos tiro alto,29.99,,37015886,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-matilda-rectos-tiro-alto/37015886,2026-10-10
+Mango,vaquero,Jeans Matilda rectos tiro alto,29.99,,37034115,vaqueros/straight,3,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-matilda-rectos-tiro-alto/37034115,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto costuras,29.99,,37025844,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto-costuras/37025844,2026-10-10
+Mango,vaquero,Jeans flare tiro bajo,39.99,,37054797,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-bajo/37054797,2026-10-10
+Mango,vaquero,Jeans rectos strass,59.99,,37067808,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-rectos-strass/37067808,2026-10-10
+Mango,vaquero,Jeans slim tiro bajo,39.99,,37084801,vaqueros/skinny--slim,1,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-tiro-bajo/37084801,2026-10-10
+Mango,vaquero,Jeans slim desgastados,49.99,,37077939,vaqueros/skinny--slim,1,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-desgastados/37077939,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto costuras,29.99,,37061362,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto-costuras/37061362,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,35.99,,37075850,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37075850,2026-10-10
+Mango,vaquero,Pantalón pana wide leg,39.99,,37077804,vaqueros/wide-leg,2,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/pantalon-pana-wide-leg/37077804,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,49.99,,37005894,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37005894,2026-10-10
+Mango,vaquero,Jeans flare cintura contraste,39.99,,37015871,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-cintura-contraste/37015871,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,39.99,,37057781,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37057781,2026-10-10
+Mango,vaquero,Jeans balloon costuras,19.99,29.99,37071399,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-costuras/37071399,2026-10-10
+Mango,vaquero,Jeans balloon tobilleros,49.99,,37056369,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tobilleros/37056369,2026-10-10
+Mango,vaquero,Jeans flare tiro medio,35.99,,37015865,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-medio/37015865,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos parche,29.99,,37031364,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-bolsillos-parche/37031364,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos,39.99,,37034119,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-bolsillos/37034119,2026-10-10
+Mango,vaquero,Jeans wide leg tiro bajo,19.99,29.99,37042527,vaqueros/wide-leg,2,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-tiro-bajo/37042527,2026-10-10
+Mango,vaquero,Jeans balloon costuras,35.99,,37015887,vaqueros/balloon,4,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-costuras/37015887,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,19.99,29.99,37051349,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37051349,2026-10-10
+Mango,vaquero,Jeans wide leg bolsillos,29.99,,37047782,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-bolsillos/37047782,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,39.99,,37044075,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37044075,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto costuras,15.99,29.99,37041363,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto-costuras/37041363,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,39.99,,37064074,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37064074,2026-10-10
+Mango,vaquero,Jeans wide leg tiro alto,29.99,,37004101,vaqueros/tallas-plus,3,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-alto/37004101,2026-10-10
+Mango,vaquero,Jeans balloon tiro bajo,49.99,,37084802,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-bajo/37084802,2026-10-10
+Mango,vaquero,Jeans flare tiro medio,35.99,,37015866,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-tiro-medio/37015866,2026-10-10
+Mango,vaquero,Jeans slim tiro bajo,49.99,,37034798,vaqueros/skinny--slim,2,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-tiro-bajo/37034798,2026-10-10
+Mango,vaquero,Jeans wide leg tiro medio,19.99,29.99,37031378,vaqueros/wide-leg,2,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-tiro-medio/37031378,2026-10-10
+Mango,vaquero,Jeans tiro bajo lazo,19.99,29.99,37052902,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-tiro-bajo-lazo/37052902,2026-10-10
+Mango,vaquero,Jeans flare crop,29.99,,37056368,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-crop/37056368,2026-10-10
+Mango,vaquero,Jeans balloon rayas,39.99,,37015860,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-rayas/37015860,2026-10-10
+Mango,vaquero,Jeans tiro medio tachuelas,59.99,,37004106,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-tiro-medio-tachuelas/37004106,2026-10-10
+Mango,vaquero,Jeans wide leg brillantes,59.99,,37052559,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-brillantes/37052559,2026-10-10
+Mango,vaquero,Jeans rectos algodón,29.99,,37096367,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-algodon/37096367,2026-10-10
+Mango,vaquero,Jeans flare desgastados,49.99,,37005896,vaqueros/flare,1,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-desgastados/37005896,2026-10-10
+Mango,vaquero,Jeans efecto desgastado rectos,49.99,,37034120,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-efecto-desgastado-rectos/37034120,2026-10-10
+Mango,vaquero,Jeans Fiona flare tiro medio,29.99,,37024113,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-fiona-flare-tiro-medio/37024113,2026-10-10
+Mango,vaquero,Jeans rectos tachuelas,39.99,59.99,37004105,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tachuelas/37004105,2026-10-10
+Mango,vaquero,Jeans wide leg botones laterales,29.99,,37071547,vaqueros/wide-leg,4,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-botones-laterales/37071547,2026-10-10
+Mango,vaquero,Jeans tiro bajo lazo,19.99,29.99,37052901,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-tiro-bajo-lazo/37052901,2026-10-10
+Mango,vaquero,Jeans rectos tiro bajo,15.99,29.99,37041353,vaqueros/straight,2,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-bajo/37041353,2026-10-10
+Mango,vaquero,Jeans cargo bolsillos,19.99,39.99,37041376,vaqueros/straight,2,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-cargo-bolsillos/37041376,2026-10-10
+Mango,vaquero,Jeans cargo tiro medio,49.99,,37095880,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-cargo-tiro-medio/37095880,2026-10-10
+Mango,vaquero,Jeans rectos rayas,25.99,39.99,37081476,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-rayas/37081476,2026-10-10
+Mango,vaquero,Jeans wide leg cintura deshilachada,39.99,,37012528,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-cintura-deshilachada/37012528,2026-10-10
+Mango,vaquero,Jeans wide leg detalle contraste,49.99,,37005901,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-detalle-contraste/37005901,2026-10-10
+Mango,vaquero,Jeans Sienna flare crop,15.99,25.99,37091351,vaqueros/flare,8,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-sienna-flare-crop/37091351,2026-10-10
+Mango,vaquero,Jeans slim tiro bajo,49.99,,37024799,vaqueros/skinny--slim,2,https://shop.mango.com/es/es/p/mujer/vaqueros/skinny--slim/jeans-slim-tiro-bajo/37024799,2026-10-10
+Mango,vaquero,Jeans wide leg strass,59.99,,37052552,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-strass/37052552,2026-10-10
+Mango,vaquero,Jeans balloon tiro bajo,49.99,,37005891,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-bajo/37005891,2026-10-10
+Mango,vaquero,Jeans Catherin culotte tiro alto,19.99,29.99,37051369,vaqueros/tallas-plus,5,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-catherin-culotte-tiro-alto/37051369,2026-10-10
+Mango,vaquero,Jeans cargo bolsillos,19.99,39.99,37061375,vaqueros/straight,2,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-cargo-bolsillos/37061375,2026-10-10
+Mango,vaquero,Jeans wide leg tiro medio,15.99,29.99,37031379,vaqueros/tallas-plus,1,https://shop.mango.com/es/es/p/mujer/vaqueros/tallas-plus/jeans-wide-leg-tiro-medio/37031379,2026-10-10
+Mango,vaquero,Jeans balloon tiro medio,27.99,39.99,37052553,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tiro-medio/37052553,2026-10-10
+Mango,vaquero,Jeans wide leg flocados,49.99,,37027795,vaqueros/wide-leg,1,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-flocados/37027795,2026-10-10
+Mango,vaquero,Jeans rectos estampado floral,19.99,39.99,37021380,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-estampado-floral/37021380,2026-10-10
+Mango,vaquero,Jeans balloon rayas,25.99,39.99,37091493,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-rayas/37091493,2026-10-10
+Mango,vaquero,Jeans wide leg tiro bajo,19.99,29.99,37061374,vaqueros/wide-leg,2,https://shop.mango.com/es/es/p/mujer/vaqueros/wide-leg/jeans-wide-leg-tiro-bajo/37061374,2026-10-10
+Mango,vaquero,Jeans balloon tobilleros,27.99,39.99,37051471,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-tobilleros/37051471,2026-10-10
+Mango,vaquero,Jeans rectos rayas,25.99,39.99,37031377,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-rayas/37031377,2026-10-10
+Mango,vaquero,Jeans balloon crop,39.99,,37051470,vaqueros/balloon,2,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-crop/37051470,2026-10-10
+Mango,vaquero,Jeans rectos tiro bajo,15.99,29.99,37061352,vaqueros/straight,2,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-bajo/37061352,2026-10-10
+Mango,vaquero,Jeans rectos tiro medio,19.99,39.99,37071458,vaqueros/straight,1,https://shop.mango.com/es/es/p/mujer/vaqueros/straight/jeans-rectos-tiro-medio/37071458,2026-10-10
+Mango,vaquero,Jeans wide leg premamá,39.99,,37015177,vaqueros/maternity,3,https://shop.mango.com/es/es/p/mujer/vaqueros/maternity/jeans-wide-leg-premama/37015177,2026-10-10
+Mango,vaquero,Jeans wide leg premamá,39.99,,37015175,vaqueros/maternity,3,https://shop.mango.com/es/es/p/mujer/vaqueros/maternity/jeans-wide-leg-premama/37015175,2026-10-10
+Mango,vaquero,Jeans wide leg premamá,39.99,,37015176,vaqueros/maternity,3,https://shop.mango.com/es/es/p/mujer/vaqueros/maternity/jeans-wide-leg-premama/37015176,2026-10-10
+Mango,vaquero,Jeans wide leg premamá,39.99,,37025173,vaqueros/maternity,1,https://shop.mango.com/es/es/p/mujer/vaqueros/maternity/jeans-wide-leg-premama/37025173,2026-10-10
+Mango,vaquero,Jeans rectos premamá,39.99,,37015174,vaqueros/maternity,1,https://shop.mango.com/es/es/p/mujer/vaqueros/maternity/jeans-rectos-premama/37015174,2026-10-10
+Mango,vaquero,Pantalón recto bambula,19.99,29.99,27039058,pantalones/casual,1,https://shop.mango.com/es/es/p/mujer/pantalones/casual/pantalon-recto-bambula/27039058,2026-10-10
+Mango,vaquero,Jeans balloon premamá,39.99,,37015178,vaqueros/balloon,1,https://shop.mango.com/es/es/p/mujer/vaqueros/balloon/jeans-balloon-premama/37015178,2026-10-10
+Mango,vaquero,Jeans flare crop premamá,39.99,,37035172,vaqueros/flare,2,https://shop.mango.com/es/es/p/mujer/vaqueros/flare/jeans-flare-crop-premama/37035172,2026-10-10
+Springfield,camiseta,Top tachas,18.89,26.99,0074921,camisetas-y-tops,2,https://myspringfield.com/es/es/mujer/camisetas-y-tops/top-tachas/0074921.html,2026-10-10
+Springfield,camiseta,Camiseta manga larga murciélago,15.99,26.99,0074896,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-manga-larga-murcielago/0074896.html,2026-10-10
+Springfield,camiseta,Top cuello perking lace,16.09,22.99,0074917,camisetas-y-tops,2,https://myspringfield.com/es/es/mujer/camisetas-y-tops/top-cuello-perking-lace/0074917.html,2026-10-10
+Springfield,camiseta,Camiseta bimateria Inglaterra,16.09,22.99,0074912,camisetas-y-tops,2,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-bimateria-inglaterra/0074912.html,2026-10-10
+Springfield,camiseta,Camiseta bimateria Inglaterra,16.09,22.99,0074889,camisetas-y-tops,1,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-bimateria-inglaterra/0074889.html,2026-10-10
+Springfield,camiseta,Jersey faldón bimateria lace,20.99,29.99,0074918,jerseis,3,https://myspringfield.com/es/es/mujer/jerseis/jersey-faldon-bimateria-lace/0074918.html,2026-10-10
+Springfield,camiseta,Camiseta manga larga brillantes,18.89,26.99,0074927,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-manga-larga-brillantes/0074927.html,2026-10-10
+Springfield,camiseta,Camiseta manga larga brillante,18.89,26.99,0074930,camisetas-y-tops,2,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-manga-larga-brillante/0074930.html,2026-10-10
+Springfield,camiseta,"Polo cuello camisero ""san francisco""",20.99,29.99,0074898,camisetas-y-tops,1,https://myspringfield.com/es/es/mujer/camisetas-y-tops/polo-cuello-camisero-san-francisco/0074898.html,2026-10-10
+Springfield,camiseta,Camiseta cuello cuadrado algodón,12.59,17.99,6766070,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-cuello-cuadrado-algodon/6766070.html,2026-10-10
+Springfield,camiseta,Camiseta cuello cervantes,12.59,17.99,6766063,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-cuello-cervantes/6766063.html,2026-10-10
+Springfield,camiseta,Camiseta manga larga algodón,12.59,17.99,6766071,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-manga-larga-algodon/6766071.html,2026-10-10
+Springfield,camiseta,Camiseta manga larga lace,12.59,17.99,6766058,camisetas-y-tops,2,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-manga-larga-lace/6766058.html,2026-10-10
+Springfield,camiseta,Camiseta básica manga larga algodón,12.59,17.99,6766072,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-basica-manga-larga-algodon/6766072.html,2026-10-10
+Springfield,camiseta,Camiseta plumeti,12.59,17.99,6766065,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-plumeti/6766065.html,2026-10-10
+Springfield,camiseta,Camiseta rayas,12.59,17.99,6766067,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-rayas/6766067.html,2026-10-10
+Springfield,camiseta,Jersey bimateria,12.59,17.99,6766062,jerseis,3,https://myspringfield.com/es/es/mujer/jerseis/jersey-bimateria/6766062.html,2026-10-10
+Springfield,camiseta,Camiseta bimateria cuello,12.59,17.99,6766078,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-bimateria-cuello/6766078.html,2026-10-10
+Springfield,camiseta,Camiseta básica bimateria,12.59,17.99,6766066,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-basica-bimateria/6766066.html,2026-10-10
+Springfield,camiseta,Camiseta cuello lace,12.59,17.99,6766074,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-cuello-lace/6766074.html,2026-10-10
+Springfield,camiseta,Camiseta cuello perkins,12.59,17.99,6766076,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-cuello-perkins/6766076.html,2026-10-10
+Springfield,camiseta,Camiseta animal print,12.59,17.99,6766059,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-animal-print/6766059.html,2026-10-10
+Springfield,camiseta,Camiseta cuello barco,12.59,17.99,6766077,camisetas-y-tops,3,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-cuello-barco/6766077.html,2026-10-10
+Springfield,camiseta,Jersey chenilla rayas,26.99,,0072724,camisetas-y-tops,1,https://myspringfield.com/es/es/mujer/camisetas-y-tops/jersey-chenilla-rayas/0072724.html,2026-10-10
+Springfield,camiseta,Camiseta entallada rayas lurex,17.99,,6765992,camisetas-y-tops,1,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-entallada-rayas-lurex/6765992.html,2026-10-10
+Springfield,camiseta,Camiseta rayas lurex,17.99,,6765998,camisetas-y-tops,1,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-rayas-lurex/6765998.html,2026-10-10
+Springfield,camiseta,Camiseta panadera punto cortado,22.99,,0072719,camisetas-y-tops,1,https://myspringfield.com/es/es/mujer/camisetas-y-tops/camiseta-panadera-punto-cortado/0072719.html,2026-10-10
+Springfield,vaquero,Jeans recto cargo,17.99,35.99,6834414,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-recto-cargo/6834414.html,2026-10-10
+Springfield,vaquero,Jeans Straight cropped,27.99,39.99,6824456,vaqueros,2,https://myspringfield.com/es/es/mujer/vaqueros/jeans-straight-cropped/6824456.html,2026-10-10
+Springfield,vaquero,Jeans recto cargo,17.99,35.99,6834413,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-recto-cargo/6834413.html,2026-10-10
+Springfield,vaquero,Jeans sailor,25.19,35.99,6824459,vaqueros,3,https://myspringfield.com/es/es/mujer/vaqueros/jeans-sailor/6824459.html,2026-10-10
+Springfield,vaquero,Jeans recto cargo,17.99,35.99,6834412,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-recto-cargo/6834412.html,2026-10-10
+Springfield,vaquero,Jeans bootcut tiro alto,25.19,35.99,6824452,vaqueros,3,https://myspringfield.com/es/es/mujer/vaqueros/jeans-bootcut-tiro-alto/6824452.html,2026-10-10
+Springfield,vaquero,Jeans bootcut flare tiro bajo,25.19,35.99,6824453,vaqueros,3,https://myspringfield.com/es/es/mujer/vaqueros/jeans-bootcut-flare-tiro-bajo/6824453.html,2026-10-10
+Springfield,vaquero,Jeans wide leg tiro medio,27.99,39.99,6824457,vaqueros,2,https://myspringfield.com/es/es/mujer/vaqueros/jeans-wide-leg-tiro-medio/6824457.html,2026-10-10
+Springfield,vaquero,Jeans skinny push up,25.19,35.99,6844520,vaqueros,3,https://myspringfield.com/es/es/mujer/vaqueros/jeans-skinny-push-up/6844520.html,2026-10-10
+Springfield,vaquero,Jeans kick flare,25.19,35.99,6824451,vaqueros,3,https://myspringfield.com/es/es/mujer/vaqueros/jeans-kick-flare/6824451.html,2026-10-10
+Springfield,vaquero,Jeans sailor,27.99,39.99,6824460,vaqueros,2,https://myspringfield.com/es/es/mujer/vaqueros/jeans-sailor/6824460.html,2026-10-10
+Springfield,vaquero,Jeans skinny tiro alto,25.19,35.99,6844521,vaqueros,2,https://myspringfield.com/es/es/mujer/vaqueros/jeans-skinny-tiro-alto/6844521.html,2026-10-10
+Springfield,vaquero,Jeans sailor cintura alta color,25.19,35.99,6834418,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-sailor-cintura-alta-color/6834418.html,2026-10-10
+Springfield,vaquero,Jeans super wide tiro medio,27.99,39.99,6824458,vaqueros,2,https://myspringfield.com/es/es/mujer/vaqueros/jeans-super-wide-tiro-medio/6824458.html,2026-10-10
+Springfield,vaquero,Jeans flare bolsillos plastón,27.99,39.99,6824450,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-flare-bolsillos-plaston/6824450.html,2026-10-10
+Springfield,vaquero,Jeans sailor cintura alta color,25.19,35.99,6834438,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-sailor-cintura-alta-color/6834438.html,2026-10-10
+Springfield,vaquero,Jeans sailor cintura alta color,25.19,35.99,6834416,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-sailor-cintura-alta-color/6834416.html,2026-10-10
+Springfield,vaquero,Jeans skinny tiro alto,25.19,35.99,6844522,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-skinny-tiro-alto/6844522.html,2026-10-10
+Springfield,vaquero,Jeans sailor cintura alta color,25.19,35.99,6834417,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-sailor-cintura-alta-color/6834417.html,2026-10-10
+Springfield,vaquero,Jeans kick flare,25.19,35.99,6823571,vaqueros,2,https://myspringfield.com/es/es/mujer/vaqueros/jeans-kick-flare/6823571.html,2026-10-10
+Springfield,vaquero,Jeans skinny,25.19,35.99,6843364,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-skinny/6843364.html,2026-10-10
+Springfield,vaquero,Jeans slim cropped,25.19,35.99,6843363,vaqueros,3,https://myspringfield.com/es/es/mujer/vaqueros/jeans-slim-cropped/6843363.html,2026-10-10
+Springfield,vaquero,Jeans skinny,35.99,,6842431,vaqueros,1,https://myspringfield.com/es/es/mujer/vaqueros/jeans-skinny/6842431.html,2026-10-10
+Cortefiel,camiseta,Camiseta pliegue hombro,19.99,39.99,5684223,camisetas-y-tops,2,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-pliegue-hombro/5684223.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica escote mao,14.99,29.99,6324481,camisetas-y-tops,10,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-escote-mao/6324481.html,2026-10-10
+Cortefiel,camiseta,Camiseta pico con detalle puntilla,9.99,35.99,9164273,camisetas-y-tops,7,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-pico-con-detalle-puntilla/9164273.html,2026-10-10
+Cortefiel,camiseta,Camiseta escote barco,17.99,25.99,6324483,camisetas-y-tops,9,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-escote-barco/6324483.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica manga larga,17.99,29.99,6324498,camisetas-y-tops,4,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-manga-larga/6324498.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica escote pico,17.99,29.99,6324501,camisetas-y-tops,4,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-escote-pico/6324501.html,2026-10-10
+Cortefiel,camiseta,Camiseta guipur bajo,39.99,,6324482,camisetas-y-tops,3,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-guipur-bajo/6324482.html,2026-10-10
+Cortefiel,camiseta,Camiseta fluida floral,39.99,,6324486,camisetas-y-tops,3,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-fluida-floral/6324486.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica suave,29.99,,5684230,camisetas-y-tops,3,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-suave/5684230.html,2026-10-10
+Cortefiel,camiseta,Camiseta manga larga vivo contraste,39.99,,6324489,camisetas-y-tops,2,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-manga-larga-vivo-contraste/6324489.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica suave,29.99,,5684228,camisetas-y-tops,4,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-suave/5684228.html,2026-10-10
+Cortefiel,camiseta,Camiseta chenilla escote pico,39.99,,5684226,camisetas-y-tops,4,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-chenilla-escote-pico/5684226.html,2026-10-10
+Cortefiel,camiseta,Camiseta escote barco,39.99,,6324490,camisetas-y-tops,2,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-escote-barco/6324490.html,2026-10-10
+Cortefiel,camiseta,Camiseta bajo plana y detalle encaje,29.99,,6324503,camisetas-y-tops,2,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-bajo-plana-y-detalle-encaje/6324503.html,2026-10-10
+Cortefiel,camiseta,Camiseta pañuelo,14.99,29.99,9164277,camisetas-y-tops,2,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-panuelo/9164277.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica manga larga,29.99,,6324487,camisetas-y-tops,2,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-manga-larga/6324487.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica suave,29.99,,5684231,camisetas-y-tops,1,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-suave/5684231.html,2026-10-10
+Cortefiel,camiseta,Camiseta básica suave escote pico,29.99,,5684229,camisetas-y-tops,1,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-basica-suave-escote-pico/5684229.html,2026-10-10
+Cortefiel,camiseta,Camiseta volante,39.99,,6324495,camisetas-y-tops,1,https://cortefiel.com/es/es/mujer/camisetas-y-tops/camiseta-volante/6324495.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Campana Cropped,49.99,,8824021,vaqueros,4,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-campana-cropped/8824021.html,2026-10-10
+Cortefiel,vaquero,Jeans Pitillo Crop Color,19.99,59.99,9954070,vaqueros,4,https://cortefiel.com/es/es/mujer/vaqueros/jeans-pitillo-crop-color/9954070.html,2026-10-10
+Cortefiel,vaquero,Jeans Bootcut,29.99,59.99,8880974,vaqueros,3,https://cortefiel.com/es/es/mujer/vaqueros/jeans-bootcut/8880974.html,2026-10-10
+Cortefiel,vaquero,Jean sastre,39.99,69.99,6124142,pantalones,2,https://cortefiel.com/es/es/mujer/pantalones/jean-sastre/6124142.html,2026-10-10
+Cortefiel,vaquero,Jeans Wide Leg,29.99,59.99,8824018,vaqueros,5,https://cortefiel.com/es/es/mujer/vaqueros/jeans-wide-leg/8824018.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Marine,59.99,,9954068,vaqueros,4,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-marine/9954068.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Recto,59.99,,8880972,vaqueros,5,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-recto/8880972.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Pitillo,29.99,49.99,8101481,vaqueros,6,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-pitillo/8101481.html,2026-10-10
+Cortefiel,vaquero,Jeans Fluido Ancho,29.99,59.99,9954067,pantalones,3,https://cortefiel.com/es/es/mujer/pantalones/jeans-fluido-ancho/9954067.html,2026-10-10
+Cortefiel,vaquero,Jeans Rectos,39.99,59.99,8141305,vaqueros,5,https://cortefiel.com/es/es/mujer/vaqueros/jeans-rectos/8141305.html,2026-10-10
+Cortefiel,vaquero,Jeans Recto Botones,39.99,59.99,8824017,vaqueros,4,https://cortefiel.com/es/es/mujer/vaqueros/jeans-recto-botones/8824017.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Pitillo Color,49.99,,8124502,vaqueros,7,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-pitillo-color/8124502.html,2026-10-10
+Cortefiel,vaquero,Jean bombacho,59.99,,6124141,vaqueros,1,https://cortefiel.com/es/es/mujer/vaqueros/jean-bombacho/6124141.html,2026-10-10
+Cortefiel,vaquero,Jeans Barrel,59.99,,8824019,vaqueros,3,https://cortefiel.com/es/es/mujer/vaqueros/jeans-barrel/8824019.html,2026-10-10
+Cortefiel,vaquero,Jean formal recto,59.99,,9954073,vaqueros,1,https://cortefiel.com/es/es/mujer/vaqueros/jean-formal-recto/9954073.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Campana,49.99,,8824020,vaqueros,1,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-campana/8824020.html,2026-10-10
+Cortefiel,vaquero,Jean Tailored Recto,59.99,,9954072,vaqueros,3,https://cortefiel.com/es/es/mujer/vaqueros/jean-tailored-recto/9954072.html,2026-10-10
+Cortefiel,vaquero,Jeans Sensational Marine Velvet,59.99,,8724439,vaqueros,4,https://cortefiel.com/es/es/mujer/vaqueros/jeans-sensational-marine-velvet/8724439.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta manga larga rayas,44,89.9,8624237,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-manga-larga-rayas/8624237.html,2026-10-10
+Pedro del Hierro,camiseta,Top drapeado,79,159,6634126,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/top-drapeado/6634126.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta cuelo drapeado con detalle metálico,99.9,,8624254,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-cuelo-drapeado-con-detalle-metalico/8624254.html,2026-10-10
+Pedro del Hierro,camiseta,Top fruncido,129,,6634137,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/top-fruncido/6634137.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta de cuello V manga larga,89.9,,8624253,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-de-cuello-v-manga-larga/8624253.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta escote cuadrado manga larga,89.9,,8624251,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-escote-cuadrado-manga-larga/8624251.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta escote asimétrico cruzado,99.9,,8624244,camisetas,2,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-escote-asimetrico-cruzado/8624244.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta cruzada con detalle metálico,99.9,,8624250,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-cruzada-con-detalle-metalico/8624250.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta romántica,69,119,8624235,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-romantica/8624235.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta envolvente cuello pico,99.9,,8624261,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-envolvente-cuello-pico/8624261.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta rib cuello barco,89.9,,8624245,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-rib-cuello-barco/8624245.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta cuello doble bicolor,89.9,,8624252,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-cuello-doble-bicolor/8624252.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta rayas rib manga larga,49,89.9,8624240,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-rayas-rib-manga-larga/8624240.html,2026-10-10
+Pedro del Hierro,camiseta,Camiseta manga larga rib,39,79.9,8624238,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/camiseta-manga-larga-rib/8624238.html,2026-10-10
+Pedro del Hierro,camiseta,Top de punto lurex manga larga,59,99.9,3514465,camisetas,1,https://pedrodelhierro.com/es/es/mujer/camisetas/top-de-punto-lurex-manga-larga/3514465.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans straight basic,99.9,,8344441,vaqueros,3,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-straight-basic/8344441.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans wide leg strass,129,,8344443,vaqueros,1,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-wide-leg-strass/8344443.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans wide leg arch,59,119,8344438,vaqueros,1,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-wide-leg-arch/8344438.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans wide leg capri,49,99.9,8344435,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-wide-leg-capri/8344435.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans super flare,129,,8344446,vaqueros,1,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-super-flare/8344446.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans wide leg arch,119,,8344442,vaqueros,1,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-wide-leg-arch/8344442.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans wide leg soft touch,119,,8344445,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-wide-leg-soft-touch/8344445.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans flare cropped,59,119,8344437,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-flare-cropped/8344437.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans flare cropped bordado,49,99.9,7604930,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-flare-cropped-bordado/7604930.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans push up flare capri,59,99.9,8344440,vaqueros,3,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-push-up-flare-capri/8344440.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans stovepipe capri,59,119,8344436,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-stovepipe-capri/8344436.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans stovepipe,119,,8344448,vaqueros,1,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-stovepipe/8344448.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans push up straight basic,49,99.9,7604918,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-push-up-straight-basic/7604918.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans push up stovepipe basic,49,99.9,8344439,vaqueros,3,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-push-up-stovepipe-basic/8344439.html,2026-10-10
+Pedro del Hierro,vaquero,Jeans push up stovepipe,49,99.9,7604919,vaqueros,2,https://pedrodelhierro.com/es/es/mujer/vaqueros/jeans-push-up-stovepipe/7604919.html,2026-10-10
+Women'secret,camiseta,Polo rayas blanco granate,21.99,29.99,3274538,mujer/deporte/camisetas,1,https://womensecret.com/es/es/mujer/deporte/camisetas/polo-rayas-blanco-granate/3274538.html,2026-10-10
+Women'secret,camiseta,Polo rayas azul granate,21.99,29.99,3274539,mujer/deporte/camisetas,1,https://womensecret.com/es/es/mujer/deporte/camisetas/polo-rayas-azul-granate/3274539.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga rosa,10.99,16.99,3274541,mujer/ropa/camisetas,1,https://womensecret.com/es/es/mujer/ropa/camisetas/camiseta-manga-larga-rosa/3274541.html,2026-10-10
+Women'secret,camiseta,Camiseta punto suave gris,12.99,17.99,3274544,mujer/deporte/camisetas,1,https://womensecret.com/es/es/mujer/deporte/camisetas/camiseta-punto-suave-gris/3274544.html,2026-10-10
+Women'secret,camiseta,Camiseta punto suave azul,12.99,17.99,3274545,mujer/deporte/camisetas,1,https://womensecret.com/es/es/mujer/deporte/camisetas/camiseta-punto-suave-azul/3274545.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga verde,13.99,19.99,3274552,mujer/ropa/camisetas,1,https://womensecret.com/es/es/mujer/ropa/camisetas/camiseta-manga-larga-verde/3274552.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga verde agua,10.99,16.99,3274546,mujer/ropa/camisetas,1,https://womensecret.com/es/es/mujer/ropa/camisetas/camiseta-manga-larga-verde-agua/3274546.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga blanco,10.99,16.99,3274540,mujer/ropa/camisetas,1,https://womensecret.com/es/es/mujer/ropa/camisetas/camiseta-manga-larga-blanco/3274540.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga marrón,13.99,19.99,3274582,mujer/ropa/camisetas,1,https://womensecret.com/es/es/mujer/ropa/camisetas/camiseta-manga-larga-marron/3274582.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga algodón verde,7.99,16.99,3274535,mujer/dormir-y-homewear/pijamas,1,https://womensecret.com/es/es/mujer/dormir-y-homewear/pijamas/camiseta-manga-larga-algodon-verde/3274535.html,2026-10-10
+Women'secret,camiseta,Camiseta algodón bolsillo azul,10.99,16.99,3274528,mujer/dormir-y-homewear/pijamas,1,https://womensecret.com/es/es/mujer/dormir-y-homewear/pijamas/camiseta-algodon-bolsillo-azul/3274528.html,2026-10-10
+Women'secret,camiseta,Camiseta algodón bolsillo rosa,7.99,16.99,3274529,mujer/dormir-y-homewear/pijamas,1,https://womensecret.com/es/es/mujer/dormir-y-homewear/pijamas/camiseta-algodon-bolsillo-rosa/3274529.html,2026-10-10
+Women'secret,camiseta,Camiseta manga larga algodón gris,10.99,16.99,3274534,mujer/dormir-y-homewear/pijamas,1,https://womensecret.com/es/es/mujer/dormir-y-homewear/pijamas/camiseta-manga-larga-algodon-gris/3274534.html,2026-10-10
+Desigual,camiseta,CAMISA FLOCADA,69.95,,26SWTKXD,,1,https://www.desigual.comes_ES/26SWTKXD5003.html,2026-10-10
+Desigual,camiseta,CAMISA CREMALLERA FLOCADA,79.95,,26SWTKXA,,1,https://www.desigual.comes_ES/26SWTKXA6000.html,2026-10-10
+Desigual,camiseta,CAMISETA MANGA LARGA ESTAMPADA,59.95,,26SWTKXG,,1,https://www.desigual.comes_ES/26SWTKXG3035.html,2026-10-10
+Desigual,camiseta,CAMISETA ALGODÓN ESTAMPADA,59.95,,26SMTK35,,1,https://www.desigual.comes_ES/26SMTK351000.html,2026-10-10
+Desigual,camiseta,CAMISETA MANGAS TRANSPARENTES,59.95,,25WWTKZF,,1,https://www.desigual.comes_ES/25WWTKZF2000.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero regular,99.95,,26WWDDXC,,1,https://www.desigual.comes_ES/26WWDDXC5008.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero wide leg pintura,90.3,129,26SWDDX3,,1,https://www.desigual.comes_ES/26SWDDX35053.html,2026-10-10
+Desigual,vaquero,pantalón vaquero flare estampado,169,,26WWDDXI,,1,https://www.desigual.comes_ES/26WWDDXI5007.html,2026-10-10
+Desigual,vaquero,pantalón vaquero flare estampado,129,,26WWDDXH,,1,https://www.desigual.comes_ES/26WWDDXH5009.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero flare efecto brillante,119,,26WWDDXG,,1,https://www.desigual.comes_ES/26WWDDXG5053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero flores regular,90.3,129,26WWDD22,,1,https://www.desigual.comes_ES/26WWDD225053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Mariposas wide leg,83.3,119,26WWDD07,,1,https://www.desigual.comes_ES/26WWDD075053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero tencel regular,83.3,119,26WWDDX4,,1,https://www.desigual.comes_ES/26WWDDX45007.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero bordados regular,99.95,,26SWDDXC,,1,https://www.desigual.comes_ES/26SWDDXC5053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero estampado balloon,83.3,119,26WWDDX0,,1,https://www.desigual.comes_ES/26WWDDX05053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Jogger,69.96,99.95,26WWDD14,,1,https://www.desigual.comes_ES/26WWDD145008.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Floral Culotte,62.96,89.95,26WWDD08,,1,https://www.desigual.comes_ES/26WWDD085053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Regular,89.95,,26WWDD06,,1,https://www.desigual.comes_ES/26WWDD065053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Flare,99.95,,26WWDD21,,1,https://www.desigual.comes_ES/26WWDD215053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Estampado balloon,99.95,,26WWDDX8,,1,https://www.desigual.comes_ES/26WWDDX81001.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero regular Ottolinger,169,,26WWDD29,,1,https://www.desigual.comes_ES/26WWDD295053.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero flare,99.95,,26WWDDXK,,1,https://www.desigual.comes_ES/26WWDDXK3174.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Estampado Wide Leg,90.3,129,26WWDDXL,,1,https://www.desigual.comes_ES/26WWDDXL5007.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Flare,89.95,,26WWDD18,,1,https://www.desigual.comes_ES/26WWDD185008.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero wide leg,119,,26WWDDXD,,1,https://www.desigual.comes_ES/26WWDDXD2023.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Estampado balloon,83.3,119,26WWDDX5,,1,https://www.desigual.comes_ES/26WWDDX59019.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Culotte Mickey™,89.95,,26WWDD09,,1,https://www.desigual.comes_ES/26WWDD095007.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero flare,99.95,,26WWDDX9,,1,https://www.desigual.comes_ES/26WWDDX95008.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero bordado regular,69.96,99.95,26WWDD25,,1,https://www.desigual.comes_ES/26WWDD255053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Slim,79.95,,26WWDDX7,,1,https://www.desigual.comes_ES/26WWDDX73007.html,2026-10-10
+Desigual,vaquero,Vaquero recto efecto invertido,99.95,,25WWDD13,,1,https://www.desigual.comes_ES/25WWDD135007.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero balloon bordado,129,,26WWDDXB,,1,https://www.desigual.comes_ES/26WWDDXB1001.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero flare M. C. Lacroix,129,,26WWDD01,,1,https://www.desigual.comes_ES/26WWDD015007.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Skinny,79.95,,26WWDD20,,1,https://www.desigual.comes_ES/26WWDD205053.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero straight estampado,119,,26WWDDXE,,1,https://www.desigual.comes_ES/26WWDDXE5053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero estampado Slim,69.96,99.95,26WWDD23,,1,https://www.desigual.comes_ES/26WWDD235053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Flare Estampado,119,,26WWDDX6,,1,https://www.desigual.comes_ES/26WWDDX65053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Wide Leg,119,,26WWDDXA,,1,https://www.desigual.comes_ES/26WWDDXA5007.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Wide Leg,119,,26WWDD24,,1,https://www.desigual.comes_ES/26WWDD245007.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero estampado balloon,119,,26WWDD13,,1,https://www.desigual.comes_ES/26WWDD135007.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Balloon,119,,26WWDD12,,1,https://www.desigual.comes_ES/26WWDD125008.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero wide leg,99.95,,26WWDD17,,1,https://www.desigual.comes_ES/26WWDD175053.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero regular M.C. Lacroix,99.95,,26WWDDXJ,,1,https://www.desigual.comes_ES/26WWDDXJ5008.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero culotte flores,89.95,,26WWDD16,,1,https://www.desigual.comes_ES/26WWDD165053.html,2026-10-10
+Desigual,vaquero,Pantalón Vaquero Estampado regular,119,,26WMDD08,,1,https://www.desigual.comes_ES/26WMDD085053.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero gaugin,119,,26SMDD06,,1,https://www.desigual.comes_ES/26SMDD065001.html,2026-10-10
+Desigual,vaquero,Pantalón vaquero panelado,139,,26WMDD04,,1,https://www.desigual.comes_ES/26WMDD043005.html,2026-10-10
+Adolfo Domínguez,camiseta,Camiseta cruzada manga larga,120,,27302290462,,4,https://www.adolfodominguez.comes-es/camiseta-cruzada-manga-larga-273022904262.html,2026-10-10
+Adolfo Domínguez,camiseta,Camiseta fruncida manga larga,95,,27307291362,,3,https://www.adolfodominguez.comes-es/camiseta-fruncida-manga-larga-273072913162.html,2026-10-10
+Adolfo Domínguez,camiseta,Camiseta capa fruncida superpuesta,130,,27308298262,,1,https://www.adolfodominguez.comes-es/camiseta-capa-fruncida-superpuesta-273082982162.html,2026-10-10
+Adolfo Domínguez,camiseta,Camiseta evasé manga larga,120,,27303293362,,1,https://www.adolfodominguez.comes-es/camiseta-evase-manga-larga-273032933262.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón denim skinny,95,,26806253862,,1,https://www.adolfodominguez.comes-es/pantalon-denim-skinny-268062538162.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón barrel fit denim algodón,130,,29008240362,,1,https://www.adolfodominguez.comes-es/pantalon-barrel-fit-denim-algodon-290082403462.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón denim confort,95,,29004258662,,1,https://www.adolfodominguez.comes-es/pantalon-denim-confort-290042586162.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón barrel fit denim,90,130,29005240162,,1,https://www.adolfodominguez.comes-es/pantalon-barrel-fit-denim-290052401162.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón recto denim efecto lavado,150,,29006117662,,1,https://www.adolfodominguez.comes-es/pantalon-recto-denim-efecto-lavado-290061176162.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón pierna ancha denim algodón,130,,29007239162,,1,https://www.adolfodominguez.comes-es/pantalon-pierna-ancha-denim-algodon-290072391262.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón barrel fit denim desflecado,130,,29001124162,,1,https://www.adolfodominguez.comes-es/pantalon-barrel-fit-denim-desflecado-290011241162.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón barrel fit denim algodón,130,,29001111562,,1,https://www.adolfodominguez.comes-es/pantalon-barrel-fit-denim-algodon-290011115161.html,2026-10-10
+Adolfo Domínguez,vaquero,Pantalón denim confort,95,,29003258462,,1,https://www.adolfodominguez.comes-es/pantalon-denim-confort-290032584162.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta textura fruncida chocolate,65,,262BR7451,,2,https://www.bimbaylola.com/es_es/camiseta-textura-fruncida-chocolate-262BR7451.10640.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta oversize multirrayas marrones,95,,262BR7418,,2,https://www.bimbaylola.com/es_es/camiseta-oversize-multirrayas-marrones-262BR7418.12600_DL7.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta lurex fruncida marfil,115,,262BR7420,,1,https://www.bimbaylola.com/es_es/camiseta-lurex-fruncida-marfil-262BR7420.10070_DL5.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta de terciopelo ajustada azul claro,85,,262BR7447,,1,https://www.bimbaylola.com/es_es/camiseta-de-terciopelo-ajustada-azul-claro-262BR7447.10401_DL1.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta canalé ajustada negra,65,,262BR7410,,3,https://www.bimbaylola.com/es_es/camiseta-canale-ajustada-negra-262BR7410.10000.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta jacquard lana marfil,85,,262BR7449,,2,https://www.bimbaylola.com/es_es/camiseta-jacquard-lana-marfil-262BR7449.10070_DL5.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta de tul fruncida Romantic Snake caramel,45.5,65,262BR7450,,3,https://www.bimbaylola.com/es_es/camiseta-de-tul-fruncida-romantic-snake-caramel-262BR7450.11271.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta ajustada encaje chocolate,75,,262BR7465,,1,https://www.bimbaylola.com/es_es/camiseta-ajustada-encaje-chocolate-262BR7465.10640_DL5.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta oversize rayas verde azulado,95,,262BR7406,,2,https://www.bimbaylola.com/es_es/camiseta-oversize-rayas-verde-azulado-262BR7406.12503_DL3.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta oversize rayas rojas,66.5,95,261BR7406,,2,https://www.bimbaylola.com/es_es/camiseta-oversize-rayas-rojas-261BR7406.12200_DL1.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta polo oversize rayas caqui,115,,262BR7414,,,,2026-10-10
+Bimba y Lola,camiseta,Camiseta encaje cintura gris oscuro melange,45,75,262BR7412,,1,https://www.bimbaylola.com/es_es/camiseta-encaje-cintura-gris-oscuro-melange-262BR7412.10012_DL3.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta algodón fruncida romantic sweet vainilla,39,65,262BR7407,,1,https://www.bimbaylola.com/es_es/camiseta-algodon-fruncida-romantic-sweet-vainilla-262BR7407.11200_DL5.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta fluida fruncida rayas oliva,75,,262BR7448,,1,https://www.bimbaylola.com/es_es/camiseta-fluida-fruncida-rayas-oliva-262BR7448.12540.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta lana nudo gris melange,75,125,262BR7408,,2,https://www.bimbaylola.com/es_es/camiseta-lana-nudo-gris-melange-262BR7408.10013_DL5.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta lino ajustada rayas marrones,65,,262BR7402,,1,https://www.bimbaylola.com/es_es/camiseta-lino-ajustada-rayas-marrones-262BR7402.12600.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta manga larga algodón rizado rayas marfil,75,,262BR7421,,1,https://www.bimbaylola.com/es_es/camiseta-manga-larga-algodon-rizado-rayas-marfil-262BR7421.12070_DL5.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta manga larga algodón rizado rayas marrones,65,,262BR7415,,1,https://www.bimbaylola.com/es_es/camiseta-manga-larga-algodon-rizado-rayas-marrones-262BR7415.12600_DL3.html,2026-10-10
+Bimba y Lola,camiseta,Camiseta canalé escote V negra,45,75,262BR7453,,1,https://www.bimbaylola.com/es_es/camiseta-canale-escote-v-negra-262BR7453.10000_DL3.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim hebilla rayas marrón claro,150,,262BR6121,,4,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-hebilla-rayas-marron-claro-262BR6121.12601_DL8.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim rayas caqui,150,,262BR6114,,1,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-rayas-caqui-262BR6114.12530_DL3.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim 5 bolsillos Snake ocre,94.5,135,262BR6140,,4,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-5-bolsillos-snake-ocre-262BR6140.12270_DL3.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim cintura ajustable bicolor negro,135,,262BR6117,,2,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-cintura-ajustable-bicolor-negro-262BR6117.10000.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim 5 bolsillos pony,135,,262BR6123,,1,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-5-bolsillos-pony-262BR6123.11150_DL3.html,2026-10-10
+Bimba y Lola,vaquero,STRAIGHT CROPPED - Pantalón denim tobillero negro,105,,262BR6104,,,,2026-10-10
+Bimba y Lola,vaquero,Pantalón jogger fruncido denim negro lavado,101.2,135,262BR6102,,1,https://www.bimbaylola.com/es_es/pantalon-jogger-fruncido-denim-negro-lavado-262BR6102.10035.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim 5 bolsillos blanco,135,,262BR6122,,2,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-5-bolsillos-blanco-262BR6122.10050_DL4.html,2026-10-10
+Bimba y Lola,vaquero,BARREL- Pantalón denim 5 bolsillos azul vaquero medio,135,,262BR6150,,1,https://www.bimbaylola.com/es_es/barrel--pantalon-denim-5-bolsillos-azul-vaquero-medio-262BR6150.10459.html,2026-10-10
+Bimba y Lola,vaquero,BARREL- Pantalón denim rayas marrón lavado,94.5,135,262BR6118,,1,https://www.bimbaylola.com/es_es/barrel--pantalon-denim-rayas-marron-lavado-262BR6118.12648_DL3.html,2026-10-10
+Bimba y Lola,vaquero,BARREL - Pantalón denim cintura ajustable marrón oscuro,94.5,135,252BR6117,,1,https://www.bimbaylola.com/es_es/barrel---pantalon-denim-cintura-ajustable-marron-oscuro-252BR6117.10602_DL1.html,2026-10-10
+Bimba y Lola,vaquero,Pantalón ancho denim fluido marrón lavado,81,135,262BR6103,,1,https://www.bimbaylola.com/es_es/pantalon-ancho-denim-fluido-marron-lavado-262BR6103.10648_DL3.html,2026-10-10
+Bimba y Lola,vaquero,Pantalón denim fluido con cinturón gris lavado,135,,262BR6105,,1,https://www.bimbaylola.com/es_es/pantalon-denim-fluido-con-cinturon-gris-lavado-262BR6105.10036_DL5.html,2026-10-10
+Scalpers,camiseta,CÁRDIGAN CANALÉ ENCAJE,49.99,,72816,,1,https://scalperscompany.com/es/products/72816-sclace-v-cardigan-tee-aw2627-bouganville,2026-10-10
+Scalpers,camiseta,CAMISETA RAYAS DETALLE CUELLO,59.99,,72818,,2,https://scalperscompany.com/es/products/72818-scstripes-ls-scarf-tee-aw2627-bluestripes,2026-10-10
+Scalpers,camiseta,CAMISETA ESTAMPADA MANGAS CONTRASTE,39.99,,72727,,1,https://scalperscompany.com/es/products/72727-scbaseball-tee-aw2627-blue,2026-10-10
+Scalpers,camiseta,CAMISETA LYOCELL NUDO,49.99,,72794,,1,https://scalperscompany.com/es/products/72794-scknot-ls-tee-aw2627-lightblue,2026-10-10
+Scalpers,camiseta,CAMISETA MANGAS ABULLONADAS,39.99,,66703,,1,https://scalperscompany.com/es/products/66703-scpoplin-puff-tee-ss26-white,2026-10-10
+Scalpers,camiseta,CAMISETA ABERTURA FRUNCES,39.99,,62361,,1,https://scalperscompany.com/es/products/62361-sccutgatherls-tee-aw2526-white,2026-10-10
+Scalpers,camiseta,CAMISETA RAYAS CANALÉ,49.99,,72894,,1,https://scalperscompany.com/es/products/72894-scasy-stripes-ls-tee-aw2627-navystripes,2026-10-10
+Scalpers,camiseta,CAMISETA CUELLO BARCO,29.99,,72784,,2,https://scalperscompany.com/es/products/72784-scplain-ls-skull-tee-aw2627-ecru,2026-10-10
+Scalpers,camiseta,CAMISETA MANGAS ACAMPANADAS,49.99,,72927,,1,https://scalperscompany.com/es/products/72927-sccape-ls-tee-aw2627-blue,2026-10-10
+Scalpers,camiseta,CAMISETA DRAPEADO FRONTAL,49.99,,72887,,1,https://scalperscompany.com/es/products/72887-sccupro-drapped-ls-tee-aw2627-darkbrown,2026-10-10
+Scalpers,camiseta,CAMISETA LÚREX MANGA LARGA,49.99,,72905,,1,https://scalperscompany.com/es/products/72905-scdouble-v-ls-tee-aw2627-black,2026-10-10
+Scalpers,camiseta,CAMISETA FLUIDA STUDS,49.99,,72803,,1,https://scalperscompany.com/es/products/72803-scfluid-studs-ls-tee-aw2627-navy,2026-10-10
+Scalpers,camiseta,CAMISETA ASIMÉTRICA STRASS,49.99,,72753,,1,https://scalperscompany.com/es/products/72753-scasy-studs-ls-tee-aw2627-burgundy,2026-10-10
+Scalpers,camiseta,SCOFF SHOULDER LS TEE,49.99,,72895,,1,https://scalperscompany.com/es/products/72895-scoff-shoulder-ls-tee-aw2627-khaki,2026-10-10
+Scalpers,camiseta,SCNET SMOCK LS TEE,49.99,,72893,,2,https://scalperscompany.com/es/products/72893-scnet-smock-ls-tee-aw2627-ecru,2026-10-10
+Scalpers,vaquero,PANTALÓN DENIM DETALLE BAJO,59.99,,72202,,1,https://scalperscompany.com/es/products/72202-scfolded-denim-pant-aw2627-khaki,2026-10-10
+Scalpers,vaquero,JEANS TIRAS LATERALES,79.99,,72387,,1,https://scalperscompany.com/es/products/72387-sctapetrim-denim-pant-aw2627-indigo,2026-10-10
+Scalpers,vaquero,JEANS WIDE LEG STRASS,79.99,,72204,,1,https://scalperscompany.com/es/products/72204-scfull-strass-denim-pant-aw2627-khaki,2026-10-10
+Scalpers,vaquero,JEANS CULOTTE STUDS,79.99,,72179,,2,https://scalperscompany.com/es/products/72179-scculotte-studs-denim-pant-aw2627-black,2026-10-10
+Scalpers,vaquero,JEANS BALLOON FIT,69.99,,72379,,1,https://scalperscompany.com/es/products/72379-scsummer-denim-pant-aw2627-lightindigo,2026-10-10
+Scalpers,vaquero,JEANS BORDADOS FLORALES,79.99,,72296,,1,https://scalperscompany.com/es/products/72296-scnewemb-flower-denim-pant-aw2627-camel,2026-10-10
+Scalpers,vaquero,PANTALÓN DENIM RAYAS,79.99,,73005,,1,https://scalperscompany.com/es/products/73005-scstripes-denim-pant-aw2627-mustardstripes,2026-10-10
+Scalpers,vaquero,PANTALÓN DENIM RAYAS,79.99,,66332,,1,https://scalperscompany.com/es/products/66332-scstripes-denim-pant-ss26-indigostripes,2026-10-10
+Scalpers,vaquero,JEANS WIDE LEG GLITTER,79.99,,72755,,1,https://scalperscompany.com/es/products/72755-scshinny-air-denim-pant-aw2627-black,2026-10-10
+Scalpers,vaquero,JEANS BALLOON ANIMAL PRINT,79.99,,72261,,1,https://scalperscompany.com/es/products/72261-scleo-balloon-denim-pant-aw2627-natural,2026-10-10
+Scalpers,vaquero,JEANS BOOTCUT ANIMAL PRINT,79.99,,72153,,1,https://scalperscompany.com/es/products/72153-sccandy-belt-animal-denim-pant-aw2627-animalprint,2026-10-10
+Scalpers,vaquero,JEANS WIDE LEG TIRAS LATERALES,79.99,,72907,,1,https://scalperscompany.com/es/products/72907-scsidetape-denim-pant-aw2627-indigo,2026-10-10
+Scalpers,vaquero,JEANS DETALLE VOLANTE,69.9,,72341,,1,https://scalperscompany.com/es/products/72341-scruffle-denim-pant-aw2627-darkgrey,2026-10-10
+Scalpers,vaquero,JEANS BOOTCUT TIRO ALTO,79.99,,72155,,1,https://scalperscompany.com/es/products/72155-sccandy-belt-denim-pant-aw2627-indigo,2026-10-10
+Scalpers,vaquero,JEANS BICOLOR MAXI,69.99,,72182,,1,https://scalperscompany.com/es/products/72182-scdouble-color-denim-pant-aw2627-indigo,2026-10-10
+Scalpers,vaquero,PANTALÓN DENIM TIRO MEDIO,59.99,,72146,,2,https://scalperscompany.com/es/products/72146-scbootcutrelax-denim-pant-aw2627-indigo,2026-10-10
+Scalpers,vaquero,JEANS CULOTTE ESTAMPADO ÉTNICO,79.99,,72196,,1,https://scalperscompany.com/es/products/72196-scetnic-trize-denim-pant-aw2627-indigo,2026-10-10
+Scalpers,vaquero,JEANS WIDE LEG TIRO ALTO,59.99,,72178,,3,https://scalperscompany.com/es/products/72178-scculotte-denim-pant-aw2627-black,2026-10-10
+Scalpers,vaquero,JEANS CULOTTE,59.99,,62104,,2,https://scalperscompany.com/es/products/62104-scculotte-denim-aw2526-indigo,2026-10-10
+Scalpers,vaquero,JEANS DETALLE PAISLEY,79.99,,72312,,1,https://scalperscompany.com/es/products/72312-scpasley-trize-denim-pant-aw2627-greydenim,2026-10-10
+Scalpers,vaquero,JEANS BOLSILLO ASIMÉTRICO,59.99,,62256,,1,https://scalperscompany.com/es/products/62256-scpocketbootcut-denim-aw2526-lightindigo,2026-10-10
+Scalpers,vaquero,JEANS FULL LENGTH TIRO ALTO,69.99,,62053,,1,https://scalperscompany.com/es/products/62053-sccool-denim-pant-aw2526-indigo,2026-10-10
+Scalpers,vaquero,JEANS RECTOS TIRO BAJO,69.99,,66715,,1,https://scalperscompany.com/es/products/66715-scstraight-low-waist-pant-ss26-indigo,2026-10-10
+Scalpers,vaquero,JEANS BOOTCUT RELAXED,69.99,,66746,,3,https://scalperscompany.com/es/products/66746-scbootcut-relax-denim-ss26-indigo,2026-10-10
+Scalpers,vaquero,JEANS SKINNY BOTONES,59.9,,32382,,2,https://scalperscompany.com/es/products/32382-skinny-buttons-denim-nos-black,2026-10-10
+Scalpers,vaquero,PANTALÓN DENIM BOOTCUT,69.99,,62105,,1,https://scalperscompany.com/es/products/62105-sccandyseam-denim-aw2526-black,2026-10-10
+Scalpers,vaquero,PANTALÓN DENIM TIRO MEDIO,59.99,,62071,,1,https://scalperscompany.com/es/products/62071-scbootcutwash-denim-pant-aw2526-darkbrown,2026-10-10
+Scalpers,vaquero,PANTALÓN DE TIRO ALTO APLIQUES,79.99,,62257,,1,https://scalperscompany.com/es/products/62257-schighfull-denim-pant-aw2526-indigo,2026-10-10
+Scalpers,vaquero,JEANS BOOTCUT,69.9,,32383,,1,https://scalperscompany.com/es/products/32383-boot-cut-denim-nos-white,2026-10-10
+Scalpers,vaquero,JEANS SKINNY FIT,59.9,,21332,,3,https://scalperscompany.com/es/products/21332-skinny-denim-nos-indigo,2026-10-10
+Scalpers,vaquero,PANTALÓN TIRO ALTO DETALLE COSTURAS,69.99,,62260,,1,https://scalperscompany.com/es/products/62260-scculotte-stitching-denim-aw2526-ecru,2026-10-10
+Scalpers,vaquero,JEANS BOOTCUT LYOCELL,69.99,,72992,,2,https://scalperscompany.com/es/products/72992-scluna-denim-pant-aw2627-black,2026-10-10
+El Ganso,vaquero,Pantalón Estrella Denim Azul,69.9,,2020W26ESTRELLA,,2,https://www.elganso.com/es/pantalon-estrella-denim-azul.html,2026-10-10
+El Ganso,vaquero,Pantalón Selim Denim Estampado Azul,69.9,,2020W260002,,1,https://www.elganso.com/es/pantalon-selim-denim-estampado-azul.html,2026-10-10
+El Ganso,vaquero,Pantalón Leonie Denim Azul,69.9,,2020W260024,,1,https://www.elganso.com/es/pantalon-leonie-denim-azul.html,2026-10-10
+Silbon,camiseta,Camiseta manga larga cuello bobo rayas,34.9,,SB-cuello-bobo-rayas,,2,https://www.silbonshop.com/products/camiseta-manga-larga-cuello-bobo-rayas-camel,2026-10-10
+Silbon,camiseta,Camiseta woman lazada rayas azul marino,34.9,,15631700689273,,1,https://www.silbonshop.com/products/camiseta-woman-lazada-rayas-azul-marino,2026-10-10
+Silbon,camiseta,Camiseta woman manga larga punto smock marron,34.9,,15631700885881,,1,https://www.silbonshop.com/products/camiseta-woman-manga-larga-punto-smock-marron,2026-10-10
+Silbon,camiseta,Camiseta woman manga larga abullonada rayas granate,34.9,,15683846865273,,1,https://www.silbonshop.com/products/camiseta-woman-manga-larga-abullonada-rayas-granate,2026-10-10
+Silbon,vaquero,Pantalon denim recto detalle hebillas marron,69.9,,15527312720249,,1,https://www.silbonshop.com/products/pantalon-denim-recto-detalle-hebillas-marron,2026-10-10
+Silbon,vaquero,Pantalon culotte marinero denim,69.9,,SB-culotte-marinero-denim,,2,https://www.silbonshop.com/products/pantalon-culotte-marinero-denim-azul,2026-10-10
+Silbon,vaquero,Pantalon recto denim claro,69.9,,15687729545593,,1,https://www.silbonshop.com/products/pantalon-recto-denim-claro,2026-10-10
+Silbon,vaquero,Pantalon flare denim azul,69.9,,15659000430969,,1,https://www.silbonshop.com/products/pantalon-flare-denim-azul,2026-10-10
+Silbon,vaquero,Pantalon woman slim fit denim,49.9,,SB-slim-fit-denim,,2,https://www.silbonshop.com/products/pantalon-woman-slim-fit-denim-medio,2026-10-10
