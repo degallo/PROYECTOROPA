@@ -1,100 +1,44 @@
 categoria,marca_a,marca_b,solape_pct,solape_pct_robustez,solape_pct_rebajado,en_metricas,pareja
-camiseta,Mango,Women'secret,100,33,0,False,Mango – Women'secret
-camiseta,Cortefiel,Scalpers,90,80,50,False,Cortefiel – Scalpers
 camiseta,Mango,Springfield,83,33,0,True,Mango – Springfield
-camiseta,Springfield,Women'secret,83,83,83,False,Springfield – Women'secret
 camiseta,Cortefiel,Massimo Dutti,74,74,60,True,Cortefiel – Massimo Dutti
 camiseta,Springfield,Zara,70,42,24,True,Springfield – Zara
 camiseta,Mango,Zara,66,81,74,True,Mango – Zara
-camiseta,Women'secret,Zara,66,38,20,False,Women'secret – Zara
-camiseta,Massimo Dutti,Scalpers,64,64,64,False,Massimo Dutti – Scalpers
 camiseta,Lefties,Primark,52,72,52,True,Lefties – Primark
 camiseta,H&M,Zara,47,60,47,True,H&M – Zara
 camiseta,H&M,Primark,35,31,35,True,H&M – Primark
 camiseta,H&M,Lefties,31,12,31,True,H&M – Lefties
-camiseta,Bimba y Lola,Pedro del Hierro,25,0,0,False,Bimba y Lola – Pedro del Hierro
 camiseta,H&M,Springfield,23,17,44,True,H&M – Springfield
 camiseta,H&M,Mango,13,46,29,True,H&M – Mango
-camiseta,H&M,Women'secret,13,9,33,False,H&M – Women'secret
 camiseta,Primark,Zara,12,8,12,True,Primark – Zara
 camiseta,Cortefiel,H&M,8,10,31,True,Cortefiel – H&M
 camiseta,H&M,Massimo Dutti,8,5,8,True,H&M – Massimo Dutti
 camiseta,Lefties,Zara,8,8,8,True,Lefties – Zara
-camiseta,H&M,Scalpers,7,3,7,False,H&M – Scalpers
 camiseta,Cortefiel,Zara,2,2,42,True,Cortefiel – Zara
 camiseta,Massimo Dutti,Zara,2,2,2,True,Massimo Dutti – Zara
-camiseta,Scalpers,Zara,2,2,2,False,Scalpers – Zara
-camiseta,Adolfo Domínguez,Bimba y Lola,0,0,0,False,Adolfo Domínguez – Bimba y Lola
-camiseta,Adolfo Domínguez,Cortefiel,0,0,0,False,Adolfo Domínguez – Cortefiel
-camiseta,Adolfo Domínguez,H&M,0,0,0,False,Adolfo Domínguez – H&M
-camiseta,Adolfo Domínguez,Lefties,0,0,0,False,Adolfo Domínguez – Lefties
-camiseta,Adolfo Domínguez,Mango,0,0,0,False,Adolfo Domínguez – Mango
-camiseta,Adolfo Domínguez,Massimo Dutti,0,0,0,False,Adolfo Domínguez – Massimo Dutti
-camiseta,Adolfo Domínguez,Pedro del Hierro,0,0,0,False,Adolfo Domínguez – Pedro del Hierro
-camiseta,Adolfo Domínguez,Primark,0,0,0,False,Adolfo Domínguez – Primark
-camiseta,Adolfo Domínguez,Scalpers,0,0,0,False,Adolfo Domínguez – Scalpers
-camiseta,Adolfo Domínguez,Springfield,0,0,0,False,Adolfo Domínguez – Springfield
-camiseta,Adolfo Domínguez,Women'secret,0,0,0,False,Adolfo Domínguez – Women'secret
-camiseta,Adolfo Domínguez,Zara,0,0,0,False,Adolfo Domínguez – Zara
-camiseta,Bimba y Lola,Cortefiel,0,0,0,False,Bimba y Lola – Cortefiel
-camiseta,Bimba y Lola,H&M,0,0,1,False,Bimba y Lola – H&M
-camiseta,Bimba y Lola,Lefties,0,0,0,False,Bimba y Lola – Lefties
-camiseta,Bimba y Lola,Mango,0,0,0,False,Bimba y Lola – Mango
-camiseta,Bimba y Lola,Massimo Dutti,0,0,0,False,Bimba y Lola – Massimo Dutti
-camiseta,Bimba y Lola,Primark,0,0,0,False,Bimba y Lola – Primark
-camiseta,Bimba y Lola,Scalpers,0,0,0,False,Bimba y Lola – Scalpers
-camiseta,Bimba y Lola,Springfield,0,0,0,False,Bimba y Lola – Springfield
-camiseta,Bimba y Lola,Women'secret,0,0,0,False,Bimba y Lola – Women'secret
-camiseta,Bimba y Lola,Zara,0,0,0,False,Bimba y Lola – Zara
 camiseta,Cortefiel,Lefties,0,0,0,True,Cortefiel – Lefties
 camiseta,Cortefiel,Mango,0,0,30,True,Cortefiel – Mango
-camiseta,Cortefiel,Pedro del Hierro,0,0,10,False,Cortefiel – Pedro del Hierro
 camiseta,Cortefiel,Primark,0,0,4,True,Cortefiel – Primark
 camiseta,Cortefiel,Springfield,0,0,10,True,Cortefiel – Springfield
-camiseta,Cortefiel,Women'secret,0,0,10,False,Cortefiel – Women'secret
-camiseta,H&M,Pedro del Hierro,0,0,1,False,H&M – Pedro del Hierro
 camiseta,Lefties,Mango,0,0,17,True,Lefties – Mango
 camiseta,Lefties,Massimo Dutti,0,0,0,True,Lefties – Massimo Dutti
-camiseta,Lefties,Pedro del Hierro,0,0,0,False,Lefties – Pedro del Hierro
-camiseta,Lefties,Scalpers,0,0,0,False,Lefties – Scalpers
 camiseta,Lefties,Springfield,0,0,0,True,Lefties – Springfield
-camiseta,Lefties,Women'secret,0,0,0,False,Lefties – Women'secret
 camiseta,Mango,Massimo Dutti,0,0,0,True,Mango – Massimo Dutti
-camiseta,Mango,Pedro del Hierro,0,0,0,False,Mango – Pedro del Hierro
 camiseta,Mango,Primark,0,0,17,True,Mango – Primark
-camiseta,Mango,Scalpers,0,0,0,False,Mango – Scalpers
-camiseta,Massimo Dutti,Pedro del Hierro,0,0,25,False,Massimo Dutti – Pedro del Hierro
 camiseta,Massimo Dutti,Primark,0,0,0,True,Massimo Dutti – Primark
 camiseta,Massimo Dutti,Springfield,0,0,0,True,Massimo Dutti – Springfield
-camiseta,Massimo Dutti,Women'secret,0,0,0,False,Massimo Dutti – Women'secret
-camiseta,Pedro del Hierro,Primark,0,0,0,False,Pedro del Hierro – Primark
-camiseta,Pedro del Hierro,Scalpers,0,0,0,False,Pedro del Hierro – Scalpers
-camiseta,Pedro del Hierro,Springfield,0,0,0,False,Pedro del Hierro – Springfield
-camiseta,Pedro del Hierro,Women'secret,0,0,0,False,Pedro del Hierro – Women'secret
-camiseta,Pedro del Hierro,Zara,0,0,0,False,Pedro del Hierro – Zara
-camiseta,Primark,Scalpers,0,0,0,False,Primark – Scalpers
 camiseta,Primark,Springfield,0,0,4,True,Primark – Springfield
-camiseta,Primark,Women'secret,0,0,4,False,Primark – Women'secret
-camiseta,Scalpers,Springfield,0,0,0,False,Scalpers – Springfield
-camiseta,Scalpers,Women'secret,0,0,0,False,Scalpers – Women'secret
 vaquero,Lefties,Primark,97,82,97,True,Lefties – Primark
 vaquero,Cortefiel,Massimo Dutti,91,91,56,True,Cortefiel – Massimo Dutti
 vaquero,H&M,Zara,87,86,87,True,H&M – Zara
 vaquero,Mango,Zara,78,76,69,True,Mango – Zara
-vaquero,El Ganso,Silbon,75,75,75,False,El Ganso – Silbon
 vaquero,Desigual,Pedro del Hierro,71,71,39,True,Desigual – Pedro del Hierro
 vaquero,H&M,Mango,71,64,68,True,H&M – Mango
-vaquero,Adolfo Domínguez,Bimba y Lola,57,57,43,False,Adolfo Domínguez – Bimba y Lola
-vaquero,El Ganso,Scalpers,50,50,50,False,El Ganso – Scalpers
-vaquero,Scalpers,Silbon,50,50,50,False,Scalpers – Silbon
 vaquero,Cortefiel,Scalpers,49,49,38,True,Cortefiel – Scalpers
 vaquero,Springfield,Zara,46,46,55,True,Springfield – Zara
 vaquero,H&M,Springfield,45,45,43,True,H&M – Springfield
 vaquero,Massimo Dutti,Scalpers,43,43,43,True,Massimo Dutti – Scalpers
 vaquero,Adolfo Domínguez,Pedro del Hierro,40,10,10,True,Adolfo Domínguez – Pedro del Hierro
 vaquero,Adolfo Domínguez,Desigual,36,14,36,True,Adolfo Domínguez – Desigual
-vaquero,Cortefiel,Silbon,31,31,19,False,Cortefiel – Silbon
-vaquero,Massimo Dutti,Silbon,25,25,25,False,Massimo Dutti – Silbon
 vaquero,Mango,Springfield,24,24,52,True,Mango – Springfield
 vaquero,H&M,Primark,20,12,20,True,H&M – Primark
 vaquero,Mango,Primark,18,9,42,True,Mango – Primark
@@ -105,67 +49,37 @@ vaquero,Lefties,Zara,14,4,14,True,Lefties – Zara
 vaquero,Cortefiel,H&M,13,7,53,True,Cortefiel – H&M
 vaquero,H&M,Massimo Dutti,13,6,13,True,H&M – Massimo Dutti
 vaquero,Cortefiel,Mango,10,10,54,True,Cortefiel – Mango
-vaquero,H&M,Silbon,10,4,10,False,H&M – Silbon
 vaquero,Mango,Massimo Dutti,10,10,10,True,Mango – Massimo Dutti
-vaquero,Mango,Silbon,10,10,10,False,Mango – Silbon
 vaquero,Desigual,Scalpers,7,7,7,True,Desigual – Scalpers
-vaquero,Cortefiel,El Ganso,6,6,0,False,Cortefiel – El Ganso
 vaquero,H&M,Scalpers,6,5,6,True,H&M – Scalpers
 vaquero,Cortefiel,Zara,5,3,42,True,Cortefiel – Zara
 vaquero,Massimo Dutti,Zara,5,3,5,True,Massimo Dutti – Zara
-vaquero,Silbon,Zara,4,2,4,False,Silbon – Zara
 vaquero,Desigual,H&M,2,2,2,True,Desigual – H&M
 vaquero,Scalpers,Zara,1,1,1,True,Scalpers – Zara
 vaquero,Adolfo Domínguez,Cortefiel,0,0,0,True,Adolfo Domínguez – Cortefiel
-vaquero,Adolfo Domínguez,El Ganso,0,0,0,False,Adolfo Domínguez – El Ganso
 vaquero,Adolfo Domínguez,H&M,0,0,0,True,Adolfo Domínguez – H&M
 vaquero,Adolfo Domínguez,Lefties,0,0,0,True,Adolfo Domínguez – Lefties
 vaquero,Adolfo Domínguez,Mango,0,0,0,True,Adolfo Domínguez – Mango
 vaquero,Adolfo Domínguez,Massimo Dutti,0,0,0,True,Adolfo Domínguez – Massimo Dutti
 vaquero,Adolfo Domínguez,Primark,0,0,0,True,Adolfo Domínguez – Primark
 vaquero,Adolfo Domínguez,Scalpers,0,0,0,True,Adolfo Domínguez – Scalpers
-vaquero,Adolfo Domínguez,Silbon,0,0,0,False,Adolfo Domínguez – Silbon
 vaquero,Adolfo Domínguez,Springfield,0,0,0,True,Adolfo Domínguez – Springfield
 vaquero,Adolfo Domínguez,Zara,0,0,0,True,Adolfo Domínguez – Zara
-vaquero,Bimba y Lola,Cortefiel,0,0,0,False,Bimba y Lola – Cortefiel
-vaquero,Bimba y Lola,Desigual,0,0,0,False,Bimba y Lola – Desigual
-vaquero,Bimba y Lola,El Ganso,0,0,0,False,Bimba y Lola – El Ganso
-vaquero,Bimba y Lola,H&M,0,0,0,False,Bimba y Lola – H&M
-vaquero,Bimba y Lola,Lefties,0,0,0,False,Bimba y Lola – Lefties
-vaquero,Bimba y Lola,Mango,0,0,0,False,Bimba y Lola – Mango
-vaquero,Bimba y Lola,Massimo Dutti,0,0,0,False,Bimba y Lola – Massimo Dutti
-vaquero,Bimba y Lola,Pedro del Hierro,0,10,0,False,Bimba y Lola – Pedro del Hierro
-vaquero,Bimba y Lola,Primark,0,0,0,False,Bimba y Lola – Primark
-vaquero,Bimba y Lola,Scalpers,0,0,0,False,Bimba y Lola – Scalpers
-vaquero,Bimba y Lola,Silbon,0,0,0,False,Bimba y Lola – Silbon
-vaquero,Bimba y Lola,Springfield,0,0,0,False,Bimba y Lola – Springfield
-vaquero,Bimba y Lola,Zara,0,0,0,False,Bimba y Lola – Zara
 vaquero,Cortefiel,Desigual,0,0,0,True,Cortefiel – Desigual
 vaquero,Cortefiel,Lefties,0,0,21,True,Cortefiel – Lefties
 vaquero,Cortefiel,Pedro del Hierro,0,0,39,True,Cortefiel – Pedro del Hierro
 vaquero,Cortefiel,Primark,0,0,24,True,Cortefiel – Primark
 vaquero,Cortefiel,Springfield,0,0,24,True,Cortefiel – Springfield
-vaquero,Desigual,El Ganso,0,0,0,False,Desigual – El Ganso
 vaquero,Desigual,Lefties,0,0,0,True,Desigual – Lefties
 vaquero,Desigual,Mango,0,0,0,True,Desigual – Mango
 vaquero,Desigual,Massimo Dutti,0,0,0,True,Desigual – Massimo Dutti
 vaquero,Desigual,Primark,0,0,0,True,Desigual – Primark
-vaquero,Desigual,Silbon,0,0,0,False,Desigual – Silbon
 vaquero,Desigual,Springfield,0,0,0,True,Desigual – Springfield
 vaquero,Desigual,Zara,0,0,0,True,Desigual – Zara
-vaquero,El Ganso,H&M,0,0,0,False,El Ganso – H&M
-vaquero,El Ganso,Lefties,0,0,0,False,El Ganso – Lefties
-vaquero,El Ganso,Mango,0,0,0,False,El Ganso – Mango
-vaquero,El Ganso,Massimo Dutti,0,0,0,False,El Ganso – Massimo Dutti
-vaquero,El Ganso,Pedro del Hierro,0,0,0,False,El Ganso – Pedro del Hierro
-vaquero,El Ganso,Primark,0,0,0,False,El Ganso – Primark
-vaquero,El Ganso,Springfield,0,0,0,False,El Ganso – Springfield
-vaquero,El Ganso,Zara,0,0,0,False,El Ganso – Zara
 vaquero,H&M,Pedro del Hierro,0,0,13,True,H&M – Pedro del Hierro
 vaquero,Lefties,Massimo Dutti,0,0,0,True,Lefties – Massimo Dutti
 vaquero,Lefties,Pedro del Hierro,0,0,0,True,Lefties – Pedro del Hierro
 vaquero,Lefties,Scalpers,0,0,0,True,Lefties – Scalpers
-vaquero,Lefties,Silbon,0,0,0,False,Lefties – Silbon
 vaquero,Lefties,Springfield,0,0,14,True,Lefties – Springfield
 vaquero,Mango,Pedro del Hierro,0,0,10,True,Mango – Pedro del Hierro
 vaquero,Mango,Scalpers,0,0,0,True,Mango – Scalpers
@@ -174,11 +88,8 @@ vaquero,Massimo Dutti,Primark,0,0,0,True,Massimo Dutti – Primark
 vaquero,Massimo Dutti,Springfield,0,0,0,True,Massimo Dutti – Springfield
 vaquero,Pedro del Hierro,Primark,0,0,0,True,Pedro del Hierro – Primark
 vaquero,Pedro del Hierro,Scalpers,0,0,20,True,Pedro del Hierro – Scalpers
-vaquero,Pedro del Hierro,Silbon,0,0,25,False,Pedro del Hierro – Silbon
 vaquero,Pedro del Hierro,Springfield,0,0,0,True,Pedro del Hierro – Springfield
 vaquero,Pedro del Hierro,Zara,0,0,5,True,Pedro del Hierro – Zara
 vaquero,Primark,Scalpers,0,0,0,True,Primark – Scalpers
-vaquero,Primark,Silbon,0,0,0,False,Primark – Silbon
 vaquero,Primark,Springfield,0,0,18,True,Primark – Springfield
 vaquero,Scalpers,Springfield,0,0,0,True,Scalpers – Springfield
-vaquero,Silbon,Springfield,0,0,0,False,Silbon – Springfield

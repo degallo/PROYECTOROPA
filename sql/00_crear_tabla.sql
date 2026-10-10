@@ -40,23 +40,25 @@ CREATE TABLE catalogo (
 -- -----------------------------------------------------------------------------
 DROP TABLE IF EXISTS marcas;
 CREATE TABLE marcas (
-    marca  TEXT PRIMARY KEY,
-    grupo  TEXT NOT NULL
+    marca        TEXT PRIMARY KEY,
+    grupo        TEXT NOT NULL,
+    en_analisis  INTEGER NOT NULL DEFAULT 1,  -- 0 = fuera del análisis (decisión de Javi, 10/10/2026)
+    nota         TEXT
 );
-INSERT INTO marcas (marca, grupo) VALUES
-    ('Lefties',          'Inditex'),
-    ('Zara',             'Inditex'),
-    ('Massimo Dutti',    'Inditex'),
-    ('Springfield',      'Tendam'),
-    ('Cortefiel',        'Tendam'),
-    ('Pedro del Hierro', 'Tendam'),
-    ('Women''secret',    'Tendam'),
-    ('Mango',            'Mango'),
-    ('H&M',              'H&M'),
-    ('Primark',          'Primark'),
-    ('Desigual',         'Premium española'),
-    ('Adolfo Domínguez', 'Premium española'),
-    ('Bimba y Lola',     'Premium española'),
-    ('Scalpers',         'Premium española'),
-    ('El Ganso',         'Premium española'),
-    ('Silbon',           'Premium española');
+INSERT INTO marcas (marca, grupo, en_analisis, nota) VALUES
+    ('Lefties',          'Inditex',          1, NULL),
+    ('Zara',             'Inditex',          1, NULL),
+    ('Massimo Dutti',    'Inditex',          1, NULL),
+    ('Springfield',      'Tendam',           1, NULL),
+    ('Cortefiel',        'Tendam',           1, NULL),
+    ('Pedro del Hierro', 'Tendam',           1, NULL),
+    ('Women''secret',    'Tendam',           0, 'Lencería y homewear: no es una cadena de moda comparable y no vende vaqueros'),
+    ('Mango',            'Mango',            1, NULL),
+    ('H&M',              'H&M',              1, NULL),
+    ('Primark',          'Primark',          1, NULL),
+    ('Desigual',         'Premium española', 1, NULL),
+    ('Adolfo Domínguez', 'Premium española', 1, NULL),
+    ('Bimba y Lola',     'Premium española', 1, NULL),
+    ('Scalpers',         'Premium española', 1, NULL),
+    ('El Ganso',         'Premium española', 1, NULL),
+    ('Silbon',           'Premium española', 1, NULL);

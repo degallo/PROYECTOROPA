@@ -14,6 +14,9 @@
 --   Simétrica. Tramos proporcionales al precio de la prenda: 5 € en camisetas y
 --   10 € en vaqueros (los vaqueros cuestan ~2,2 veces más).
 --   Prueba de robustez: con 4 € / 8 € los dos pares principales se mantienen.
+--
+-- Las dos métricas solo usan las marcas con en_metricas = 1 en v_resumen_precios
+-- (n ≥ 5 y dentro del análisis). Las 5 marcas originales entran todas.
 -- =============================================================================
 
 -- Métrica 1 -------------------------------------------------------------------
@@ -23,7 +26,8 @@ WITH cruce AS (
     SELECT c.categoria, c.marca AS de, r.marca AS en,
            ROUND(100.0 * AVG(c.precio_actual BETWEEN r.p25 AND r.p75), 0) AS pct
     FROM catalogo AS c
-    JOIN v_resumen_precios AS r ON r.categoria = c.categoria
+    JOIN v_resumen_precios AS r ON r.categoria = c.categoria AND r.en_metricas = 1
+    JOIN v_resumen_precios AS m ON m.categoria = c.categoria AND m.marca = c.marca AND m.en_metricas = 1
     WHERE c.motivo = '7_basica' AND c.precio_actual IS NOT NULL
     GROUP BY c.categoria, c.marca, r.marca
 )
@@ -41,10 +45,12 @@ WHERE x.de < x.en;                    -- cada pareja una sola vez
 DROP VIEW IF EXISTS v_solape_pares;
 CREATE VIEW v_solape_pares AS
 WITH tramos AS (
-    SELECT categoria, marca,
-           CAST(precio_actual / (CASE WHEN categoria = 'camiseta' THEN 5 ELSE 10 END) AS INTEGER) AS tramo
-    FROM catalogo
-    WHERE motivo = '7_basica' AND precio_actual IS NOT NULL
+    SELECT c.categoria, c.marca,
+           CAST(c.precio_actual / (CASE WHEN c.categoria = 'camiseta' THEN 5 ELSE 10 END) AS INTEGER) AS tramo
+    FROM catalogo AS c
+    JOIN v_resumen_precios AS m        -- solo marcas con n ≥ 5 y dentro del análisis
+      ON m.categoria = c.categoria AND m.marca = c.marca AND m.en_metricas = 1
+    WHERE c.motivo = '7_basica' AND c.precio_actual IS NOT NULL
 ),
 reparto AS (
     SELECT categoria, marca, tramo,

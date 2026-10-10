@@ -4,14 +4,14 @@ camiseta,Lefties,9,6.99,7.99,7.99,7.99,9.99,8.1,0.0,Inditex,Baja fiabilidad (n<1
 camiseta,H&M,87,7.99,9.99,14.99,19.99,49.99,16.9,10.0,H&M,OK,True
 camiseta,Zara,50,9.95,12.95,15.95,17.95,29.95,16.39,5.0,Inditex,OK,True
 camiseta,Mango,12,15.99,15.99,15.99,19.99,19.99,17.32,4.0,Mango,Baja fiabilidad (n<15),True
-camiseta,Women'secret,5,16.99,16.99,16.99,19.99,19.99,18.19,3.0,Tendam,Baja fiabilidad (n<15),False
+camiseta,Women'secret,5,16.99,16.99,16.99,19.99,19.99,18.19,3.0,Tendam,Fuera del análisis (no comparable),False
 camiseta,Springfield,6,17.99,17.99,17.99,17.99,22.99,18.82,0.0,Tendam,Baja fiabilidad (n<15),True
 camiseta,Massimo Dutti,14,29.95,29.95,29.95,39.95,39.95,33.52,10.0,Inditex,Baja fiabilidad (n<15),True
 camiseta,Cortefiel,10,25.99,29.99,29.99,29.99,39.99,30.59,0.0,Tendam,Baja fiabilidad (n<15),True
-camiseta,Bimba y Lola,2,65.0,65.0,75.0,,75.0,70.0,,Premium española,Baja fiabilidad (n<15),False
-camiseta,Pedro del Hierro,4,79.9,79.9,89.9,89.9,89.9,87.4,10.0,Tendam,Baja fiabilidad (n<15),False
-camiseta,Adolfo Domínguez,1,120.0,120.0,,,120.0,120.0,,Premium española,Baja fiabilidad (n<15),False
-camiseta,Scalpers,1,29.99,29.99,,,29.99,29.99,,Premium española,Baja fiabilidad (n<15),False
+camiseta,Bimba y Lola,2,65.0,65.0,75.0,,75.0,70.0,,Premium española,Fuera de las métricas (n<5),False
+camiseta,Pedro del Hierro,4,79.9,79.9,89.9,89.9,89.9,87.4,10.0,Tendam,Fuera de las métricas (n<5),False
+camiseta,Adolfo Domínguez,1,120.0,120.0,,,120.0,120.0,,Premium española,Fuera de las métricas (n<5),False
+camiseta,Scalpers,1,29.99,29.99,,,29.99,29.99,,Premium española,Fuera de las métricas (n<5),False
 vaquero,Primark,45,10.0,14.0,18.0,18.0,24.0,17.2,4.0,Primark,OK,True
 vaquero,Lefties,28,12.99,17.99,19.99,19.99,25.99,19.24,2.0,Inditex,OK,True
 vaquero,Mango,87,25.99,29.99,29.99,39.99,49.99,33.88,10.0,Mango,OK,True
@@ -20,10 +20,10 @@ vaquero,Zara,101,25.95,29.95,35.95,39.95,59.95,34.41,10.0,Inditex,OK,True
 vaquero,Springfield,19,35.99,35.99,35.99,35.99,39.99,36.83,0.0,Tendam,OK,True
 vaquero,Massimo Dutti,32,49.95,49.95,59.95,59.95,59.95,56.51,10.0,Inditex,OK,True
 vaquero,Cortefiel,16,49.99,49.99,59.99,59.99,69.99,58.12,10.0,Tendam,OK,True
-vaquero,Silbon,4,49.9,49.9,69.9,69.9,69.9,64.9,20.0,Premium española,Baja fiabilidad (n<15),False
+vaquero,Silbon,4,49.9,49.9,69.9,69.9,69.9,64.9,20.0,Premium española,Fuera de las métricas (n<5),False
 vaquero,Scalpers,14,59.9,59.99,69.99,69.99,79.99,66.4,10.0,Premium española,Baja fiabilidad (n<15),True
 vaquero,Desigual,14,79.95,89.95,99.95,119.0,119.0,102.47,29.05,Premium española,Baja fiabilidad (n<15),True
 vaquero,Pedro del Hierro,10,99.9,99.9,119.0,119.0,129.0,112.36,19.1,Tendam,Baja fiabilidad (n<15),True
 vaquero,Adolfo Domínguez,7,95.0,95.0,130.0,130.0,130.0,115.0,35.0,Premium española,Baja fiabilidad (n<15),True
-vaquero,Bimba y Lola,3,105.0,105.0,135.0,135.0,135.0,125.0,30.0,Premium española,Baja fiabilidad (n<15),False
-vaquero,El Ganso,1,69.9,69.9,,,69.9,69.9,,Premium española,Baja fiabilidad (n<15),False
+vaquero,Bimba y Lola,3,105.0,105.0,135.0,135.0,135.0,125.0,30.0,Premium española,Fuera de las métricas (n<5),False
+vaquero,El Ganso,1,69.9,69.9,,,69.9,69.9,,Premium española,Fuera de las métricas (n<5),False

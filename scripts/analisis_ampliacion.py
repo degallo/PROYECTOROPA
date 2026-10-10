@@ -36,9 +36,8 @@ os.makedirs(SALIDA, exist_ok=True)
 
 ANCHO = {'camiseta': 5, 'vaquero': 10}          # tramos de la métrica principal
 ANCHO_ROBUSTEZ = {'camiseta': 4, 'vaquero': 8}  # prueba de robustez
-N_MIN_METRICAS = 5      # por debajo: no se calculan cuartiles ni solapamiento (propuesta)
-N_FIABLE = 15           # por debajo: "muestra pequeña"
-FUERA_DEL_ANALISIS = {"Women'secret"}   # lencería y homewear (propuesta, pendiente de Javi)
+N_MIN_METRICAS = 5      # solo para rotular la tabla de muestras; el corte real está en v_resumen_precios
+N_FIABLE = 15
 PREMIUM = ['Desigual', 'Adolfo Domínguez', 'Bimba y Lola', 'Scalpers', 'El Ganso', 'Silbon',
            'Pedro del Hierro', 'Massimo Dutti']
 
@@ -78,7 +77,7 @@ def solape_python(basicas, cat, ancho):
 def todas_las_parejas(pares, resumen):
     """v_solape_pares omite las parejas sin ningún tramo en común: se rellenan con 0 %."""
     filas = []
-    for cat, g in resumen.groupby('categoria'):
+    for cat, g in resumen[resumen['en_metricas'] == 1].groupby('categoria'):
         marcas = sorted(g['marca'])
         for i, a in enumerate(marcas):
             for b in marcas[i + 1:]:
@@ -128,11 +127,11 @@ for cat in ['camiseta', 'vaquero']:
 muestras = muestras.sort_values(['categoria', 'n'], ascending=[True, False])
 muestras.to_csv(os.path.join(SALIDA, 'muestras_por_marca.csv'), index=False)
 
-en_metricas = {(r.categoria, r.marca) for r in muestras.itertuples()
-               if r.n >= N_MIN_METRICAS and r.marca not in FUERA_DEL_ANALISIS}
+# Decisión de Javi: n ≥ 5 y Women'secret fuera. El corte vive en la vista (columna en_metricas).
+en_metricas = {(c, m) for c, m, e in zip(resumen['categoria'], resumen['marca'], resumen['en_metricas']) if e}
 
 # 3. Resumen de las 16 marcas ---------------------------------------------------
-resumen['en_metricas'] = [(c, m) in en_metricas for c, m in zip(resumen['categoria'], resumen['marca'])]
+resumen['en_metricas'] = resumen['en_metricas'].astype(bool)
 resumen = resumen.sort_values(['categoria', 'mediana', 'marca'])
 resumen.to_csv(os.path.join(SALIDA, 'resumen_16_marcas.csv'), index=False)
 
@@ -164,17 +163,17 @@ sens_pares['diferencia'] = sens_pares['solape_pct_rebajado'] - sens_pares['solap
 
 # 5. Solapamiento entre las marcas que entran en las métricas ---------------------
 # Coherencia: el cálculo en Python con los anchos originales tiene que dar lo mismo que la vista.
+basicas_m = basicas[[(c, m) in en_metricas for c, m in zip(basicas['categoria'], basicas['marca'])]]
 for cat in ['camiseta', 'vaquero']:
-    py = solape_python(basicas, cat, ANCHO[cat])
+    py = solape_python(basicas_m, cat, ANCHO[cat])
     sq = pares_cat[pares_cat['categoria'] == cat]
     comp = py.merge(sq, on=['categoria', 'marca_a', 'marca_b'], suffixes=('_py', '_sql'))
     assert len(comp) == len(py) and (comp['solape_pct_py'] == comp['solape_pct_sql']).all(), \
         f'El solapamiento en Python no coincide con v_solape_pares ({cat})'
-robustez = pd.concat([solape_python(basicas, c, ANCHO_ROBUSTEZ[c]) for c in ['camiseta', 'vaquero']])
+robustez = pd.concat([solape_python(basicas_m, c, ANCHO_ROBUSTEZ[c]) for c in ['camiseta', 'vaquero']])
 solape = (pares_cat.merge(robustez, on=['categoria', 'marca_a', 'marca_b'], suffixes=('', '_robustez'))
           .merge(sens_pares[['categoria', 'marca_a', 'marca_b', 'solape_pct_rebajado']]))
-solape['en_metricas'] = [((c, a) in en_metricas) and ((c, b) in en_metricas)
-                         for c, a, b in zip(solape['categoria'], solape['marca_a'], solape['marca_b'])]
+solape['en_metricas'] = True    # la vista ya solo incluye marcas con en_metricas = 1
 solape['pareja'] = solape['marca_a'] + ' – ' + solape['marca_b']
 solape = solape.sort_values(['categoria', 'solape_pct'], ascending=[True, False])
 solape.to_csv(os.path.join(SALIDA, 'solapamiento_16_marcas.csv'), index=False)
@@ -224,6 +223,30 @@ for cat in ['camiseta', 'vaquero']:
                                                      dentro['precio'].value_counts().sort_index().items())})
 hueco = pd.DataFrame(filas).sort_values(['categoria', 'n_hueco'], ascending=[True, False])
 hueco.to_csv(os.path.join(SALIDA, 'hueco_16_marcas.csv'), index=False)
+# Peso del hueco en la oferta de las marcas que entran en las métricas (modelos, no ventas)
+hm = hueco[hueco['en_metricas']]
+hueco_total = hm.groupby('categoria')[['n', 'n_hueco']].sum()
+hueco_total['pct'] = (100 * hueco_total['n_hueco'] / hueco_total['n']).round().astype(int)
+hueco_total.to_csv(os.path.join(SALIDA, 'hueco_total.csv'))
+
+# 8. Arquitectura de precios: céntimos finales y concentración ------------------------
+# Céntimos con enteros (precio × 100) para evitar errores de redondeo (7.99 * 100 = 798.999…).
+bm = basicas_m.copy()
+bm['centimos'] = (bm['precio'] * 100).round().astype(int) % 100
+bm['terminacion'] = bm['centimos'].map(lambda c: ',00' if c == 0 else f',{c:02d}')
+terminaciones = (pd.crosstab(bm['marca'], bm['terminacion'], normalize='index').mul(100).round().astype(int))
+terminaciones.insert(0, 'grupo', terminaciones.index.map(grupos))
+terminaciones.insert(1, 'n', bm.groupby('marca').size())
+terminaciones = terminaciones.sort_values(['grupo', 'n'], ascending=[True, False])
+terminaciones.to_csv(os.path.join(SALIDA, 'terminaciones_16_marcas.csv'))
+filas = []
+for (cat, marca), g in bm.groupby(['categoria', 'marca']):
+    frec = g['precio'].value_counts()
+    filas.append({'categoria': cat, 'grupo': grupos[marca], 'marca': marca, 'n': len(g),
+                  'precios_distintos': len(frec), 'pct_top3': round(100 * frec.head(3).sum() / len(g)),
+                  'precios_top3': ' · '.join(euros(p) for p in frec.head(3).index)})
+arquitectura = pd.DataFrame(filas).sort_values(['categoria', 'pct_top3'], ascending=[True, False])
+arquitectura.to_csv(os.path.join(SALIDA, 'arquitectura_16_marcas.csv'), index=False)
 con.close()
 
 # =============================================================================
@@ -261,4 +284,10 @@ print('\n7a. RATIOS DE LAS ESCALERAS (medianas)')
 print(ratios.to_string(index=False))
 print('\n7b. HUECO ENTRE ZARA (P75) Y MASSIMO DUTTI (P25), precios redondeados al euro')
 print(hueco[hueco['n_hueco'] > 0].to_string(index=False))
+print('\nPeso del hueco en la oferta de las marcas en métricas:')
+print(hueco_total.to_string())
+print('\n8. ARQUITECTURA DE PRECIOS')
+print(arquitectura.to_string(index=False))
+print('\nTerminaciones (% de modelos, camiseta + vaquero):')
+print(terminaciones.to_string())
 print('\nTablas guardadas en', SALIDA)

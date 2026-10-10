@@ -5,6 +5,8 @@
 -- SQLite no tiene función de mediana: se aproxima con NTILE(4).
 --   p25 ≈ máximo del cuartil 1 · mediana ≈ máximo del cuartil 2 · p75 ≈ máximo del cuartil 3
 -- Con muestras pequeñas (Lefties camisetas, n = 9) la aproximación es tosca.
+-- Umbrales: n ≥ 15 normal · 5 ≤ n < 15 baja fiabilidad ("muestra pequeña" para el
+-- lector) · n < 5 fuera de las métricas (columna en_metricas = 0).
 -- =============================================================================
 
 DROP VIEW IF EXISTS v_resumen_precios;
@@ -31,7 +33,14 @@ resumen AS (
 SELECT resumen.*,
        ROUND(p75 - p25, 2) AS ancho_franja,
        marcas.grupo,                    -- Inditex · Tendam · Mango · H&M · Primark · Premium española
-       CASE WHEN n < 15 THEN 'Baja fiabilidad (n<15)' ELSE 'OK' END AS fiabilidad
+       CASE WHEN marcas.en_analisis = 0 THEN 'Fuera del análisis (no comparable)'
+            WHEN n < 5                  THEN 'Fuera de las métricas (n<5)'
+            WHEN n < 15                 THEN 'Baja fiabilidad (n<15)'
+            ELSE 'OK' END AS fiabilidad,
+       -- Decisión de Javi (10/10/2026): con menos de 5 modelos un P25 no significa nada,
+       -- así que esas marcas no entran en el solapamiento (06) ni en la escalera; se
+       -- enseñan como puntos sueltos. Women'secret queda fuera del análisis.
+       (marcas.en_analisis = 1 AND n >= 5) AS en_metricas
 FROM resumen
 JOIN marcas USING (marca);              -- grupo de cada marca: tabla creada en 00_crear_tabla.sql
 
