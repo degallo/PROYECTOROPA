@@ -30,9 +30,10 @@ resumen AS (
 )
 SELECT resumen.*,
        ROUND(p75 - p25, 2) AS ancho_franja,
-       CASE WHEN marca IN ('Lefties', 'Zara', 'Massimo Dutti') THEN 'Inditex' ELSE 'Otros' END AS grupo,
+       marcas.grupo,                    -- Inditex · Tendam · Mango · H&M · Primark · Premium española
        CASE WHEN n < 15 THEN 'Baja fiabilidad (n<15)' ELSE 'OK' END AS fiabilidad
-FROM resumen;
+FROM resumen
+JOIN marcas USING (marca);              -- grupo de cada marca: tabla creada en 00_crear_tabla.sql
 
 -- Resultado validado
 SELECT categoria, marca, n, minimo, p25, mediana, p75, maximo, media, fiabilidad
