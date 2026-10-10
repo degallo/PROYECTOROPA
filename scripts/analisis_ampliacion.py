@@ -227,6 +227,16 @@ hueco.to_csv(os.path.join(SALIDA, 'hueco_16_marcas.csv'), index=False)
 hm = hueco[hueco['en_metricas']]
 hueco_total = hm.groupby('categoria')[['n', 'n_hueco']].sum()
 hueco_total['pct'] = (100 * hueco_total['n_hueco'] / hueco_total['n']).round().astype(int)
+# Sensibilidad: el mismo hueco (mismos límites de Zara y Massimo Dutti, que no tienen
+# rebajas) contando cada modelo con el precio que marcaba la web ese día.
+filas = []
+for cat in ['camiseta', 'vaquero']:
+    lo, hi = redondear_euro(r.loc[(cat, 'Zara'), 'p75']), redondear_euro(r.loc[(cat, 'Massimo Dutti'), 'p25'])
+    d = basicas_v[basicas_v['categoria'] == cat]
+    d = d[d['marca'].map(lambda m: (cat, m) in en_metricas)]
+    filas.append({'categoria': cat, 'pct_rebajado': round(100 * d['precio'].map(redondear_euro)
+                                                          .between(lo + 1, hi - 1).mean())})
+hueco_total = hueco_total.join(pd.DataFrame(filas).set_index('categoria'))
 hueco_total.to_csv(os.path.join(SALIDA, 'hueco_total.csv'))
 
 # 8. Arquitectura de precios: céntimos finales y concentración ------------------------
@@ -284,7 +294,7 @@ print('\n7a. RATIOS DE LAS ESCALERAS (medianas)')
 print(ratios.to_string(index=False))
 print('\n7b. HUECO ENTRE ZARA (P75) Y MASSIMO DUTTI (P25), precios redondeados al euro')
 print(hueco[hueco['n_hueco'] > 0].to_string(index=False))
-print('\nPeso del hueco en la oferta de las marcas en métricas:')
+print('\nPeso del hueco en la oferta de las marcas en métricas (pct_rebajado: con el precio rebajado):')
 print(hueco_total.to_string())
 print('\n8. ARQUITECTURA DE PRECIOS')
 print(arquitectura.to_string(index=False))

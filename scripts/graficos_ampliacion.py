@@ -134,10 +134,15 @@ def estado(cat, marca):
 
 
 def mediana_orden(marca):
-    """Orden de las filas: mediana del vaquero (si no hay, la de la camiseta)."""
+    """Orden de las filas: mediana del vaquero (si no hay, la de la camiseta).
+    Con 1 modelo, NTILE(4) deja vacía la mediana de la vista (NULL): para ORDENAR esas
+    marcas (n < 5, sin métrica) se usa la mediana de sus precios. No se publica como cifra."""
     for cat in ['vaquero', 'camiseta']:
         if (cat, marca) in resumen.index:
-            return resumen.loc[(cat, marca), 'mediana']
+            m = resumen.loc[(cat, marca), 'mediana']
+            if pd.isna(m):
+                m = basicas.query('categoria == @cat and marca == @marca')['precio'].median()
+            return m
     return 1e9
 
 
@@ -154,12 +159,15 @@ print('Gráficos (16 marcas):')
 # ---------------------------------------------------------------------------
 # 1. La escalera completa (múltiplos pequeños, escala log)
 # ---------------------------------------------------------------------------
-def dibujar_escalera(ax, cat, nombres=True, hueco=False):
-    for i, marca in enumerate(ORDEN):
+def dibujar_escalera(ax, cat, nombres=True, hueco=False, filas=None, lim=LIM, log=True):
+    """Barras flotantes P25–P75 + mediana. `filas`: marcas a dibujar (por defecto, todas);
+    `log`: escala logarítmica (escalera completa) o lineal (zoom a un tramo de precios)."""
+    filas = filas or ORDEN
+    for i, marca in enumerate(filas):
         e = estado(cat, marca)
         col, col_claro = color_marca(marca), color_marca(marca, claro=True)
         if e == 'sin':
-            ax.text(LIM[0] * 1.1, i, 'sin básicas en esta prenda', va='center', fontsize=8,
+            ax.text(lim[0] * 1.1, i, 'sin básicas en esta prenda', va='center', fontsize=8,
                     color=TEXTO_SEC, style='italic')
             continue
         r = resumen.loc[(cat, marca)]
@@ -168,7 +176,7 @@ def dibujar_escalera(ax, cat, nombres=True, hueco=False):
             precios = basicas.query('categoria == @cat and marca == @marca')['precio']
             ax.scatter(precios, [i] * len(precios), s=34, facecolor='white', edgecolor=col,
                        linewidth=1.3, zorder=3)
-            ax.annotate(f'n = {int(r["n"])} · sin métrica', (precios.max(), i), xytext=(8, 0),
+            ax.annotate(f'n = {int(r["n"])}', (precios.max(), i), xytext=(8, 0),
                         textcoords='offset points', va='center', fontsize=7.5, color=TEXTO_SEC,
                         style='italic')
             continue
@@ -188,14 +196,19 @@ def dibujar_escalera(ax, cat, nombres=True, hueco=False):
         ax.annotate(f'n = {int(r["n"])}' + (' · muestra pequeña' if pequena else ''), (x_texto, i),
                     xytext=(8, -0.5), textcoords='offset points', va='top', ha='left', fontsize=7,
                     color=TEXTO_SEC, style='italic' if pequena else 'normal')
-    ax.set_yticks(range(len(ORDEN)))
-    ax.set_yticklabels(ORDEN, fontsize=10, fontweight='bold')
-    for t, marca in zip(ax.get_yticklabels(), ORDEN):
+    ax.set_yticks(range(len(filas)))
+    ax.set_yticklabels(filas, fontsize=10, fontweight='bold')
+    for t, marca in zip(ax.get_yticklabels(), filas):
         t.set_color(color_marca(marca))
     ax.tick_params(axis='y', labelleft=nombres)
-    ax.set_ylim(-0.6, len(ORDEN) - 0.4)
-    eje_log(ax, TICKS)
-    ax.set_xlim(*LIM)
+    ax.set_ylim(-0.6, len(filas) - 0.4)
+    if log:
+        eje_log(ax, TICKS)
+    else:
+        ticks = list(range(int(lim[0] // 10 * 10 + 10), int(lim[1]) + 1, 20))
+        ax.set_xticks(ticks)
+        ax.set_xticklabels([euros(t, 0) for t in ticks])
+    ax.set_xlim(*lim)
     limpiar_ejes(ax)
     if hueco:
         lo, hi = resumen.loc[(cat, 'Zara'), 'p75'], resumen.loc[(cat, 'Massimo Dutti'), 'p25']
@@ -257,7 +270,7 @@ for ax, cat in zip(axes, PRENDAS):
                 n = int(resumen.loc[(cat, marca), 'n'])
                 m = resumen.loc[(cat, marca), 'mediana']
                 ax.scatter(m, y, s=70, facecolor='white', edgecolor=col, linewidth=1.3, zorder=3)
-                ax.annotate(f'{marca}\nn = {n}, sin métrica', (m, y), xytext=(0, -11),
+                ax.annotate(f'{marca}\nn = {n}', (m, y), xytext=(0, -11),
                             textcoords='offset points', ha='center', va='top', fontsize=8,
                             color=TEXTO_SEC, style='italic', linespacing=1.15)
         # Flechas y multiplicadores entre escalones consecutivos con métrica.
@@ -384,6 +397,22 @@ reparto('05_cortefiel_massimo_dutti.png',
         'Altura de cada barra: % de los modelos de la marca con ese precio (misma escala en las tres filas). Fondo '
         'gris: 50 % central de Massimo Dutti (P25–P75).\nÚltima fila: Cortefiel con el precio que marcaba la web '
         'ese día (con rebaja si la había; el 41 % de su catálogo estaba rebajado). Los ejes empiezan en 10 € y 15 €.')
+
+
+# ---------------------------------------------------------------------------
+# 8. El vaquero por encima de 45 € (zoom lineal de la escalera)
+# ---------------------------------------------------------------------------
+# Massimo Dutti y Cortefiel como referencia y, encima, las marcas premium. En este
+# tramo los precios van de 50 € a 135 €: basta un eje lineal (sin escala log).
+PREMIUM_VAQ = [m for m in ORDEN if mediana_orden(m) >= 45 and estado('vaquero', m) != 'sin']
+fig, ax = plt.subplots(figsize=(10, 4.9))
+dibujar_escalera(ax, 'vaquero', filas=PREMIUM_VAQ, lim=(40, 150), log=False)
+titulo_panel(ax, 'Vaquero · marcas con mediana por encima de 45 €')
+fig.subplots_adjust(bottom=0.2, left=0.2)
+nota_pie(fig, 'Barra: 50 % central de los modelos (P25–P75). Punto: mediana. Con trama: muestra pequeña (5–14 '
+              'modelos). Puntos huecos: menos de 5 modelos,\ncada punto es un modelo. Escala lineal; el eje '
+              'empieza en 40 €.')
+guardar(fig, '08_vaquero_premium.png')
 
 
 # ---------------------------------------------------------------------------
