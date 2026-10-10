@@ -66,6 +66,7 @@
 python scripts/construir_bd.py              # crea data/moda.db desde el CSV y ejecuta sql/02 → sql/06
 python scripts/analisis_complementario.py   # tablas del paso 1
 python scripts/graficos.py                  # gráficos del paso 2
+python scripts/crear_deck.py                # deck del paso 3
 ```
 
 | Fichero | Qué hace |
@@ -79,6 +80,7 @@ python scripts/graficos.py                  # gráficos del paso 2
 | `sql/06_solapamiento.sql` | Vistas `v_solape_franja` (métrica 1) y `v_solape_pares` (métrica 2) |
 | `scripts/analisis_complementario.py` | Paso 1: arquitectura de precios, hueco de la escalera, ratios y "H&M rodea a Zara" → `output/tablas/*.csv` |
 | `scripts/graficos.py` | Paso 2: gráficos PNG a 300 ppp → `output/graficos/` |
+| `scripts/crear_deck.py` | Paso 3: `output/posicionamiento_precio_moda.pptx` (python-pptx, Calibri; cifras leídas de la base y de `output/tablas/`) |
 
 **Regla de coherencia:** todo lo que calcules en Python tiene que coincidir con estas vistas. Si no coincide, es un error tuyo de configuración, no un hallazgo nuevo. Usa las vistas como fuente o verifica contra ellas.
 
