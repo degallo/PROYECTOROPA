@@ -38,6 +38,7 @@ GRIS_MARCA = RGBColor(0x7A, 0x7A, 0x7A)
 FONDO_TARJETA = RGBColor(0xF3, 0xF3, 0xF3)
 BLANCO = RGBColor(0xFF, 0xFF, 0xFF)
 FUENTE_LETRA = 'Calibri'
+AUTOR = 'Javier Benítez Escobedo'
 
 INDITEX = {'Lefties', 'Zara', 'Massimo Dutti'}
 ORDEN = ['Primark', 'Lefties', 'H&M', 'Zara', 'Massimo Dutti']
@@ -230,25 +231,82 @@ def cifra_grande(s, cifra, texto, x, y, w, color):
 # ===========================================================================
 s = prs.slides.add_slide(LAYOUT_PORTADA)
 t = s.shapes.title
-t.left, t.top, t.width, t.height = Inches(MARGEN + 0.2), Inches(2.0), Inches(8.4), Inches(2.2)
+t.left, t.top, t.width, t.height = Inches(MARGEN + 0.2), Inches(1.5), Inches(6.1), Inches(2.9)
 t.text_frame.word_wrap = True
 t.text_frame.vertical_anchor = MSO_ANCHOR.BOTTOM
 t.text_frame.text = '¿Compiten de verdad en precio las grandes cadenas de moda en España?'
 p = t.text_frame.paragraphs[0]
 p.alignment = PP_ALIGN.LEFT
-estilo_runs(p, 40, negrita=True)
+estilo_runs(p, 38, negrita=True)
+t.text_frame.margin_left = t.text_frame.margin_right = 0
 sub = s.placeholders[1]
-sub.left, sub.top, sub.width, sub.height = Inches(MARGEN + 0.2), Inches(4.4), Inches(8.4), Inches(1.0)
+sub.left, sub.top, sub.width, sub.height = Inches(MARGEN + 0.2), Inches(4.6), Inches(6.1), Inches(1.0)
 sub.text_frame.word_wrap = True
-sub.text_frame.text = ('Posicionamiento de precio de Primark, Lefties, H&M, Zara y Massimo Dutti '
-                       'a partir de su catálogo online')
+sub.text_frame.text = ('Posicionamiento de precio de cinco cadenas a partir de su catálogo online')
 p = sub.text_frame.paragraphs[0]
 p.alignment = PP_ALIGN.LEFT
 estilo_runs(p, 20, color=TEXTO_SEC)
-caja(s, 'Javi  ·  Datos recogidos el 10/10/2026', MARGEN + 0.2, 6.3, 8, 0.4, tam=14, color=TEXTO_SEC)
-# Motivo visual: una escalera de tres peldaños en azul (las tres marcas de Inditex)
-for i, alto in enumerate([1.0, 2.0, 3.0]):
-    forma_plana(s, 9.9 + i * 0.85, 5.6 - alto, 0.7, alto, AZUL)
+sub.text_frame.margin_left = sub.text_frame.margin_right = 0
+caja(s, [[(AUTOR, {'negrita': True, 'color': TEXTO})], 'Datos recogidos el 10/10/2026'],
+     MARGEN + 0.2, 6.05, 6.1, 0.8, tam=14, color=TEXTO_SEC)
+
+# Motivo visual: la escalera de precios con las cinco marcas. Cada peldaño mide lo que
+# el precio mediano del vaquero básico de esa marca (factor de mentira = 1): Inditex en
+# azul, el resto en gris, igual que en los gráficos.
+LOGOS = {m: os.path.join(BASE, 'assets', 'logos', f) for m, f in
+         [('Primark', 'primark.png'), ('Lefties', 'lefties.png'), ('H&M', 'hm.png'),
+          ('Zara', 'zara.png'), ('Massimo Dutti', 'massimo_dutti.png')]}
+# Los logos solo se usan si están los cinco; si falta alguno, van todos como texto
+# para que la portada sea coherente.
+usar_logos = all(os.path.exists(r) for r in LOGOS.values())
+
+
+def logo_monocromo(ruta, color=(0x33, 0x33, 0x33)):
+    """Convierte un logo a un solo color (gris oscuro) conservando su forma.
+    Usa la transparencia del PNG; si no la tiene, la oscuridad del píxel."""
+    im = Image.open(ruta).convert('RGBA')
+    if im.getextrema()[3][0] == 255:            # sin transparencia: fondo claro
+        gris = im.convert('L')
+        alfa = gris.point(lambda v: 255 - v)
+    else:
+        alfa = im.getchannel('A')
+    plano = Image.new('RGBA', im.size, color + (0,))
+    plano.putalpha(alfa)
+    plano = plano.crop(alfa.getbbox())
+    destino = os.path.join(GRAFICOS, '_logos', os.path.basename(ruta))
+    os.makedirs(os.path.dirname(destino), exist_ok=True)
+    plano.save(destino)
+    return destino
+
+
+GRIS_PELDANO = RGBColor(0xD3, 0xD3, 0xD3)
+base_y, alto_max = 6.55, 3.7
+pw, pg = 1.02, 0.1
+x0 = ANCHO - MARGEN - 5 * pw - 4 * pg
+precio_max = max(r_med('vaquero', m) for m in ORDEN)
+for i, marca in enumerate(ORDEN):
+    alto = alto_max * r_med('vaquero', marca) / precio_max
+    x = x0 + i * (pw + pg)
+    forma_plana(s, x, base_y - alto, pw, alto, AZUL if marca in INDITEX else GRIS_PELDANO)
+    # Precio dentro del peldaño, arriba
+    caja(s, euros(r_med('vaquero', marca)), x, base_y - alto + 0.08, pw, 0.3, tam=11,
+         color=BLANCO if marca in INDITEX else TEXTO, negrita=True, alinear=PP_ALIGN.CENTER)
+    # Marca encima del peldaño: logo (si están todos) o nombre
+    if usar_logos:
+        ruta = logo_monocromo(LOGOS[marca])
+        ancho_px, alto_px = Image.open(ruta).size
+        w = min(pw * 0.85, 0.42 * ancho_px / alto_px)
+        h = w * alto_px / ancho_px
+        s.shapes.add_picture(ruta, Inches(x + (pw - w) / 2), Inches(base_y - alto - 0.12 - h),
+                             Inches(w), Inches(h))
+    else:
+        nombre = marca.replace(' ', '\n')
+        lineas = nombre.count('\n') + 1
+        caja(s, [[(l, {'espacio': 0})] for l in nombre.split('\n')], x - 0.05, base_y - alto - 0.1 - 0.27 * lineas, pw + 0.1,
+             0.27 * lineas, tam=13, negrita=True, alinear=PP_ALIGN.CENTER, anclaje=MSO_ANCHOR.BOTTOM,
+             color=AZUL if marca in INDITEX else TEXTO)
+caja(s, 'Altura de cada peldaño: precio mediano del vaquero básico. En azul, Inditex.',
+     x0, base_y + 0.1, 5 * pw + 4 * pg, 0.3, tam=10, color=TEXTO_SEC, alinear=PP_ALIGN.RIGHT)
 s.notes_slide.notes_text_frame.text = (
     'Pregunta de partida: dónde se posiciona en precio cada gran cadena de moda en España y con quién '
     'se solapa. En concreto: ¿escalona Inditex sus marcas sin pisarse, y dónde chocan con sus rivales? '

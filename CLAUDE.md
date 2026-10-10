@@ -251,7 +251,7 @@ Javi ha leído *Storytelling with Data* (Cole Nussbaumer Knaflic), *La represent
 
 | # | Título de acción (borrador) | Contenido |
 |---|---|---|
-| 1 | ¿Compiten de verdad las grandes cadenas de moda por el mismo cliente? | Portada: pregunta, autor (Javi), fecha de los datos |
+| 1 | ¿Compiten de verdad en precio las grandes cadenas de moda en España? | Portada: pregunta, autor (**Javier Benítez Escobedo**), fecha de los datos, escalera de precios con las 5 marcas (logos en `assets/logos/` si están los cinco) |
 | 2 | Inditex escalona sus marcas sin pisarse; solo hay dos choques frontales | La Gran Idea + 3 cifras grandes: ×2 · 97 % · 87 % |
 | 3 | 1.211 modelos de 5 cadenas, comparando la misma prenda básica | Método en una imagen: marcas, prendas, definición de básica, fecha |
 | 4 | En camisetas, cada marca de Inditex ocupa su propio tramo de precio | Escalera de camisetas (barras flotantes P25–P75 + mediana) |
