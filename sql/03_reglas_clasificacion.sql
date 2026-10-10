@@ -254,7 +254,88 @@ INSERT INTO reglas_clasificacion (categoria, prioridad, motivo, campo, patron) V
     ('vaquero', 4, '4_adornos_acabado', 'nombre', '%selvedge%'),
     ('vaquero', 4, '4_adornos_acabado', 'nombre', '%split seam%');
 
--- Comprobación: reglas por categoría y motivo (camiseta 97, vaquero 94; total 191)
+-- =============================================================================
+-- AMPLIACIÓN (11 marcas nuevas, 10/10/2026)
+-- Patrones añadidos tras leer a mano las 486 filas nuevas. Mismos motivos y
+-- prioridades que arriba. construir_bd.py comprueba que NINGUNO cambia la
+-- clasificación de una fila de las 5 marcas originales.
+-- Criterio de coherencia con lo ya validado: se mantienen como básicos los
+-- casos que en Zara/H&M/Lefties ya lo eran ("cuello panadero", "cuello perkins",
+-- "manga ancha", "bajo vuelta", "marine/sailor", "cropped").
+-- =============================================================================
+
+-- Camisetas ---------------------------------------------------------------------
+INSERT INTO reglas_clasificacion (categoria, prioridad, motivo, campo, patron) VALUES
+    -- 1: no es una camiseta
+    ('camiseta', 1, '1_no_es_camiseta', 'nombre', '%camisa %'),              -- "CAMISA FLOCADA" (Desigual)
+    ('camiseta', 1, '1_no_es_camiseta', 'nombre', 'camisa%'),
+    ('camiseta', 1, '1_no_es_camiseta', 'nombre', 'jersey%'),                -- jerséis de Springfield
+    ('camiseta', 1, '1_no_es_camiseta', 'clasificacion_web', '%jerseis%'),
+    -- 2: deporte (Women'secret clasifica por sección: ropa / deporte / pijamas)
+    ('camiseta', 2, '2_deporte_funcional', 'clasificacion_web', '%deporte%'),
+    -- 3: estampados y colaboraciones
+    ('camiseta', 3, '3_estampado_rayas', 'nombre', '%animal print%'),
+    ('camiseta', 3, '3_estampado_rayas', 'nombre', '%flor%'),                -- "fluida floral"
+    ('camiseta', 3, '3_estampado_rayas', 'nombre', '%jacquard%'),
+    ('camiseta', 3, '3_estampado_rayas', 'nombre', '%inglaterra%'),          -- gráfico de bandera (Springfield)
+    -- 4: adornos y detalles de diseño
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%lace%'),                 -- encaje en inglés ("cuello lace")
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%guipur%'),               -- encaje de guipur
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%plumeti%'),              -- tul o gasa con topitos bordados
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%l_rex%'),                -- hilo metálico (lurex / LÚREX)
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%studs%'),                -- tachas en inglés
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%smock%'),                -- nido de abeja ("SMOCK LS TEE", "punto smock")
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%shoulder%'),             -- "OFF SHOULDER"
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%nudo%'),                 -- detalle de nudo
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%lazada%'),               -- lazo
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%envolvente%'),           -- cruzada / wrap
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%rom_ntic%'),             -- estilo romántico (volantes, puntillas)
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%bimateria%'),            -- dos tejidos combinados
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%flocad%'),               -- flocado
+    ('camiseta', 4, '4_adornos_diseno', 'nombre', '%cervantes%'),            -- cuello decorativo tipo gola
+    -- 5: tejido de vestir
+    ('camiseta', 5, '5_tejido_de_vestir', 'nombre', '%chenilla%');
+
+-- Vaqueros ----------------------------------------------------------------------
+INSERT INTO reglas_clasificacion (categoria, prioridad, motivo, campo, patron) VALUES
+    -- 1: no es un vaquero clásico (otro tejido)
+    ('vaquero', 1, '1_no_es_vaquero_clasico', 'nombre', '% pana%'),          -- pana (el espacio evita "campana")
+    ('vaquero', 1, '1_no_es_vaquero_clasico', 'nombre', '%bambula%'),        -- tejido arrugado, no denim
+    -- 2: líneas especiales de Mango (por la ruta de la web y por el nombre)
+    ('vaquero', 2, '2_linea_especial', 'nombre', '%premam_%'),
+    ('vaquero', 2, '2_linea_especial', 'clasificacion_web', '%maternity%'),
+    ('vaquero', 2, '2_linea_especial', 'clasificacion_web', '%tallas-plus%'),
+    -- 3: estampados, licencias y colaboraciones
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%snake%'),
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%pony%'),
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%leopardo%'),
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%cuadros%'),
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%mariposa%'),
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%mickey%'),
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%lacroix%'),              -- colaboración M. C. Lacroix (Desigual)
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%ottolinger%'),           -- colaboración Ottolinger (Desigual)
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%gaugin%'),               -- colección Gauguin (Desigual)
+    ('vaquero', 3, '3_estampado_rayas', 'nombre', '%tiras laterales%'),
+    -- 4: adornos y acabados
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%studs%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%glitter%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%aplique%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%hebilla%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%asim_tric%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%volante%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%flocad%'),               -- "flocados" (la regla '%flock%' no lo cubre)
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%deshilachad%'),          -- "deshilachada"
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%desflecad%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%velvet%'),               -- terciopelo en inglés
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%panelad%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%lazo%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%botones laterales%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%bolsillos parche%'),
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%plast_n%'),              -- bolsillos de plastón
+    ('vaquero', 4, '4_adornos_acabado', 'nombre', '%cintura ajustable%');
+
+-- Comprobación: reglas por categoría y motivo
+-- Originales: camiseta 97, vaquero 94 (191). Ampliación: +24 camiseta, +31 vaquero (246 en total).
 SELECT categoria, motivo, COUNT(*) AS n_patrones
 FROM reglas_clasificacion
 GROUP BY categoria, motivo
