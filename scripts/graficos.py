@@ -11,7 +11,7 @@ Reglas que se aplican en todos:
     se dice "muestra pequeña", no "baja fiabilidad").
   - Nota al pie con fuente, fecha y tamaño de muestra.
 
-Fuente: data/moda.db (vistas v_resumen_precios y v_solape_pares) y las tablas
+Fuente: data/moda_5marcas.db (vistas v_resumen_precios y v_solape_pares) y las tablas
 de output/tablas/ que genera scripts/analisis_complementario.py.
 Salida: PNG a 300 ppp en output/graficos/.
 
@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(BASE, 'data', 'moda.db')
+DB = os.path.join(BASE, 'data', 'moda_5marcas.db')  # versión de 5 marcas (antes de la ampliación)
 TABLAS = os.path.join(BASE, 'output', 'tablas')
 SALIDA = os.path.join(BASE, 'output', 'graficos')
 os.makedirs(SALIDA, exist_ok=True)

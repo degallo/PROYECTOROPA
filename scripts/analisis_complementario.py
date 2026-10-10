@@ -8,7 +8,7 @@ Tres preguntas que completan la historia de la escalera de precios:
      P25 de Massimo Dutti?
   3. Ratios de la escalera de Inditex (medianas), con el cálculo explícito.
 
-Fuente: data/moda.db (hay que ejecutar antes scripts/construir_bd.py).
+Fuente: data/moda_5marcas.db (hay que ejecutar antes scripts/construir_bd.py).
 Los cuartiles y medianas se leen de la vista v_resumen_precios para que todo
 coincida con el SQL (regla de coherencia).
 Salida: tablas CSV en output/tablas/ y un resumen por pantalla.
@@ -21,7 +21,7 @@ import sqlite3
 import pandas as pd
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(BASE, 'data', 'moda.db')
+DB = os.path.join(BASE, 'data', 'moda_5marcas.db')  # versión de 5 marcas (antes de la ampliación)
 SALIDA = os.path.join(BASE, 'output', 'tablas')
 os.makedirs(SALIDA, exist_ok=True)
 

@@ -23,7 +23,7 @@ import subprocess
 import tempfile
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(BASE, 'data', 'moda.db')
+DB = os.path.join(BASE, 'data', 'moda_5marcas.db')  # versión de 5 marcas (antes de la ampliación)
 PANEL = os.path.join(BASE, 'scripts', 'panel')
 SALIDA = os.path.join(BASE, 'output', 'panel', 'escalera_precios.html')
 INDITEX = ['Lefties', 'Zara', 'Massimo Dutti']

@@ -69,6 +69,9 @@
 python scripts/construir_bd.py              # crea data/moda.db (16 marcas, 2 CSV) y data/moda_5marcas.db; ejecuta sql/02 → sql/06
                                             # y comprueba solo que las 5 marcas originales cuadran con la sección 6
 python scripts/analisis_ampliacion.py       # ampliación: rebajas, muestras, sensibilidad, solapamiento 16 marcas
+python scripts/graficos_ampliacion.py       # gráficos de 16 marcas → output/graficos/16_marcas/
+# Los scripts analisis_complementario, graficos, crear_deck y crear_panel reproducen la versión de 5 marcas
+# (leen data/moda_5marcas.db).
 python scripts/analisis_complementario.py   # tablas del paso 1
 python scripts/graficos.py                  # gráficos del paso 2
 python scripts/crear_deck.py                # deck del paso 3
@@ -115,6 +118,16 @@ python scripts/crear_panel.py               # panel web interactivo (comprueba c
     - **"H&M rodea a Zara" se matiza:** claro en camisetas (H&M 31 % por debajo / 37 % dentro / 32 % por encima de la franja de Zara) y suave en vaqueros (15 % / 70 % / 16 %).
     - La **arquitectura de precios** va como **apoyo**, no como hallazgo central (la dispersión de H&M se explica en parte por su tamaño de catálogo). Las terminaciones: x,95 = Zara y Massimo Dutti; x,99 = H&M **y Lefties**; Primark, enteros o x,50.
     - **Mango** (y COS / & Other Stories) podrían ocupar el hueco: va **solo como limitación**, sin añadir datos.
+11. **Ampliación a 16 marcas (10/10/2026), decisiones aprobadas por Javi:**
+    - **Precio de catálogo** (original, sin rebaja) como criterio principal. La sensibilidad con el precio
+      rebajado (`precio_venta`) va en limitaciones: solo mueve a Tendam (Springfield pasa del 6.º al 3.er puesto;
+      Cortefiel–Massimo Dutti en vaquero baja del 91 % al 56 %).
+    - **n ≥ 15** normal · **5–14** "muestra pequeña" · **n < 5** fuera de las métricas (puntos sueltos en los
+      gráficos). El corte vive en `v_resumen_precios.en_metricas`.
+    - **Women'secret fuera** del análisis (lencería y homewear, sin vaqueros): `marcas.en_analisis = 0`.
+    - Clasificación de los casos dudosos aceptada tal como está (55 reglas nuevas, cajón de sastre revisado).
+    - Colores: azul = Inditex, **naranja `#C8571B` = Tendam**, gris = resto. Escaleras en **escala logarítmica**
+      (avisado en cada gráfico). Las parejas destacadas del solapamiento se eligen a mano (decisión 8), no por umbral.
 
 ---
 

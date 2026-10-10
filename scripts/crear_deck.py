@@ -5,7 +5,7 @@ Paso 3 · Presentación PowerPoint (guion de la sección 9 de CLAUDE.md).
 - Los títulos van en el marcador de título de cada diapositiva: son texto
   editable y salen en la vista de esquema de PowerPoint.
 - Los gráficos se insertan como imagen (output/graficos/).
-- Todas las cifras se leen de data/moda.db y de output/tablas/; ninguna se
+- Todas las cifras se leen de data/moda_5marcas.db y de output/tablas/; ninguna se
   escribe a mano.
 - Cada diapositiva lleva notas del orador con un guion breve.
 
@@ -23,7 +23,7 @@ from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.util import Inches, Pt
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(BASE, 'data', 'moda.db')
+DB = os.path.join(BASE, 'data', 'moda_5marcas.db')  # versión de 5 marcas (antes de la ampliación)
 TABLAS = os.path.join(BASE, 'output', 'tablas')
 GRAFICOS = os.path.join(BASE, 'output', 'graficos')
 SALIDA = os.path.join(BASE, 'output', 'posicionamiento_precio_moda.pptx')
