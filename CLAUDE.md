@@ -63,7 +63,9 @@
 ## 4. Pipeline reproducible
 
 ```bash
-python scripts/construir_bd.py      # crea data/moda.db desde el CSV y ejecuta sql/02 → sql/06
+python scripts/construir_bd.py              # crea data/moda.db desde el CSV y ejecuta sql/02 → sql/06
+python scripts/analisis_complementario.py   # tablas del paso 1
+python scripts/graficos.py                  # gráficos del paso 2
 ```
 
 | Fichero | Qué hace |
@@ -75,6 +77,8 @@ python scripts/construir_bd.py      # crea data/moda.db desde el CSV y ejecuta s
 | `sql/04_clasificar.sql` | Columna `motivo` (motivo de exclusión o `7_basica`) |
 | `sql/05_resumen_precios.sql` | Vista `v_resumen_precios`: n, mínimo, P25, mediana, P75, máximo, media, grupo, fiabilidad |
 | `sql/06_solapamiento.sql` | Vistas `v_solape_franja` (métrica 1) y `v_solape_pares` (métrica 2) |
+| `scripts/analisis_complementario.py` | Paso 1: arquitectura de precios, hueco de la escalera, ratios y "H&M rodea a Zara" → `output/tablas/*.csv` |
+| `scripts/graficos.py` | Paso 2: gráficos PNG a 300 ppp → `output/graficos/` |
 
 **Regla de coherencia:** todo lo que calcules en Python tiene que coincidir con estas vistas. Si no coincide, es un error tuyo de configuración, no un hallazgo nuevo. Usa las vistas como fuente o verifica contra ellas.
 

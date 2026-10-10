@@ -1,0 +1,11 @@
+categoria,limite_inferior_zara_p75,limite_superior_md_p25,marca,n,n_hueco,pct_hueco,n_hueco_estricto,pct_hueco_estricto,precios_en_hueco
+camiseta,17.95,29.95,H&M,87,20,23,20,23,"19,99 € (8) · 22,99 € (7) · 24,99 € (2) · 25,99 € (1) · 27,99 € (2)"
+camiseta,17.95,29.95,Lefties,9,0,0,0,0,
+camiseta,17.95,29.95,Massimo Dutti,14,0,0,0,0,
+camiseta,17.95,29.95,Primark,23,0,0,0,0,
+camiseta,17.95,29.95,Zara,50,7,14,7,14,"19,95 € (5) · 22,95 € (2)"
+vaquero,39.95,49.95,H&M,289,19,7,63,22,"44,99 € (19)"
+vaquero,39.95,49.95,Lefties,28,0,0,0,0,
+vaquero,39.95,49.95,Massimo Dutti,32,0,0,0,0,
+vaquero,39.95,49.95,Primark,45,0,0,0,0,
+vaquero,39.95,49.95,Zara,101,2,2,2,2,"45,95 € (2)"

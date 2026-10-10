@@ -1,0 +1,7 @@
+categoria,escalon,mediana_baja,mediana_alta,ratio_mediana,calculo,ratio_media
+camiseta,Lefties → Zara,7.99,15.95,2.0,"15,95 € / 7,99 € = 2,00",2.0
+camiseta,Zara → Massimo Dutti,15.95,29.95,1.9,"29,95 € / 15,95 € = 1,88",2.0
+camiseta,Lefties → Massimo Dutti,7.99,29.95,3.7,"29,95 € / 7,99 € = 3,75",4.1
+vaquero,Lefties → Zara,19.99,35.95,1.8,"35,95 € / 19,99 € = 1,80",1.8
+vaquero,Zara → Massimo Dutti,35.95,59.95,1.7,"59,95 € / 35,95 € = 1,67",1.6
+vaquero,Lefties → Massimo Dutti,19.99,59.95,3.0,"59,95 € / 19,99 € = 3,00",2.9
