@@ -312,9 +312,9 @@ for ax, cat in zip(axes, PRENDAS):
         ax.plot([r.solape_pct_robustez] * 2, [i - 0.4, i + 0.4], color=TEXTO, lw=1.3, zorder=3)
         avisos = []
         if r.solape_pct - r.solape_pct_robustez >= 20:
-            avisos.append(f'tramos de {ANCHO[cat][1]} €: {r.solape_pct_robustez} %')
+            avisos.append(f'{ANCHO[cat][1]} €: {r.solape_pct_robustez} %')
         if r.solape_pct - r.solape_pct_rebajado >= 20:
-            avisos.append(f'con rebajas: {r.solape_pct_rebajado} %')
+            avisos.append(f'rebajado: {r.solape_pct_rebajado} %')
         texto = f'{r.solape_pct} %' + ('   ' + ' · '.join(avisos) if avisos else '')
         ax.text(max(r.solape_pct, r.solape_pct_robustez) + 1.5, i, texto, va='center', fontsize=8.5,
                 fontweight='bold' if destacada else 'normal', color=TEXTO if destacada else TEXTO_SEC)
@@ -333,8 +333,9 @@ for ax, cat in zip(axes, PRENDAS):
 fig.subplots_adjust(wspace=0.9, bottom=0.17, left=0.13, right=0.9)
 nota_pie(fig, 'Solapamiento: parte del catálogo que dos marcas reparten igual por tramos de precio (0 % = no '
               'comparten ningún tramo; 100 % = mismo reparto). Solo parejas con 30 % o más.\nLínea vertical: '
-              'mismo cálculo con tramos de 4 € / 8 € (robustez). Se avisa cuando la cifra cae 20 puntos o más con '
-              'esos tramos o con el precio rebajado. En negro: los choques frontales.')
+              'mismo cálculo con tramos de 4 € / 8 € (robustez). Junto a la barra se avisa cuando la cifra cae 20 puntos '
+              'o más con esos tramos ("4 €: 33 %") o con el precio rebajado ("rebajado: 0 %").\nEn negro: los choques '
+              'frontales.')
 guardar(fig, '03_solapamiento_16_marcas.png')
 
 

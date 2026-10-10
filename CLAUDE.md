@@ -70,6 +70,7 @@ python scripts/construir_bd.py              # crea data/moda.db (16 marcas, 2 CS
                                             # y comprueba solo que las 5 marcas originales cuadran con la sección 6
 python scripts/analisis_ampliacion.py       # ampliación: rebajas, muestras, sensibilidad, solapamiento 16 marcas
 python scripts/graficos_ampliacion.py       # gráficos de 16 marcas → output/graficos/16_marcas/
+python scripts/crear_deck_ampliacion.py     # deck de 16 marcas → output/posicionamiento_precio_moda_16_marcas.pptx (18 diap.)
 # Los scripts analisis_complementario, graficos, crear_deck y crear_panel reproducen la versión de 5 marcas
 # (leen data/moda_5marcas.db).
 python scripts/analisis_complementario.py   # tablas del paso 1
@@ -128,6 +129,10 @@ python scripts/crear_panel.py               # panel web interactivo (comprueba c
     - Clasificación de los casos dudosos aceptada tal como está (55 reglas nuevas, cajón de sastre revisado).
     - Colores: azul = Inditex, **naranja `#C8571B` = Tendam**, gris = resto. Escaleras en **escala logarítmica**
       (avisado en cada gráfico). Las parejas destacadas del solapamiento se eligen a mano (decisión 8), no por umbral.
+    - Las marcas con n < 5 se rotulan solo con "n = X" (sin "sin métrica"): lo pidió Javi.
+    - El deck de 16 marcas va **con otro nombre** (`posicionamiento_precio_moda_16_marcas.pptx` y `.pdf`); el de
+      5 marcas se conserva. Lleva una diapositiva de **conclusión final** (qué podría hacer una marca de ropa y
+      qué una agencia), pedida por Javi.
 
 ---
 
