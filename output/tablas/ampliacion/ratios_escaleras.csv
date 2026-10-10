@@ -1,0 +1,9 @@
+grupo,categoria,escalon,mediana_baja,mediana_alta,ratio,calculo,n_baja,n_alta
+Inditex,camiseta,Lefties → Zara,7.99,15.95,2.0,"15,95 € / 7,99 €",9,50
+Inditex,camiseta,Zara → Massimo Dutti,15.95,29.95,1.9,"29,95 € / 15,95 €",50,14
+Inditex,vaquero,Lefties → Zara,19.99,35.95,1.8,"35,95 € / 19,99 €",28,101
+Inditex,vaquero,Zara → Massimo Dutti,35.95,59.95,1.7,"59,95 € / 35,95 €",101,32
+Tendam,camiseta,Springfield → Cortefiel,17.99,29.99,1.7,"29,99 € / 17,99 €",6,10
+Tendam,camiseta,Cortefiel → Pedro del Hierro,29.99,89.9,3.0,"89,90 € / 29,99 €",10,4
+Tendam,vaquero,Springfield → Cortefiel,35.99,59.99,1.7,"59,99 € / 35,99 €",19,16
+Tendam,vaquero,Cortefiel → Pedro del Hierro,59.99,119.0,2.0,"119,00 € / 59,99 €",16,10

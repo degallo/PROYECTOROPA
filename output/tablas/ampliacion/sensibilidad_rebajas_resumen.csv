@@ -1,0 +1,29 @@
+categoria,marca,n,p25,mediana,p75,en_metricas,p25_rebajado,mediana_rebajado,p75_rebajado,cambia_mediana,puesto_mediana,puesto_mediana_rebajado
+camiseta,Primark,23,4.5,7.0,8.0,True,4.5,7.0,8.0,False,1.0,1.0
+camiseta,Lefties,9,7.99,7.99,7.99,True,7.99,7.99,7.99,False,2.0,2.0
+camiseta,H&M,87,9.99,14.99,19.99,True,9.99,14.99,19.99,False,3.0,4.0
+camiseta,Zara,50,12.95,15.95,17.95,True,12.95,15.95,17.95,False,4.0,5.0
+camiseta,Mango,12,15.99,15.99,19.99,True,15.99,15.99,19.99,False,5.0,6.0
+camiseta,Women'secret,5,16.99,16.99,19.99,False,10.99,10.99,13.99,True,,
+camiseta,Springfield,6,17.99,17.99,17.99,True,12.59,12.59,12.59,True,6.0,3.0
+camiseta,Massimo Dutti,14,29.95,29.95,39.95,True,29.95,29.95,39.95,False,7.0,7.0
+camiseta,Cortefiel,10,29.99,29.99,29.99,True,17.99,29.99,29.99,False,8.0,8.0
+camiseta,Bimba y Lola,2,65.0,75.0,,False,45.0,65.0,,True,,
+camiseta,Pedro del Hierro,4,79.9,89.9,89.9,False,39.0,89.9,89.9,False,,
+camiseta,Adolfo Domínguez,1,120.0,,,False,120.0,,,False,,
+camiseta,Scalpers,1,29.99,,,False,29.99,,,False,,
+vaquero,Primark,45,14.0,18.0,18.0,True,14.0,18.0,18.0,False,1.0,1.0
+vaquero,Lefties,28,17.99,19.99,19.99,True,17.99,19.99,19.99,False,2.0,2.0
+vaquero,Mango,87,29.99,29.99,39.99,True,25.99,29.99,35.99,False,3.0,4.0
+vaquero,H&M,289,29.99,34.99,39.99,True,29.99,34.99,39.99,False,4.0,5.0
+vaquero,Zara,101,29.95,35.95,39.95,True,29.95,35.95,39.95,False,5.0,6.0
+vaquero,Springfield,19,35.99,35.99,35.99,True,25.19,25.19,27.99,True,6.0,3.0
+vaquero,Massimo Dutti,32,49.95,59.95,59.95,True,49.95,59.95,59.95,False,7.0,8.0
+vaquero,Cortefiel,16,49.99,59.99,59.99,True,29.99,49.99,59.99,True,8.0,7.0
+vaquero,Silbon,4,49.9,69.9,69.9,False,49.9,69.9,69.9,False,,
+vaquero,Scalpers,14,59.99,69.99,69.99,True,59.99,69.99,69.99,False,9.0,9.0
+vaquero,Desigual,14,89.95,99.95,119.0,True,89.95,99.95,119.0,False,10.0,12.0
+vaquero,Pedro del Hierro,10,99.9,119.0,119.0,True,49.0,99.9,119.0,True,11.0,11.0
+vaquero,Adolfo Domínguez,7,95.0,130.0,130.0,True,95.0,95.0,130.0,True,12.0,10.0
+vaquero,Bimba y Lola,3,105.0,135.0,135.0,False,105.0,135.0,135.0,False,,
+vaquero,El Ganso,1,69.9,,,False,69.9,,,False,,

@@ -1,5 +1,8 @@
 # Proyecto 4 · Posicionamiento de precio en la moda rápida en España
 
+> **Ampliación a 16 marcas en curso** (`docs/INSTRUCCIONES_AMPLIACION.md`). La sección 6 sigue siendo la
+> referencia de las 5 marcas originales: `construir_bd.py` comprueba que se reproduce exactamente.
+
 > Archivo de traspaso desde la conversación en claude.ai. Léelo entero antes de tocar nada.
 > Todo lo que aparece aquí como "validado" se comprobó paso a paso con Javi en SQLite.
 
@@ -63,7 +66,9 @@
 ## 4. Pipeline reproducible
 
 ```bash
-python scripts/construir_bd.py              # crea data/moda.db desde el CSV y ejecuta sql/02 → sql/06
+python scripts/construir_bd.py              # crea data/moda.db (16 marcas, 2 CSV) y data/moda_5marcas.db; ejecuta sql/02 → sql/06
+                                            # y comprueba solo que las 5 marcas originales cuadran con la sección 6
+python scripts/analisis_ampliacion.py       # ampliación: rebajas, muestras, sensibilidad, solapamiento 16 marcas
 python scripts/analisis_complementario.py   # tablas del paso 1
 python scripts/graficos.py                  # gráficos del paso 2
 python scripts/crear_deck.py                # deck del paso 3
@@ -72,10 +77,10 @@ python scripts/crear_panel.py               # panel web interactivo (comprueba c
 
 | Fichero | Qué hace |
 |---|---|
-| `sql/00_crear_tabla.sql` | Estructura de `catalogo` |
+| `sql/00_crear_tabla.sql` | Estructura de `catalogo` y tabla `marcas(marca, grupo)` |
 | `sql/01_exploracion.sql` | Comprobaciones de tipos y totales (no modifica datos) |
-| `sql/02_limpieza.sql` | Normaliza el único producto rebajado a su precio original y elimina `precio_original` |
-| `sql/03_reglas_clasificacion.sql` | Tabla `reglas_clasificacion`: 191 patrones LIKE que excluyen prendas no básicas |
+| `sql/02_limpieza.sql` | Guarda `precio_venta` y `rebajado`, pone el precio original en `precio_actual` y elimina `precio_original` |
+| `sql/03_reglas_clasificacion.sql` | Tabla `reglas_clasificacion`: 191 patrones originales + 55 de la ampliación (246) |
 | `sql/04_clasificar.sql` | Columna `motivo` (motivo de exclusión o `7_basica`) |
 | `sql/05_resumen_precios.sql` | Vista `v_resumen_precios`: n, mínimo, P25, mediana, P75, máximo, media, grupo, fiabilidad |
 | `sql/06_solapamiento.sql` | Vistas `v_solape_franja` (métrica 1) y `v_solape_pares` (métrica 2) |

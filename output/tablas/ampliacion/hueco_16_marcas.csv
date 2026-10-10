@@ -1,0 +1,29 @@
+categoria,hueco,marca,grupo,n,en_metricas,n_hueco,pct_hueco,precios_en_hueco
+camiseta,"17,95 € – 29,95 €",H&M,H&M,87,True,20,23,"19,99 € (8) · 22,99 € (7) · 24,99 € (2) · 25,99 € (1) · 27,99 € (2)"
+camiseta,"17,95 € – 29,95 €",Zara,Inditex,50,True,7,14,"19,95 € (5) · 22,95 € (2)"
+camiseta,"17,95 € – 29,95 €",Mango,Mango,12,True,4,33,"19,99 € (4)"
+camiseta,"17,95 € – 29,95 €",Women'secret,Tendam,5,False,2,40,"19,99 € (2)"
+camiseta,"17,95 € – 29,95 €",Cortefiel,Tendam,10,True,1,10,"25,99 € (1)"
+camiseta,"17,95 € – 29,95 €",Springfield,Tendam,6,True,1,17,"22,99 € (1)"
+camiseta,"17,95 € – 29,95 €",Adolfo Domínguez,Premium española,1,False,0,0,
+camiseta,"17,95 € – 29,95 €",Bimba y Lola,Premium española,2,False,0,0,
+camiseta,"17,95 € – 29,95 €",Lefties,Inditex,9,True,0,0,
+camiseta,"17,95 € – 29,95 €",Massimo Dutti,Inditex,14,True,0,0,
+camiseta,"17,95 € – 29,95 €",Pedro del Hierro,Tendam,4,False,0,0,
+camiseta,"17,95 € – 29,95 €",Primark,Primark,23,True,0,0,
+camiseta,"17,95 € – 29,95 €",Scalpers,Premium española,1,False,0,0,
+vaquero,"39,95 € – 49,95 €",H&M,H&M,289,True,19,7,"44,99 € (19)"
+vaquero,"39,95 € – 49,95 €",Zara,Inditex,101,True,2,2,"45,95 € (2)"
+vaquero,"39,95 € – 49,95 €",Adolfo Domínguez,Premium española,7,True,0,0,
+vaquero,"39,95 € – 49,95 €",Bimba y Lola,Premium española,3,False,0,0,
+vaquero,"39,95 € – 49,95 €",Cortefiel,Tendam,16,True,0,0,
+vaquero,"39,95 € – 49,95 €",Desigual,Premium española,14,True,0,0,
+vaquero,"39,95 € – 49,95 €",El Ganso,Premium española,1,False,0,0,
+vaquero,"39,95 € – 49,95 €",Lefties,Inditex,28,True,0,0,
+vaquero,"39,95 € – 49,95 €",Mango,Mango,87,True,0,0,
+vaquero,"39,95 € – 49,95 €",Massimo Dutti,Inditex,32,True,0,0,
+vaquero,"39,95 € – 49,95 €",Pedro del Hierro,Tendam,10,True,0,0,
+vaquero,"39,95 € – 49,95 €",Primark,Primark,45,True,0,0,
+vaquero,"39,95 € – 49,95 €",Scalpers,Premium española,14,True,0,0,
+vaquero,"39,95 € – 49,95 €",Silbon,Premium española,4,False,0,0,
+vaquero,"39,95 € – 49,95 €",Springfield,Tendam,19,True,0,0,
