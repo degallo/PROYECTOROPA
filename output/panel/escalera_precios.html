@@ -1,135 +1,167 @@
 <title>Escalera de precios de la moda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
-/* Maqueta: una columna de herramienta. Controles arriba (marcas, ancho de tramo),
-   resultados debajo en el orden de la historia: escalera, choques, escalones, hueco, tabla. */
+/* Sistema de diseño ALJIBE (tokens de su tokens.json). Maqueta: portada con el arco de
+   herradura y la cifra clave en directo; debajo, controles y resultados en el orden de
+   la historia (escalera, choques, escalones, hueco, tabla), separados por espacio y línea. */
 :root {
-  --bg: #ffffff;
-  --panel: #f6f7f8;
-  --line: #e4e6e9;
-  --ink: #333333;
-  --ink-2: #5f646b;
-  --ink-3: #8a8f96;
-  --inditex: #2a64a8;          /* marca (punto) y texto de Inditex */
-  --inditex-band: #a9c1e2;     /* franja P25–P75 de Inditex */
-  --otros: #7a7a7a;            /* marca (punto) del resto */
-  --otros-text: #6b6b6b;
-  --otros-band: #d3d3d3;
-  --pair: #4a4f57;             /* barras de solapamiento */
-  --gap: #eef0f3;              /* sombreado del hueco */
-  --focus: #2a64a8;
-  --warn: #8a5a00;
-  --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-  --r: 6px;
+  /* Color ALJIBE */
+  --aljibe: #004C59; --on-aljibe: #F6F3EE; --agua: #2E8C9C; --agua-soft: #CFE6EA;
+  --cal: #F6F3EE; --cal-raised: #FFFFFF; --arena: #E6DFD3; --tinta: #10262B; --tinta-suave: #4E6368;
+  --linea: #C9CFCC; --alerta: #B4521A; --foco: #004C59;
+  /* Piedra: neutro cálido para las cadenas que no son de Inditex. tinta-suave se confunde
+     con aljibe como serie de datos (validado), así que se usa un tono de la familia arena. */
+  --piedra: #968B7C; --piedra-band: #E6DFD3; --hueco: #EBE4D7;
+  /* Alias que usa el código de los gráficos */
+  --bg: var(--cal); --panel: var(--cal-raised); --line: var(--linea); --ink: var(--tinta); --ink-2: var(--tinta-suave); --ink-3: var(--tinta-suave);
+  --inditex: var(--aljibe); --inditex-band: var(--agua-soft); --otros: var(--piedra); --otros-text: var(--tinta-suave); --otros-band: var(--piedra-band);
+  --pair: var(--tinta-suave); --gap: var(--hueco); --focus: var(--foco); --warn: var(--alerta);
+  /* Tipografía ALJIBE */
+  --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --font: var(--sans);
+  /* Espacio y forma ALJIBE */
+  --space-1: 4px; --space-2: 8px; --space-3: 16px; --space-4: 24px; --space-5: 40px; --space-6: 64px;
+  --radius-sm: 4px; --radius-md: 8px; --r: var(--radius-md);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #17191d; --panel: #1f2228; --line: #2e3238; --ink: #e6e7e9; --ink-2: #b4b8bf; --ink-3: #8b9099;
-    --inditex: #5e93db; --inditex-band: #2d4b74; --otros: #666a72; --otros-text: #a3a8b0; --otros-band: #3a3e45;
-    --pair: #a3a8b0; --gap: #22262c; --focus: #7ba7e2; --warn: #e0b45a; color-scheme: dark;
+    --aljibe: #4FB3C4; --on-aljibe: #0C1C20; --agua: #7CC6D3; --agua-soft: #163A41; --inditex-band: #22606B;
+    --cal: #0C1C20; --cal-raised: #13292E; --arena: #22383D; --tinta: #EEF3F2; --tinta-suave: #9DB3B7;
+    --linea: #2E464B; --alerta: #F0A06A; --foco: #7CC6D3;
+    --piedra: #8A8276; --piedra-band: #3B4240; --hueco: #13292E; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #17191d; --panel: #1f2228; --line: #2e3238; --ink: #e6e7e9; --ink-2: #b4b8bf; --ink-3: #8b9099;
-  --inditex: #5e93db; --inditex-band: #2d4b74; --otros: #666a72; --otros-text: #a3a8b0; --otros-band: #3a3e45;
-  --pair: #a3a8b0; --gap: #22262c; --focus: #7ba7e2; --warn: #e0b45a; color-scheme: dark;
+  --aljibe: #4FB3C4; --on-aljibe: #0C1C20; --agua: #7CC6D3; --agua-soft: #163A41; --inditex-band: #22606B;
+  --cal: #0C1C20; --cal-raised: #13292E; --arena: #22383D; --tinta: #EEF3F2; --tinta-suave: #9DB3B7;
+  --linea: #2E464B; --alerta: #F0A06A; --foco: #7CC6D3;
+  --piedra: #8A8276; --piedra-band: #3B4240; --hueco: #13292E; color-scheme: dark;
 }
-body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 48px; display: grid; gap: 36px; }
-h1, h2, h3 { margin: 0; text-wrap: balance; line-height: 1.2; }
-h1 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; letter-spacing: -0.01em; }
-h2 { font-size: 1.2rem; font-weight: 700; }
-h3 { font-size: 0.95rem; font-weight: 600; }
+body { background: var(--cal); color: var(--tinta); font-family: var(--sans); font-size: 16px; line-height: 26px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); padding-block: var(--space-5) var(--space-6); display: grid; gap: var(--space-5); }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 4.6vw, 2.75rem); line-height: 1.12; font-weight: 700; color: var(--aljibe); letter-spacing: -0.01em; }
+h2 { font-size: 24px; line-height: 32px; font-weight: 600; }
+h3 { font-size: 18px; line-height: 26px; font-weight: 600; }
 p { margin: 0; }
-.sub { color: var(--ink-2); max-width: 70ch; }
-.eyebrow { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
-header { display: grid; gap: 10px; }
-.resumen-linea { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.sub { color: var(--tinta-suave); max-width: 65ch; }
+.eyebrow, .etq { font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--tinta-suave); }
+.num, .resumen-linea { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* Portada: texto a la izquierda y el arco de herradura con la cifra clave a la derecha */
+.portada { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr); gap: var(--space-5); align-items: center;
+  padding-bottom: var(--space-5); border-bottom: 1px solid var(--linea); }
+.portada-texto { display: grid; gap: var(--space-3); min-width: 0; }
+.resumen-linea { font-size: 14px; line-height: 20px; color: var(--tinta-suave); }
+.arco { position: relative; justify-self: end; width: min(100%, 300px); }
+.arco svg { display: block; width: 100%; height: auto; }
+.arco-dentro { position: absolute; inset: 22% 18% 8% 18%; display: grid; align-content: center; justify-items: center; gap: var(--space-2); text-align: center; color: var(--on-aljibe); }
+.arco-dentro .cifra { font-family: var(--mono); font-size: clamp(26px, 8vw, 36px); line-height: 1.08; font-weight: 500; letter-spacing: -0.03em; white-space: nowrap; }
+.arco-dentro .pie { font-size: 14px; line-height: 20px; max-width: 18ch; }
+@media (max-width: 640px) { .portada { grid-template-columns: 1fr; } .arco { justify-self: start; width: min(100%, 260px); } }
 
 /* Controles */
-.controles { display: grid; gap: 14px; padding: 16px; background: var(--panel); border-radius: var(--r); }
-.fila-control { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
-.fila-control > .etq { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); min-width: 9.5em; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--bg);
-  color: var(--ink); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 0.875rem; cursor: pointer; }
-.chip .pt { width: 10px; height: 10px; border-radius: 50%; background: var(--otros); flex: none; }
-.chip.inditex .pt { background: var(--inditex); }
-.chip[aria-pressed="false"] { color: var(--ink-3); background: transparent; border-style: dashed; }
-.chip[aria-pressed="false"] .pt { background: transparent; border: 1.5px solid var(--ink-3); }
-.chip .quitar { border: 0; background: none; color: var(--ink-3); font: inherit; cursor: pointer; padding: 0 0 0 2px; }
-.segmentado { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
-.segmentado button { border: 0; background: var(--bg); color: var(--ink-2); font: inherit; font-size: 0.85rem; padding: 6px 12px; cursor: pointer; }
-.segmentado button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
-button:focus-visible, select:focus-visible, textarea:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.btn { border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: var(--r); padding: 7px 14px; font: inherit; font-size: 0.875rem; font-weight: 600; cursor: pointer; }
-.btn.sec { background: transparent; color: var(--ink); }
+.controles { display: grid; gap: var(--space-3); padding: var(--space-3) var(--space-4); background: var(--cal-raised); border: 1px solid var(--linea); border-radius: var(--radius-md); }
+.fila-control { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); align-items: center; }
+.fila-control > .etq { min-width: 11em; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chip { display: inline-flex; align-items: center; gap: var(--space-2); border: 1.5px solid var(--tinta); background: var(--cal-raised);
+  color: var(--tinta); border-radius: var(--radius-sm); padding: 6px 12px; font: inherit; font-size: 14px; line-height: 20px; font-weight: 500; cursor: pointer; }
+.chip .pt { width: 10px; height: 10px; border-radius: 50%; background: var(--piedra); flex: none; }
+.chip.inditex .pt { background: var(--aljibe); }
+.chip .grupo { font-size: 12px; color: var(--tinta-suave); font-weight: 400; }
+.chip[aria-pressed="false"] { color: var(--tinta-suave); background: transparent; border: 1.5px dashed var(--linea); }
+.chip[aria-pressed="false"] .pt { background: transparent; border: 1.5px solid var(--tinta-suave); }
+.chip .quitar { border: 0; background: none; color: var(--tinta-suave); font: inherit; cursor: pointer; padding: 0 0 0 2px; }
+.segmentado { display: inline-flex; border: 1px solid var(--linea); border-radius: var(--radius-sm); overflow: hidden; }
+.segmentado button { border: 0; background: var(--cal-raised); color: var(--tinta-suave); font: inherit; font-size: 14px; padding: 6px 12px; cursor: pointer; }
+.segmentado button[aria-pressed="true"] { background: var(--aljibe); color: var(--on-aljibe); }
+button:focus-visible, select:focus-visible, textarea:focus-visible, input:focus-visible, [tabindex]:focus-visible, summary:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+.btn { border: 1.5px solid var(--aljibe); background: var(--aljibe); color: var(--on-aljibe); border-radius: var(--radius-md); padding: 8px 16px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.btn.sec { background: transparent; color: var(--aljibe); }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-select { font: inherit; font-size: 0.875rem; padding: 5px 8px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); }
-.nota { font-size: 0.8rem; color: var(--ink-3); }
+select { font: inherit; font-size: 14px; padding: 6px 10px; border: 1px solid var(--linea); border-radius: var(--radius-md); background: var(--cal-raised); color: var(--tinta); }
+.nota { font-size: 14px; line-height: 20px; color: var(--tinta-suave); }
 
-/* Secciones */
-section { display: grid; gap: 14px; }
-.cab { display: grid; gap: 4px; }
-.cab .sub { font-size: 0.9rem; }
-.dos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px 32px; }
-.grafico { min-width: 0; display: grid; gap: 6px; }
+/* Secciones: se separan con espacio y línea, sin sombras */
+section { display: grid; gap: var(--space-3); padding-top: var(--space-4); border-top: 1px solid var(--linea); }
+.cab { display: grid; gap: var(--space-1); }
+.dos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--space-4) var(--space-5); }
+.grafico { min-width: 0; display: grid; gap: var(--space-2); align-content: start; }
 .grafico svg { display: block; width: 100%; height: auto; overflow: visible; }
-.vacio { padding: 18px; border: 1px dashed var(--line); border-radius: var(--r); color: var(--ink-3); font-size: 0.9rem; }
-svg text { font-family: var(--font); }
-.leyenda { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.8rem; color: var(--ink-2); }
-.leyenda span { display: inline-flex; align-items: center; gap: 6px; }
-.sw { width: 18px; height: 9px; border-radius: 2px; display: inline-block; }
+.vacio { padding: var(--space-3); border: 1px dashed var(--linea); border-radius: var(--radius-md); color: var(--tinta-suave); font-size: 14px; }
+svg text { font-family: var(--sans); }
+svg text.num { font-family: var(--mono); }
+.leyenda { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); font-size: 14px; line-height: 20px; color: var(--tinta-suave); }
+.leyenda span { display: inline-flex; align-items: center; gap: var(--space-2); }
+.sw { width: 18px; height: 10px; border-radius: 2px; display: inline-block; }
 
-/* Escalones de Inditex */
-.cadena { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-variant-numeric: tabular-nums; }
+/* Escalones de Inditex: las cifras en mono, como pide ALJIBE para datos */
+.cadena { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2) var(--space-3); }
 .cadena .m { display: grid; }
-.cadena .m b { color: var(--inditex); font-size: 1.05rem; }
-.cadena .m small { color: var(--ink-3); font-size: 0.75rem; }
-.cadena .x { font-size: 1.6rem; font-weight: 700; color: var(--ink); padding-inline: 4px; }
+.cadena .m b { color: var(--aljibe); font-family: var(--mono); font-size: 18px; font-weight: 500; }
+.cadena .m small { color: var(--tinta-suave); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+.cadena .x { font-family: var(--mono); font-size: 32px; line-height: 1; font-weight: 500; color: var(--tinta); }
 
 /* Tablas */
-.tabla-wrap { overflow-x: auto; min-width: 0; }
-table { border-collapse: collapse; width: 100%; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
-th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+.tabla-wrap { overflow-x: auto; min-width: 0; background: var(--cal-raised); border: 1px solid var(--linea); border-radius: var(--radius-md); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 20px; }
+th, td { padding: 8px 12px; border-bottom: 1px solid var(--linea); text-align: right; white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+td { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 th:first-child, td:first-child, th.izq, td.izq { text-align: left; }
-th { font-weight: 600; color: var(--ink-2); font-size: 0.78rem; }
-td .barra { display: inline-block; height: 8px; border-radius: 2px; background: var(--otros); vertical-align: middle; margin-right: 6px; }
-td .barra.inditex { background: var(--inditex); }
-.marca-inditex { color: var(--inditex); font-weight: 600; }
-.marca-otros { color: var(--otros-text); font-weight: 600; }
-.pequena { color: var(--warn); font-size: 0.75rem; }
+td:first-child, td.izq { font-family: var(--sans); }
+th { font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--tinta-suave); }
+td .barra { display: inline-block; height: 10px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; background: var(--piedra); vertical-align: middle; margin-right: var(--space-2); }
+td .barra.inditex { background: var(--aljibe); }
+td.izq .valor { font-family: var(--mono); }
+.marca-inditex { color: var(--aljibe); font-weight: 600; }
+.marca-otros { color: var(--tinta); font-weight: 500; }
+.pequena { color: var(--tinta-suave); font-size: 12px; font-style: italic; }
 
-/* Añadir marca */
-details.anadir { border: 1px solid var(--line); border-radius: var(--r); }
-details.anadir > summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
-.anadir-cuerpo { padding: 0 16px 16px; display: grid; gap: 12px; }
-textarea { width: 100%; box-sizing: border-box; min-height: 120px; font: 0.8rem/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace; padding: 8px;
-  border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); }
-code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.85em; background: var(--panel); padding: 1px 4px; border-radius: 3px; }
-.mensaje { font-size: 0.875rem; padding: 10px 12px; border-radius: var(--r); background: var(--panel); }
-.mensaje.error { color: var(--warn); }
-.revision { max-height: 220px; overflow: auto; border: 1px solid var(--line); border-radius: var(--r); }
+/* Añadir cadena */
+details.anadir { background: var(--cal-raised); border: 1px solid var(--linea); border-radius: var(--radius-md); }
+details.anadir > summary { cursor: pointer; padding: var(--space-3) var(--space-4); font-weight: 600; font-size: 18px; }
+.anadir-cuerpo { padding: 0 var(--space-4) var(--space-4); display: grid; gap: var(--space-3); }
+textarea { width: 100%; box-sizing: border-box; min-height: 120px; font: 13px/1.5 var(--mono); padding: var(--space-2);
+  border: 1px solid var(--linea); border-radius: var(--radius-md); background: var(--cal); color: var(--tinta); }
+code { font-family: var(--mono); font-size: 0.85em; background: var(--arena); padding: 1px 5px; border-radius: var(--radius-sm); }
+.mensaje { font-size: 14px; line-height: 20px; padding: 10px 12px; border-radius: var(--radius-md); background: var(--agua-soft); color: var(--tinta); }
+.mensaje.error { background: transparent; border: 1px solid var(--alerta); color: var(--tinta); }
+.mensaje.error::before { content: "Atención: "; font-weight: 600; color: var(--alerta); }
+.revision { max-height: 240px; overflow: auto; border: 1px solid var(--linea); border-radius: var(--radius-md); }
 
-footer { display: grid; gap: 8px; font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 16px; }
+footer { display: grid; gap: var(--space-2); font-size: 14px; line-height: 20px; color: var(--tinta-suave); border-top: 1px solid var(--linea); padding-top: var(--space-4); }
 footer ul { margin: 0; padding-left: 18px; display: grid; gap: 2px; }
 
 /* Tooltip */
-#tip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 0.78rem;
-  padding: 8px 10px; border-radius: var(--r); line-height: 1.45; max-width: 260px; font-variant-numeric: tabular-nums; }
-#tip b { font-weight: 600; }
-@media (prefers-reduced-motion: no-preference) { .chip, .segmentado button { transition: background 120ms, color 120ms; } }
+#tip { position: fixed; z-index: 10; pointer-events: none; background: var(--tinta); color: var(--cal); font-size: 13px;
+  padding: 8px 10px; border-radius: var(--radius-md); line-height: 1.5; max-width: 270px; }
+#tip .num { font-family: var(--mono); }
+@media (prefers-reduced-motion: no-preference) { .chip, .segmentado button, .btn { transition: background 120ms, color 120ms, border-color 120ms; } }
 </style>
 
 <div class="wrap">
-  <header>
-    <span class="eyebrow">Posicionamiento de precio · catálogo online · España</span>
-    <h1>Escalera de precios de la moda</h1>
-    <p class="sub">Activa o quita cadenas y mira cómo cambian la escalera de precios, los choques entre marcas y el hueco
-      entre Zara y Massimo Dutti. Prendas básicas de mujer (camiseta de manga larga y vaquero), recogidas el 10/10/2026.</p>
-    <p class="resumen-linea" id="resumen-linea">—</p>
+  <header class="portada">
+    <div class="portada-texto">
+      <span class="eyebrow">Cuadro de mando · posicionamiento de precio · España</span>
+      <h1>Escalera de precios de la moda</h1>
+      <p class="sub">Activa o quita cadenas y mira cómo cambian la escalera de precios, los choques entre marcas y el hueco
+        entre Zara y Massimo Dutti. Prendas básicas de mujer (camiseta de manga larga y vaquero) del catálogo online, recogidas el 10/10/2026.</p>
+      <p class="resumen-linea" id="resumen-linea">—</p>
+    </div>
+    <figure class="arco" aria-labelledby="arco-pie" style="margin:0">
+      <svg viewBox="0 0 200 250" aria-hidden="true">
+        <path d="M 30 250 L 30 150 A 84 84 0 1 1 170 150 L 170 250 Z" fill="var(--aljibe)"></path>
+      </svg>
+      <div class="arco-dentro">
+        <span class="cifra" id="arco-cifra">—</span>
+        <span class="pie" id="arco-pie">Cada escalón de Inditex, en precio mediano</span>
+      </div>
+    </figure>
   </header>
 
   <div class="controles" role="region" aria-label="Controles">
@@ -488,7 +520,7 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
     }
     for (var t = 0; t <= max; t += paso) {
       el('line', { x1: x(t), x2: x(t), y1: sup - 4, y2: sup + rs.length * fila, stroke: 'var(--line)', 'stroke-width': 1 }, svg);
-      texto(svg, x(t), H - 8, eurosCorto(t), { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)' });
+      texto(svg, x(t), H - 8, eurosCorto(t), { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)', class: 'num' });
     }
     rs.forEach(function (r, i) {
       var y = sup + (rs.length - 1 - i) * fila + fila / 2, g = esInditex(r.marca) ? 'inditex' : 'otros';
@@ -499,8 +531,8 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
         fill: r.muestraPequena ? 'url(#trama-' + g + '-' + cat + ')' : 'var(--' + g + '-band)' }, grupo);
       el('circle', { cx: x(r.mediana), cy: y, r: 6, fill: g === 'inditex' ? 'var(--inditex)' : 'var(--otros)', stroke: 'var(--bg)', 'stroke-width': 2 }, grupo);
       var xt = Math.max(x(r.p75), x(r.mediana)) + 12;
-      texto(grupo, xt, y + 1, euros(r.mediana), { 'font-size': 12.5, 'font-weight': 700, fill: g === 'inditex' ? 'var(--inditex)' : 'var(--otros-text)' });
-      texto(grupo, xt, y + 14, 'n = ' + r.n + (r.muestraPequena ? ' · muestra pequeña' : ''), { 'font-size': 10.5, fill: 'var(--ink-3)' });
+      texto(grupo, xt, y + 1, euros(r.mediana), { 'font-size': 12.5, 'font-weight': 700, fill: g === 'inditex' ? 'var(--inditex)' : 'var(--otros-text)', class: 'num' });
+      texto(grupo, xt, y + 14, 'n = ' + r.n + (r.muestraPequena ? ' · muestra pequeña' : ''), { 'font-size': 10.5, fill: 'var(--ink-3)', 'font-style': r.muestraPequena ? 'italic' : 'normal' });
       conTip(grupo, '<b>' + esc(r.marca) + '</b> · ' + r.n + ' modelos' + (r.muestraPequena ? ' (muestra pequeña)' : '') +
         '<br>Mínimo ' + euros(r.minimo) + ' · Máximo ' + euros(r.maximo) + '<br>P25 ' + euros(r.p25) + ' · Mediana ' + euros(r.mediana) +
         ' · P75 ' + euros(r.p75) + '<br>Media ' + euros(r.media));
@@ -533,7 +565,7 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
     var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Solapamiento por parejas: ' + titulo });
     ((W - izq - der) < 300 ? [0, 50, 100] : [0, 25, 50, 75, 100]).forEach(function (t) {
       el('line', { x1: x(t), x2: x(t), y1: sup, y2: sup + ps.length * fila, stroke: 'var(--line)', 'stroke-width': 1 }, svg);
-      texto(svg, x(t), H - 8, t + ' %', { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)' });
+      texto(svg, x(t), H - 8, t + ' %', { 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--ink-3)', class: 'num' });
     });
     ps.forEach(function (p, i) {
       var y = sup + i * fila + fila / 2;
@@ -541,9 +573,9 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
       el('rect', { x: 0, y: y - fila / 2, width: W, height: fila, fill: 'transparent' }, g);
       texto(g, izq - 10, y + 4, p.a + ' – ' + p.b, { 'text-anchor': 'end', 'font-size': W < 480 ? 10.5 : 12, fill: 'var(--ink-2)' });
       if (p.v == null) { texto(g, izq + 4, y + 4, 'sin datos en esta prenda', { 'font-size': 11, fill: 'var(--ink-3)' }); return; }
-      el('rect', { x: izq, y: y - 7, width: Math.max(0, x(p.v) - izq), height: 14, rx: 2, fill: 'var(--pair)' }, g);
+      el('rect', { x: izq, y: y - 7, width: Math.max(0, x(p.v) - izq), height: 14, rx: 4, fill: 'var(--pair)' }, g);
       if (p.alt != null) el('line', { x1: x(p.alt), x2: x(p.alt), y1: y - 11, y2: y + 11, stroke: 'var(--ink)', 'stroke-width': 1.5 }, g);
-      texto(g, Math.max(x(p.v), p.alt != null ? x(p.alt) : 0) + 6, y + 4, p.v + ' %', { 'font-size': 11.5, 'font-weight': 600, fill: 'var(--ink)' });
+      texto(g, Math.max(x(p.v), p.alt != null ? x(p.alt) : 0) + 6, y + 4, p.v + ' %', { 'font-size': 11.5, 'font-weight': 600, fill: 'var(--ink)', class: 'num' });
       conTip(g, '<b>' + esc(p.a) + ' – ' + esc(p.b) + '</b><br>Tramos de ' + ANCHOS[estado.ancho][cat] + ' €: ' + p.v + ' %<br>Tramos de ' +
         ANCHOS[otro][cat] + ' €: ' + pct(p.alt) + (p.alt != null && Math.abs(p.alt - p.v) >= 15 ? '<br>Cambia mucho con el ancho del tramo: tómalo con cautela.' : ''));
     });
@@ -614,7 +646,8 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
       var td1 = document.createElement('td'); td1.textContent = f.marca; td1.className = esInditex(f.marca) ? 'marca-inditex' : 'marca-otros';
       var td2 = document.createElement('td'); td2.className = 'izq';
       var bar = document.createElement('span'); bar.className = 'barra' + (esInditex(f.marca) ? ' inditex' : ''); bar.style.width = (f.pct * 1.2) + 'px';
-      td2.appendChild(bar); td2.appendChild(document.createTextNode(f.pct + ' %'));
+      var val = document.createElement('span'); val.className = 'valor'; val.textContent = f.pct + ' %';
+      td2.appendChild(bar); td2.appendChild(val);
       var td3 = document.createElement('td'); td3.textContent = f.enHueco + ' de ' + f.n;
       tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3); tb.appendChild(tr);
     });
@@ -650,7 +683,8 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
       b.className = 'chip' + (esInditex(m) ? ' inditex' : ''); b.id = 'chip-' + m.replace(/[^A-Za-z0-9]/g, '_');
       b.setAttribute('aria-pressed', estado.activas.indexOf(m) >= 0 ? 'true' : 'false');
       var pt = document.createElement('span'); pt.className = 'pt'; b.appendChild(pt);
-      b.appendChild(document.createTextNode(m + (esInditex(m) ? ' · Inditex' : '')));
+      b.appendChild(document.createTextNode(m));
+      if (esInditex(m)) { var gr = document.createElement('span'); gr.className = 'grupo'; gr.textContent = 'Inditex'; b.appendChild(gr); }
       b.addEventListener('click', function (ev) {
         if (ev.target.classList.contains('quitar')) return;
         var i = estado.activas.indexOf(m);
@@ -677,8 +711,8 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
     });
     var lg = document.getElementById('leyenda-escalera');
     lg.innerHTML = '<span><i class="sw" style="background:var(--inditex-band)"></i>Inditex</span><span><i class="sw" style="background:var(--otros-band)"></i>Otros grupos</span>' +
-      '<span><i class="sw" style="background:repeating-linear-gradient(45deg,var(--otros-band) 0 3px,var(--bg) 3px 5px)"></i>Muestra pequeña (menos de 15 modelos)</span>' +
-      '<span><i class="sw" style="background:var(--gap);outline:1px solid var(--line)"></i>Hueco elegido abajo</span>';
+      '<span><i class="sw" style="background:repeating-linear-gradient(45deg,var(--inditex-band) 0 3px,var(--bg) 3px 5px)"></i>Muestra pequeña (menos de 15 modelos)</span>' +
+      '<span><i class="sw" style="background:var(--gap);outline:1px solid var(--line)"></i>Hueco elegido más abajo</span>';
   }
 
   function dibujarResumen() {
@@ -689,7 +723,22 @@ window.DATOS = {"catalogo":[{"marca":"Zara","categoria":"camiseta","nombre":"CAM
       'La raya vertical es el mismo cálculo con tramos de ' + (estado.ancho === 'principal' ? '4 € / 8 €' : '5 € / 10 €') + ': si se aleja mucho de la barra, el resultado es frágil.';
   }
 
+  // Cifra clave del arco: el rango de escalones de Inditex en las dos prendas, en directo.
+  function dibujarArco() {
+    var ratios = [];
+    CATS.forEach(function (c) {
+      var rs = resumenes(c[0]).filter(function (r) { return esInditex(r.marca); });
+      for (var i = 1; i < rs.length; i++) ratios.push(rs[i].mediana / rs[i - 1].mediana);
+    });
+    var cifra = document.getElementById('arco-cifra'), pie = document.getElementById('arco-pie');
+    if (!ratios.length) { cifra.textContent = '—'; pie.textContent = 'Activa al menos dos marcas de Inditex'; return; }
+    var lo = Math.min.apply(null, ratios), hi = Math.max.apply(null, ratios);
+    cifra.textContent = veces(lo) === veces(hi) ? veces(lo) : veces(lo) + '–' + veces(hi).slice(1);
+    pie.textContent = 'Lo que cuesta cada escalón de Inditex sobre el anterior, en precio mediano';
+  }
+
   function todo() {
+    dibujarArco();
     rellenarSelects();
     dibujarChips(); dibujarResumen();
     CATS.forEach(function (c) { dibujarEscalera(c[0], c[1]); dibujarSolape(c[0], c[1]); dibujarEscalones(c[0], c[1]); dibujarHueco(c[0], c[1]); });
