@@ -99,6 +99,12 @@ python scripts/graficos.py                  # gráficos del paso 2
 6. **Mínimo de 15 modelos por marca y categoría.** Lefties camisetas (9) y Massimo Dutti camisetas (14) no llegan. **No se eliminan:** se marcan como **baja fiabilidad**. Atenuante: sus precios apenas varían (Lefties 6,99–9,99 €; Massimo Dutti 29,95–39,95 €).
 7. **Métrica principal de solapamiento = métrica 2 (tramos).** La métrica 1 se rompe en los bordes con precios redondos (ver sección 6).
 8. **Sin etiquetas automáticas** de "competencia directa" o "contacto parcial" por umbrales fijos: con un corte en el 50 %, H&M–Zara en camisetas (47 %) habría quedado como "parcial", contradiciendo el análisis. Las interpretaciones van en el texto.
+9. **"Muestra pequeña", no "baja fiabilidad"**, en todo texto que vea el lector (gráficos, deck, resumen). Lo pidió Javi: dice lo mismo sin sonar a dato erróneo. Internamente (vista SQL) se mantiene `fiabilidad`.
+10. **Aprobado tras el paso 1 (10/10/2026):**
+    - El **hueco** de la escalera se mide con precios **redondeados al euro** (39,95 € y 39,99 € = mismo precio). Sin redondear, el 22 % de H&M en vaqueros parecía estar en el hueco; con redondeo es el 7 %. Camiseta: 15 % de los modelos en el hueco (H&M 23 %, Zara 14 %); vaquero: 4 % (H&M 7 %, Zara 2 %). Se presenta como **oportunidad a validar**.
+    - **"H&M rodea a Zara" se matiza:** claro en camisetas (H&M 31 % por debajo / 37 % dentro / 32 % por encima de la franja de Zara) y suave en vaqueros (15 % / 70 % / 16 %).
+    - La **arquitectura de precios** va como **apoyo**, no como hallazgo central (la dispersión de H&M se explica en parte por su tamaño de catálogo). Las terminaciones: x,95 = Zara y Massimo Dutti; x,99 = H&M **y Lefties**; Primark, enteros o x,50.
+    - **Mango** (y COS / & Other Stories) podrían ocupar el hueco: va **solo como limitación**, sin añadir datos.
 
 ---
 

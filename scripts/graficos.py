@@ -7,7 +7,8 @@ Reglas que se aplican en todos:
     El azul significa "Inditex" en todos los gráficos del deck.
   - Etiquetas directas en lugar de leyenda, sin bordes ni cuadrícula fuerte.
   - Números en formato español (7,99 €, 47 %).
-  - Baja fiabilidad (n < 15) marcada con trama y nota.
+  - Muestra pequeña (n < 15) marcada con trama y nota (en los textos para el lector
+    se dice "muestra pequeña", no "baja fiabilidad").
   - Nota al pie con fuente, fecha y tamaño de muestra.
 
 Fuente: data/moda.db (vistas v_resumen_precios y v_solape_pares) y las tablas
@@ -136,8 +137,8 @@ def dibujar_escalera(ax, cat, sombrear_hueco=False, nombres=True):
         x_texto = max(r['p75'], r['mediana'])
         ax.annotate(euros(r['mediana']), (x_texto, i), xytext=(9, 1), textcoords='offset points',
                     va='bottom', ha='left', fontsize=10, fontweight='bold', color=color_marca(marca))
-        # Debajo, en pequeño, la n (y el aviso de baja fiabilidad si toca).
-        nota = f'n = {int(r["n"])}' + (' · baja fiabilidad' if baja else '')
+        # Debajo, en pequeño, la n (y el aviso de muestra pequeña si toca).
+        nota = f'n = {int(r["n"])}' + (' · muestra pequeña' if baja else '')
         ax.annotate(nota, (x_texto, i), xytext=(9, -1), textcoords='offset points', va='top',
                     ha='left', fontsize=7.5, color=TEXTO_SEC, style='italic' if baja else 'normal')
     # Nombre de la marca en su color (solo en el primer panel de los múltiplos pequeños).
@@ -166,7 +167,7 @@ def titulo_panel(ax, cat):
 
 
 LEYENDA_ESCALERA = ('Barra: 50 % central de los modelos (de P25 a P75). Punto: mediana. '
-                    'En azul, las marcas de Inditex. Con trama: menos de 15 modelos.')
+                    'En azul, las marcas de Inditex. Con trama: muestra pequeña (menos de 15 modelos).')
 
 print('Gráficos:')
 
@@ -224,7 +225,7 @@ for ax, cat in zip(axes, PRENDAS):
                 ha='right', va='bottom', fontsize=14, fontweight='bold', color=TEXTO)
     ax.set_xticks(range(3))
     ax.set_xticklabels([f'{m}\nn = {int(resumen.loc[(cat, m), "n"])}' +
-                        (' · baja fiab.' if b else '') for m, b in zip(escalera_inditex, baja)],
+                        ('\nmuestra pequeña' if b else '') for m, b in zip(escalera_inditex, baja)],
                        fontsize=9.5)
     ax.set_ylim(0, max(medianas) * 1.25)
     ax.set_yticks([])
@@ -398,6 +399,6 @@ for ax, cat in zip(axes, PRENDAS):
     titulo_panel(ax, cat)
 fig.subplots_adjust(wspace=0.85, bottom=0.2, left=0.1, right=0.8)
 nota_pie(fig, 'Barra: % del catálogo de básicas que concentran los 3 precios más frecuentes de cada '
-              'marca. Con trama: menos de 15 modelos.\nCon más modelos es más fácil tener más precios '
+              'marca. Con trama: muestra pequeña (menos de 15 modelos).\nCon más modelos es más fácil tener más precios '
               'distintos: parte de la dispersión de H&M se debe a su tamaño de catálogo.')
 guardar(fig, '06_arquitectura_precios.png')
